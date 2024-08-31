@@ -1,0 +1,18 @@
+body {
+    background-image: url("img/43.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+form {
+    box-sizing: content-box;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 65;
+    font-style: italic;
+    color: #074393;
+    position: absolute;
+    /* text-align: center; */
+}

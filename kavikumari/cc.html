@@ -1,0 +1,28 @@
+<html>
+<head> <title>
+sample</title></head>
+<body>
+<p id ="demo"></p>
+<p id ="add"></p>
+<script>
+document.getElementById("demo").innerHTML ="My First Javascript";
+function myfunction(){
+    document.getElementById("demo1").innerHTML="Paragraph changed.";}
+x =10;
+y= 20;
+z= x+y;
+z1= y-x;
+z2 = y*x;
+{{%z3= []%}}
+{{%z3.append(z,z1,z2)%}}
+{{% for i in z3 %}}
+document.getElementById("add").innerHTML ="The value ofZ is :" + z3;
+
+
+</script>
+<p id="demo1">A Paragraph</p>
+<button type="button" onclick="myfunction()"> Try it</button>
+    
+
+</body>
+</html>
