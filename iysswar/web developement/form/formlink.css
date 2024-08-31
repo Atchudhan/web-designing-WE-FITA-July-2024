@@ -1,0 +1,85 @@
+             body {
+                 background-image: url("background/b2.jpg");
+                 background-size: cover;
+             }
+             
+             form {
+                 text-align: center;
+                 max-width: 500px;
+                 margin: 50px auto;
+                 padding: 10px;
+                 box-shadow: 0px 10px 10px rgba(1, 0, 0, 0.9);
+             }
+             
+             label {
+                 display: inline-block;
+                 margin-bottom: 20px;
+             }
+             
+             input[type="text"],
+             input[type="email"],
+             input[type="tel"],
+             input[type="radio"],
+             input[type="checkbox"] {
+                 color: purple;
+                 width: 100%;
+                 padding: 10px;
+                 margin-bottom: 10px;
+                 box-sizing: border-box;
+                 border: 2px solid;
+                 transition: all 1.0s ease;
+                 font-family: 'Roboto', Arial, sans-serif;
+                 font-size: 16px;
+             }
+             
+             input[type="text"] {
+                 box-shadow: 0px 0px 10px rgba(1, 0, 0, 0.9);
+             }
+             
+             input[type="submit"] {
+                 font-family: 'Montserrat';
+                 background-color: black;
+                 color: whitesmoke;
+                 padding: 10px 20px;
+                 border: none;
+                 border-radius: 5px;
+                 cursor: pointer;
+                 transition: background-color 0.3s ease;
+             }
+             
+             input[type="submit"]:hover {
+                 color: purple;
+                 background-color: rgba(128, 128, 128, 0.2);
+                 transform: scale(1.1);
+             }
+             
+             input[type="text"],
+             input[type="email"],
+             input[type="tel"],
+             input[type="radio"],
+             input[type="checkbox"] {
+                 color: purple;
+                 background-color: rgba(128, 128, 128, 0.2);
+             }
+             
+             input[type="radio"] {
+                 color-scheme: red;
+             }
+             
+             form:hover {
+                 transform: scale(1.05);
+                 box-shadow: 0px 0px 15px rgba(1, 0, 0, 0.9);
+             }
+             
+             input[type="text"]:focus,
+             input[type="email"]:focus,
+             input[type="tel"]:focus {
+                 border-color: dodgerblue;
+                 box-shadow: 0px 0px 10px rgba(255, 30, 161, 0.5)
+             }
+             
+             input[type="radio"]:hover,
+             input[type="checkbox"]:hover {
+                 transform: scale(1.1);
+                 color: rgba(1, 0, 0, 0.9);
+             }

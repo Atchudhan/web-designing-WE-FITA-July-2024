@@ -1,0 +1,39 @@
+                            body {
+                                background-image: url(./background/2.webp);
+                            }
+                            
+                            h1 {
+                                font-style: inherit;
+                                font-size: 200%;
+                            }
+                            
+                            p {
+                                text-align: center;
+                                font-style: italic;
+                                font-size: 100%;
+                            }
+                            
+                            address {
+                                font-style: italic;
+                            }
+                            
+                            table,
+                            th,
+                            td {
+                                border: 2px black outset;
+                                border-collapse: collapse;
+                                padding: 4px;
+                            }
+                            
+                            tr:nth-child(even) {
+                                background-color: green;
+                            }
+                            
+                            th:nth-child(even),
+                            td :nth-child(even) {
+                                background-color: yellowgreen;
+                            }
+                            
+                            meter {
+                                size: 500px;
+                            }
