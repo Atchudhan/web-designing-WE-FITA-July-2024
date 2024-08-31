@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.com</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="add"></p>
+    <p id="sub"></p>
+
+    <script>
+        //to print the hello world
+        document.getElementById('demo').innerHTML = 'hello world';
+        //to make the changes happened when the button is being clicked
+        function myFunction() {
+            document.getElementById('demo1').innerHTML = 'Paragraph changed...';
+        }
+
+        //to perform addition
+        let x = 5;
+        let y = 6;
+        let z = x + y;
+        document.getElementById('add').innerHTML = 'the vaule of z is:' + z;
+
+        let t = 10;
+        let r= 6;
+        let e = t-r;
+        document.getElementById('sub').innerHTML = 'the vaule of z is:'+e;
+
+
+
+
+
+    </script>
+    <!--to perform changes when the button is being clicked-->
+    <p id="demo1">A paragraph.</p>
+    <button type='button' onclick="myFunction()">Try it</button>
+</body>
+
+</html>
