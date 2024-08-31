@@ -1,0 +1,40 @@
+body {
+    background-color: peachpuff;
+}
+
+h1 {
+    color: fuchsia;
+}
+
+table,
+th,
+td {
+    border: 2px black solid;
+    border-collapse: collapse;
+    padding: 20px;
+}
+
+tr:nth-child(1) {
+    background-color: cornflowerblue;
+}
+
+tr:nth-child(2) {
+    background-color: hotpink;
+}
+
+tr:nth-child(3) {
+    background-color: brown;
+}
+
+tr:nth-child(4) {
+    background-color: darkgrey;
+}
+
+tr:nth-child(5) {
+    background-color: cornsilk;
+}
+
+tr:nth-child(even),
+td:nth-child(even) {
+    background-color: darkcyan;
+}

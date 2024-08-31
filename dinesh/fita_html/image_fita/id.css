@@ -1,0 +1,16 @@
+.listo {
+    background-color: aqua;
+    height: 200px;
+    padding: 20px;
+}
+
+.unorder {
+    background-color: rebeccapurple;
+    width: 400px;
+}
+
+.order {
+    background-color: brown;
+    width: 400px;
+    padding-left: 100px;
+}
