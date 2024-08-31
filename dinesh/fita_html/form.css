@@ -1,0 +1,10 @@
+body {
+    background-image: url("image_fita/ara.png");
+    background-size: cover;
+}
+
+.inf {
+    color: rgb(0, 255, 140);
+    padding-left: 400px;
+    font-size: 50px;
+}
