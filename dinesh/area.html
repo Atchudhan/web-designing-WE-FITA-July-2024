@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>area.page</title>
+</head>
+
+<body>
+    <p id="radius"></p>
+    <p id="volume"></p>
+    <p id="xei"></p>
+    <p id="demo"></p>
+    <p id="subt"></p>
+    <p id="expt"></p>
+    <p id="divt"></p>
+    <p id="areat"></p>
+    <p id="cart"></p>
+    <p id="carte"></p>
+    <p id="tata"></p>
+    <p id="maths"></p>
+
+    <script>
+        let rad = 3;
+        let volu = (4 / 3) * 3.14 * rad * rad * rad;
+        let x = 5 + "dinesh"
+        const cars = ["audi", "benz", "bmw"];
+        const groc = new Array("veg", "egg")
+
+        document.getElementById("cart").innerHTML = cars.toString();
+        document.getElementById("carte").innerHTML = groc;
+
+        const dat = new Date();
+        document.getElementById("tata").innerHTML = dat;
+
+
+        function add(a, b) {
+            return a + b;
+        }
+
+        function sub(u, v) {
+            return u - v;
+        }
+
+        function exp(e, f) {
+            return e ** f;
+        }
+
+        function div(k, l) {
+            return k / l;
+        }
+
+        function area(rad) {
+            return (4 / 3) * 3.14 * rad * rad * rad;
+        }
+
+        let res = add(5, 10);
+        document.getElementById("demo").innerHTML = "The addition is: " + res;
+
+        let re = sub(10, 5);
+        document.getElementById("subt").innerHTML = "The subtraction is: " + re;
+
+        let reso = exp(2, 5);
+        document.getElementById("expt").innerHTML = "The exponential value is: " + reso;
+
+        let resot = div(10, 5);
+        document.getElementById("divt").innerHTML = "The division value is:" + resot;
+
+        let resort = area(3);
+        document.getElementById("areat").innerHTML = "The volume of the sphere is:" + resort;
+
+
+        document.getElementById("radius").innerHTML = " Radius of Sphere is:" + rad;
+        document.getElementById("volume").innerHTML = "The volume of the sphere is:" + volu;
+        document.getElementById("xei").innerHTML = "The concat word is:" + x;
+
+        document.getElementById("maths").innerHTML = "<p><b>Math.E:</b>" + Math.PI + "</p>" + "<p><b>Math.E:</b>" + Math.SQRT2 + "</p>" + "<p><b>Math.E:</b>" + Math.SQRT1_2 + "</p>" + "<p><b>Math.E:</b>" + Math.LN2 + "</p>" + "<p><b>Math.E:</b>" + Math.LN10 + "</p>" + "<p><b>Math.E:</b>" + Math.LOG2E + "</p>" + "<p><b>Math.E:</b>" + Math.LOG10E + "</p>";
+    </script>
+
+</body>
+
+</html>
