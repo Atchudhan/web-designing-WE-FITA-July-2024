@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <script>
+        const cars = ["ROLCE ROYCE", "SUPRA", "JAGUAR"]
+        cars[1] = "MCL36";
+        const bikes = [];
+        bikes[0] = "GT650";
+        bikes[1] = "Pulsar";
+        bikes[2] = "Classic350";
+        document.getElementById("demo").innerHTML = cars.toString();
+        document.getElementById("demo1").innerHTML = bikes[1];
+        const phones = Array("Samsung", "Apple", "ROG");
+        document.getElementById("demo2").innerHTML = phones;
+
+        const d = Date();
+        document.getElementById("demo3").innerHTML = d;
+
+        document.getElementById("demo4").innerHTML = "<p><b>Math.E:</b>" + Math.E + "</p>" + "<p><b>Math.PI:</b>" + Math.PI + "</p>" + "<p><b>Math.SQRT2:</b>" + Math.SQRT2 + "</p>" + "<p><b>Math.LN10:</b>" + Math.LN10 + "</p>" + "<p><b>Math.LOG10E:</b>" + Math.LOG10E + "</p>";
+    </script>
+
+</body>
+
+</html>
