@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="23r3"> hello</h1>
+    <button id='454t' type="button" onclick="button()">java script
+        </button>
+    <button type="button" ononclick="revert()">revert</button> <button type="button" onclick="img()">img</button>
+    <h1 id="23423"></h1>
+
+</body>
+<script>
+    // document.getElementById('23r3').innerHTML = 'hello';
+    function button() {
+        document.getElementById('23r3').style.fontSize = '25px'
+        document.getElementById('23r3').style.color = 'white'
+        document.getElementById('23r3').style.backgroundColor = '#DA6E6E'
+        document.getElementById('454t').style.color = 'pink'
+        document.getElementById('454t').style.backgroundColor = 'black'
+    }
+
+    function revert() {
+        document.getElementById('23r3').style.color = 'black'
+        document.getElementById('23r3').style.backgroundColor = 'white'
+        document.getElementById('454t').style.color = 'black'
+        document.getElementById('454t').style.backgroundColor = 'white'
+
+    }
+
+    function img() {
+        var img = document.createElement("img");
+
+        img.src = "im.jpg";
+        var src = document.getElementById("23423");
+
+        src.appendChild(img);
+
+    }
+</script>
+
+</html>
+
+</html>

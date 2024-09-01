@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<p id="ADD">add</p>
+<button type="button" onclick="add()"> ADD</button>
+<p id="SUB">sub</p>
+<button type="button" onclick="sub()"> sub</button>
+<p id="MUL">MUL</p>
+<button type="button" onclick="mul()"> mul</button>
+<p id="EXP">exp</p>
+<button type="button" onclick="exp()"> Exponention</button>
+<p id="DIV">div</p>
+<button type="button" onclick="div()">division</button>
+<p id="MOD">mod</p>
+<button type="button" onclick="mod()">modulus</button>
+<p id="INC">inc</p>
+<button type="button" onclick="inc()">Increment</button>
+<p id="DEC">dec</p>
+<button type="button" onclick="dec()">decrement</button>
+<script>
+    // function func() {
+    //     var element = document.getElementById('demo')
+    //     if (element && element.id === 'demo') {
+    //         document.getElementById('demo').innerHTML = "i can change";
+    //         // document.write("content changed")
+    //     } else {
+    //         document.write("cannot change")
+    //     }
+    // }
+
+    // function rever() {
+    //     document.write("A paragraph")
+    // }
+
+    function sum(a, b) {
+        return a + b
+    }
+
+    function min(a, b) {
+        return a - b
+    }
+
+    function pro(a, b) {
+        return a * b
+    }
+
+    function ex(a, b) {
+        return a ** b
+    }
+
+    function di(a, b) {
+        return a / b
+    }
+
+    function add() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = sum(a, b)
+        alert("the sum of " + a + " and " + b + " is: " + c)
+    }
+
+    function sub() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = min(a, b)
+        alert("the sub of " + a + " and " + b + " is: " + c)
+    }
+
+    function mul() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = pro(a, b)
+        alert("the mul of " + a + " and " + b + " is: " + c)
+    }
+
+    function exp() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = ex(a, b)
+        alert("the exp of " + a + " and " + b + " is: " + c)
+    }
+
+    function div() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = di(a, b)
+        alert("the div of " + a + " and " + b + " is: " + c)
+    }
+
+    function mod() {
+        let a = parseInt(prompt("enter the value:"))
+        let b = parseInt(prompt("enter the value:"))
+        let c = a % b
+        alert("the mod of " + a + " and " + b + " is: " + c)
+    }
+
+    function inc() {
+        let a = parseInt(prompt("enter the value:"))
+        c = a++
+            alert("the inc value is:" + c)
+
+    }
+
+    function dec() {
+        let a = parseInt(prompt("enter the value:"))
+        c = a--
+            alert("the dec value is:" + c)
+
+    }
+</script>
+
+<body>
+
+</body>
+
+</html>
