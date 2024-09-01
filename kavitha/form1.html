@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+  <P id="demo"></P>
+  <script>
+    function myFunction(p1, p2) {
+      return p1 + p2;
+    }
+    let result = myFunction(4, 3);
+    document.getElementById("demo").innerHTML = result;
+  </script>
+  <p id="demo"></p>
+  <script>
+    const cars = ["saab", "volvo", "BMW"];
+    cars[0] = "opel";
+    document.getElementById("demo").innerHTML = cars.toString();
+  </script>
+  <script>
+    const d = new Date("2024-09-01");
+    document.getElementById("demo").innerHTML = d;
+    document.getElementById("demo").innerHTML ="<p><b>Math.E:</b>" +Math.E + "</p>" +
+    "<p><b>Math.PI:</b>" + Math.PI + "</p>" +
+    "<p><b>Math.SQRT2:</b>" + Math.SQRT2 + "</p>"
+    "<p><b>Math.SQRT_2:</b>" + Math.SQRT1_2 + "</p>"
+      "<P><b>Math.LN2:</b>" + Math.LN2 + "</p>"
+        "<p><b>Math.LN10:</b>" + math.LN10 + "</p>"
+          "<p><b>Math.LOG2E:</b>" + Math.LOG2E + "</p>"
+            "<p><b>Math.LOG10E:</b>" + Math.LOG10E +  "</p>"
+  </script>
+</body>
+</html>
