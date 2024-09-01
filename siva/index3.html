@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js.com</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mult"></p>
+    <p id="div"></p>
+    <p id="power"></p>
+    <p id="modulos"></p>
+    <p id="increment"></p>
+
+    <script>
+        //to print the hello world
+        document.getElementById('demo').innerHTML = 'hello world';
+        //to make the changes happened when the button is being clicked
+        function myFunction() {
+            document.getElementById('demo1').innerHTML = 'Paragraph changed...';
+        }
+
+        //to perform addition
+        let x = 10;
+        let y = 6;
+        let z = x + y;
+        let w = x - y;
+        let e = x * y;
+        let t = x / y;
+        let p = x ** y;
+        let a = x % y;
+        ++x;
+        q = x;
+        document.getElementById('add').innerHTML = 'the vaule of z is:' + z;
+        document.getElementById('sub').innerHTML = 'the vaule of w is:' + w;
+        document.getElementById('mult').innerHTML = 'the vaule of e is:' + e;
+        document.getElementById('div').innerHTML = 'the vaule of t is:' + t;
+        document.getElementById('power').innerHTML = 'the vaule of p is:' + p;
+        document.getElementById('modulos').innerHTML = 'the vaule of a is:' + a;
+        document.getElementById('increment').innerHTML = 'the vaule of q is:' + q;
+
+    </script>
+    <!--to perform changes when the button is being clicked-->
+    <p id="demo1">A paragraph.</p>
+    <button type='button' onclick="myFunction()">Try it</button>
+
+    <p id="length"></p>
+    <p id="breadth"></p>
+    <p id="height"></p>
+    <p id="volume"></p>
+
+    <script>
+        let k = 20;
+        let v = 30;
+        let f = 18;
+        document.getElementById('length').innerHTML = 'the length of the cuboid is:20m';
+        document.getElementById('breadth').innerHTML = 'the breadth of the cuboid is:30m';
+        document.getElementById('height').innerHTML = 'the height of the cuboid is:18m';
+        let we = k * v * f;
+        document.getElementById('volume').innerHTML = 'The volume of the cuboid as per the given dimensions is:' + we + "m";
+    </script>
+
+    <p id="additi"></p>
+    <p id="subract"></p>
+    <p id="multiply"></p>
+    <p id="divi"></p>
+    <p id="expo"></p>
+    <p id="aws"></p>
+    <p id="array"></p>
+    <p id="array_"></p>
+    <p id="array by func"></p>
+    <p id="array by func2"></p>
+    <p id="array by func3"></p>
+    <p id="array by func3"></p>
+    <p id="array by func4"></p>
+    <p id="date"></p>
+    <p id="math"></p>
+
+    <script>
+        function addition(a, b) {
+            return a + b
+        }
+        function subraction(a, b) {
+            return a - b
+        }
+        function multiplication(a, b) {
+            return a * b
+        }
+        function divison(a, b) {
+            return a / b
+        }
+        function exponentiation(a, b) {
+            return a ** b
+        }
+        let add = addition(18, 17)
+        let sub = subraction(18, 17)
+        let mult = multiplication(18, 17)
+        let div = divison(18, 17)
+        let exp = exponentiation(18, 17)
+
+        document.getElementById('additi').innerHTML = 'the value after addition operation is:' + add;
+        document.getElementById('subract').innerHTML = 'the value after subraction operation is:' + sub;
+        document.getElementById('multiply').innerHTML = 'the value after multiplication operation is:' + mult;
+        document.getElementById('divi').innerHTML = 'the value after division operation is:' + div;
+        document.getElementById('expo').innerHTML = 'the value after exponentiation operation is:' + exp;
+
+        let siva = 'virat is the best player in the world and greatest of all time';
+        document.getElementById('aws').innerHTML = 'the length of the sentence is:' + siva.length;
+
+        const cars = ['BMW', 'bugati', 'ferari', 'Morris Garage']
+        document.getElementById('array').innerHTML = 'the value present in the array are:' + cars;
+
+        const cars_ = [];
+        cars_[0] = 'BMW';
+        cars_[1] = 'FERARI';
+        cars_[2] = 'MG';
+        cars_[3] = 'BUGATI';
+        document.getElementById('array_').innerHTML = 'the value present in the array by indexing are:' + cars_;
+
+
+        const car = new Array('BMW', 'bugati', 'ferari', 'Morris Garage')
+        document.getElementById('array by func').innerHTML = 'the value present in the array by using functions are:' + car;
+
+        const car1 = new Array('BMW', 'bugati', 'ferari', 'Morris Garage')
+        document.getElementById('array by func2').innerHTML = 'the value present in the 1st position of the array is:' + car1[0];
+
+
+        const cars2 = ['BMW', 'bugati', 'ferari', 'Morris Garage'];
+        cars2[0] = 'wolkswagen';
+        document.getElementById('array by func3').innerHTML = 'the value of position of the changed in the first position of array is:' + cars2;
+
+        const cars3 = ['BMW', 'bugati', 'ferari', 'Morris Garage']
+        document.getElementById('array by func4').innerHTML = 'the value present in the array are:' + cars3.toString();
+
+        const d = new Date()
+        document.getElementById('date').innerHTML = d;
+
+
+        // new Date('October 13, 2014 11:13:00')
+        // new Date(year, month)
+        // new Date(year, month, day)
+        // new Date(year, month, day, hours)
+        // new Date(year, month, day, hours, minutes)
+        // new Date(year, month, day, hours, minutes, seconds)
+        // new Date(year, month, day, hours, minutes, seconds, ms)
+        // new Date(milliseconds)
+
+        document.getElementById('math').innerHTML =
+            '<p><b>math.E</b>' + Math.E + '</p>' +
+            '<p><b>math..PI</b>' + Math.PI + '</p>' +
+            '<p><b>math.SQRT2</b>' + Math.SQRT2 + '</p>' +
+            '<p><b>math.SQRT1_2</b>' + Math.SQRT1_2 + '</p>' +
+            '<p><b>math.LN2</b>' + Math.LN2 + '</p>' +
+            '<p><b>math.LN10</b>' + Math.LN10 + '</p>' +
+            '<p><b>math.LOG2E</b>' + Math.LOG2E + '</p>' +
+            '<p><b>math.LOG10E</b>' + Math.LOG10E + '</p>';
+
+    </script>
+</body>
+
+</html>
