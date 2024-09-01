@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <title> form 2</title>
+    <link rel="shortcut icon" href="img/down.png" type="">
+    <link rel="stylesheet" href="style4.css">
+</head>
+
+<body>
+    
+        <h1> VOLUME OF HOLLOW CYLINDER</h1>
+        <div class="given"><p>Outer Radius = 7 cm <br>Inner Radius = 5 cm <br>Height = 7 cm.</p>
+        <pre> π (R^2 -r^2)h </pre>
+        <p id ="demo"></p>
+        <p id ="demo1"></p>
+        <p id ="demo2"></p>
+        <p id ="demo3"></p>
+        <p id ="demo4"></p>
+        <p id ="demo5"></p>
+        <p id ="demo6"></p>
+        <p id ="demo7"></p>
+        <p id ="vol"></p>
+
+        
+        <script>
+        
+        r =7;
+        R = 5;
+        h= 7;
+        r1 = 7*7;
+        R1 = 5*5;
+        re = r1-R1;
+        rt= re*h;
+        v = 22/7;
+        vol=v *rt;
+        cars= new Array("INDICA","BMW","AADI");
+        cars[0]="opal";
+        d =new Date("2024-12-19");
+        fita="best academy for training in pondicherry";
+
+        q="kavi"+"kumari";
+        function myfun(){
+        document.getElementById("vol").innerHTML ="THE VOLUME OF HOLLOW CYLINDER:" + vol + "cm^3";}
+        function myfunc(){
+        document.getElementById("vol").innerHTML ="THE NAME OF THE PERSON:" + q ;}
+        function myfunction(p1,p2){
+            resu= p1+p2;
+            res=p2-p1;
+            re=p1*p2;
+            r=p1/p2;
+            return resu,res,re,r;
+        }
+        result= myfunction(5,6);
+
+
+
+        document.getElementById("demo").innerHTML = "THE SUM OF NUMBERS"+ resu;
+        document.getElementById("demo1").innerHTML = "THE SUB OF NUMBERS"+ res;
+        document.getElementById("demo2").innerHTML = "THE MUL OF NUMBERS"+ re;
+        document.getElementById("demo3").innerHTML = "THE DIV OF NUMBERS"+ r;
+        document.getElementById("demo4").innerHTML = "THE LENGTH OF THE STRING" +fita.length;
+        document.getElementById("demo5").innerHTML = "Array of cars  "  + cars.toString();
+        document.getElementById("demo6").innerHTML = "DATE  "  + d;
+        document.getElementById("demo7").innerHTML = "<p><b>MATH.E:</b>" +Math.E +"</p> "+"<p><b>MATH.PI:</b>" +Math.PI +"</p>"+ "<p><b>MATH.SQRT2:</b>" +Math.SQRT2 +"</p>"+"<p><b>MATH.SQRT1_2:</b>" +Math.SQRT1_2 +"</p>"+"<p><b>MATH.LN2:</b>" +Math.LN2 +"</p>"+ "<p><b>MATH.LN10:</b>" +Math.LN10 +"</p>"+ "<p><b>MATH.LOG2E:</b>" +Math.LOG2E +"</p>"+ "<p><b>MATH.LOG10E:</b>" +Math.LOG10E +"</p>";
+        
+
+
+
+        
+
+
+        </script>
+        <button type="button" onclick="myfun()"> volume of hollow cylinder</button>
+        <button type="button" onclick="myfunc()"> NAME</button>
+        </div>
+</body>
+
+</html>

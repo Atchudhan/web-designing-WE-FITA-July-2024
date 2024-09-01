@@ -1,0 +1,16 @@
+body {
+    background-image: url(img/6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.given {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40;
+    font-style: italic;
+    color: #074393;
+    position: absolute;
+}
