@@ -1,0 +1,29 @@
+div.myclass {
+    width: 100%;
+    overflow: auto;
+}
+div.myclass div {
+    width: 33%;
+    float: left;
+}
+#ambani
+{
+    background-color: brown;
+    color: black;
+    border: 10px;
+    border-color: rgb(15, 209, 209);
+    padding: 30px;
+    text-align: center;
+}
+div.column {
+    width: 500px;
+    border: 5px solid blue;
+    padding: 10px;
+    outline: 5px dotted red;
+    outline-offset: 5px;
+    
+
+}
+body{
+    background-color: aquamarine;
+}

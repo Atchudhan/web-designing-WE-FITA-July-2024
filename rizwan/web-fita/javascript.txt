@@ -1,0 +1,5 @@
+hello world
+
+<script>
+        document.getElementById("hello").innerHTML = "Hello, World!";
+</script>

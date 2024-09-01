@@ -1,0 +1,162 @@
+body {
+    background-image: url(1.jpg);
+    background-size: 100%;
+    background-repeat: round;
+}
+
+h1 {
+    font-style: oblique;
+    font-size: larger;
+    color: rgb(254, 254, 254);
+}
+
+h3 {
+    color: rgb(2, 98, 195);
+}
+
+address {
+    color: rgba(255, 0, 0, 0);
+}
+
+table,
+th,
+td {
+    border: 1px rgb(0, 0, 0) solid;
+    border-collapse: separate;
+}
+
+tr:nth-child(odd) {
+    background-color: rgb(211, 0, 35);
+}
+
+tr:nth-child(even) {
+    background-color: aqua;
+}
+
+kbd {
+    background-color: #ecf800;
+    border: 1px dotted #0a0808;
+    border-radius: 100px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+    color: #ac1212;
+    display: flexbox;
+    font-size: larger;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+form {
+    background: rgba(40, 218, 12, 0.8);
+    padding: 50px;
+    border-radius: 30px;
+    width: 1000px;
+    margin: 50px auto;
+    box-shadow: 0 4px 8px rgba(4, 14, 205, 0.1);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.styled-form input[type="text"],
+.styled-form input[type="email"],
+.styled-form input[type="password"],
+.styled-form textarea,
+.styled-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.styled-form input[type="radio"],
+.styled-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.styled-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.styled-form p {
+    margin: 0;
+}
+
+.styled-form textarea {
+    resize: vertical;
+}
+
+
+        h5 {text-align: center;
+        color: brown;
+    font-size: 100px;}
+dt {
+    font-size: larger;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+div.myclass {
+    width: 100%;
+    overflow: auto;
+}
+
+div.myclass div {
+    width: 33%;
+    float:left;
+}
+
+div.myclass {
+    width: 100%;
+    overflow: auto;
+}
+div.myclass div {
+    width: 33%;
+    float: left;
+}
+#ambani
+{
+    background-color: brown;
+    color: black;
+    border: 10px;
+    border-color: rgb(15, 209, 209);
+    padding: 30px;
+    text-align: center;
+}
+
+div.column {
+    width: 500px;
+    border: 5px solid blue;
+    padding: 10px;
+    outline: 5px dotted red;
+    outline-offset: 5px;
+    margin-left: 300px;
+}
+
+div.news {
+    column-count: 3;
+    column-rule: 5px double red;
+}
+.ani {
+    animation: typing;
+    -webkit-animation: typing;
+}

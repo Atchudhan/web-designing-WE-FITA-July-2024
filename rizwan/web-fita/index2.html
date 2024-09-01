@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rizwan.2</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+
+<body>
+    <a href="#ambani"> below ambani</a>
+    <div class="myclass">
+        <div style="background-color: aquamarine;">
+            <h1>Rohit Sharma</h1>
+
+            <p>
+                Rohit Sharma, an Indian cricketer and the current captain of the Indian national team, is renowned for
+                his
+                exceptional batting skills and leadership qualities. Born on April 30, 1987, in Nagpur, Maharashtra,
+                Rohit is widely
+                celebrated for his elegant stroke play and remarkable consistency. He holds the record for the highest
+                individual
+                score in One Day Internationals (ODIs) with 264 runs and has scored multiple double centuries in ODIs.
+                Known as the
+                "Hitman" for his explosive batting style, Rohit has been a pivotal player for Mumbai Indians in the
+                Indian Premier
+                League (IPL), leading them to several championship victories.
+            </p>
+        </div>
+        <div style="background-color: blueviolet;">
+            <h1>Mukesh ambani</h1>
+            <p>
+                Mukesh Ambani is a prominent Indian business magnate, serving as the chairman and largest shareholder of
+                Reliance
+                Industries Limited (RIL), a Fortune Global 500 company and India's most valuable firm by market
+                capitalization. Born on
+                April 19, 1957, in Aden, Yemen, Ambani transformed RIL from a textile company into a diverse
+                conglomerate with interests
+                in petrochemicals, refining, oil, telecommunications, and retail. Under his leadership, Reliance Jio
+                revolutionized the
+                Indian telecom sector, making affordable internet accessible to millions. Mukesh Ambani is consistently
+                listed among the
+                world's wealthiest individuals, known for his strategic vision and significant contributions to India's
+                economic growth.
+            </p>
+        </div>
+
+    </div>
+
+    <p id="ambani"> Anant Ambani is the youngest son of Mukesh Ambani, chairman of Reliance Industries Limited (RIL),
+        one of India's
+        largest conglomerates. Born on April 10, 1995, Anant has been actively involved in the family business,
+        particularly
+        focusing on RIL's new energy and retail sectors. Known for his significant weight loss journey, Anant is also
+        recognized for his philanthropic efforts and passion for wildlife conservation. He plays a key role in the
+        operations of Reliance Jio, the group's telecommunications arm, and is seen as a potential future leader within
+        the
+        Ambani empire, contributing to its growth and diversification
+    </p>
+
+    <iframe src="3.webp" style="height: 500px; width: 500px;"></iframe>
+    <div class='column'>
+        KL Raghul is a notable individual, likely involved in academia, technology, or a related field, given the
+        context of your studies. If he's a professor or a professional, he might have contributed significantly to
+        research or teaching in areas related to Artificial Intelligence and Data Science. He could be known for his
+        expertise, publications, or involvement in significant projects or conferences. His work might have had an
+        impact on students and professionals in the tech industry. For specific and accurate details, more information
+        or context about his role and contributions would be helpful
+    </div>
+    <br>
+    <p id="fita">welcome to fita acadamy...</p>
+    <button type="button" onclick="myFunction()">click to view animanation</button>
+    <script>
+        function myFunction() {
+            document.getElementById('fita').style.fontSize = '30px';
+            document.getElementById('fita').style.color = "blue";
+            document.getElementById('fita').style.backgroundColor = 'yellow';
+
+        }
+    </script>
+
+    <code>
+    x=5;
+    y=10;
+    z=x+y;
+</code>
+
+    <p>The area of a circle is given by <var>A</var> = π<var>r</var><sup>2</sup>, where <var>r</var> is the radius.</p>
+    <br>
+    <!--symbol-->
+    <p>The price is 50 €.</p>
+    <p>The price is 50 &euro;.</p>
+    <p>The price is 50 &#8364;.</p><br>
+
+    <!--utf-8-->
+    <p>!=&#33;</p>
+    <p>""=&#34;</p>
+    <p>#=&#35;</p>
+    <p>-=&#45;</p>
+    <p>2=&#50;</p>
+
+    <!--emoji-->
+    <p>smile-&#128522;</p>
+    <p>&#128515;</p>
+    <p>&#128517;</p>
+    <p>&#128519;</p>
+
+    <!--current date and time 24-->
+    <button type="button" onclick="document.getElementById('demo').innerHTML=Date()">
+        click me to display date and time.</button>
+    <p id="demo"></p>
+
+    <button type="button" onclick="displayDate()">Click me to display Date and Time</button>
+
+    <p id="demo1"></p>
+
+    <!--current date and time 12-->
+    <script>
+        function displayDate() {
+            const date = new Date();
+
+            // Get hours in 12-hour format
+            let hours = date.getHours();
+            const minutes = String(date.getMinutes()).padStart(2, '0');
+            const seconds = String(date.getSeconds()).padStart(2, '0');
+            const ampm = hours >= 12 ? 'PM' : 'AM';
+
+            // Convert hours to 12-hour format
+            hours = hours % 12;
+            hours = hours ? hours : 12; // Convert 0 to 12
+
+            const formattedDate = date.getFullYear() + '-'
+                + String(date.getMonth() + 1).padStart(2, '0') + '-'
+                + String(date.getDate()).padStart(2, '0') + ' '
+                + String(hours).padStart(2, '0') + ':'
+                + minutes + ':'
+                + seconds + ' ' + ampm;
+
+            document.getElementById("demo1").innerHTML = formattedDate;
+        }
+    </script>
+
+
+<p></p>
+
+</body>
+
+</html>

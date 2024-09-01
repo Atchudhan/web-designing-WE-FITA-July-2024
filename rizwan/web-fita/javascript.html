@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+<body>
+    <p id="demo"></p>
+
+    <p id="add"></p>
+
+    <script>
+        //print hello world//
+        document.getElementById('demo').innerHTML='hello world';
+        
+        //function//
+        function myFunction() {
+            document.getElementById('demo1').innerHTML='Paragraph changed...';
+        }
+        //*sum of num//
+     let  x=10;
+     let  y=15;
+     let  z=x+y;
+     document.getElementById('add').innerHTML='The value of z is:'+ z;
+
+
+      </script>
+       <!--  -->
+    <p id="demo1">A paragraph.</p>
+    <button type='button' onclick="myFunction()">Try it</button>    
+</body>
+</html>
