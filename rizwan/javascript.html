@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+
+
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mult"></p>
+    <p id="div"></p>
+    <p id="power"></p>
+    <p id="modulos"></p>
+    <p id="increment"></p>
+
+    <script>
+        //print hello world//
+        document.getElementById('demo').innerHTML = 'hello world';
+
+        //function//
+        function myFunction() {
+            document.getElementById('demo1').innerHTML = 'Paragraph changed...';
+        }
+        //operation num symbol
+
+        let x = 10;
+        let y = 6;
+        let z = x + y;
+        let w = x - y;
+        let e = x * y;
+        let t = x / y;
+        let p = x ** y;
+        let a = x % y;
+        ++x;
+        q = x;
+        document.getElementById('add').innerHTML = 'the vaule of z is:' + z;
+        document.getElementById('sub').innerHTML = 'the vaule of w is:' + w;
+        document.getElementById('mult').innerHTML = 'the vaule of e is:' + e;
+        document.getElementById('div').innerHTML = 'the vaule of t is:' + t;
+        document.getElementById('power').innerHTML = 'the vaule of p is:' + p;
+        document.getElementById('modulos').innerHTML = 'the vaule of a is:' + a;
+        document.getElementById('increment').innerHTML = 'the vaule of q is:' + q;
+
+
+    </script>
+    <br>
+
+
+    <!-- function call -->
+    <p id="demo1">A paragraph.</p>
+    <button type='button' onclick="myFunction()">Try it</button>
+    <br>
+
+    <!-- shape-->
+
+    <p id="height"></p>
+    <p id="inner radius"></p>
+    <p id="outer radius"></p>
+    <p id="volume"></p>
+    <script>
+        let pi = 3.14;
+        let h = 20;
+        let R = 30;
+        let r = 18;
+        document.getElementById('height').innerHTML = 'the height of the hollow cone is:20m';
+        document.getElementById('inner radius').innerHTML = 'the inner radius of the hollow cone is:30m';
+        document.getElementById('outer radius').innerHTML = 'the outer radius of the hollow cone is:18m';
+        let formula = (1 / 3) * pi * h * (R * R - r * r);
+        document.getElementById('volume').innerHTML = 'The volume of the hollow cone as per the given dimensions is:' + formula;
+    </script> <br>
+
+    <!-- +-* / using function-->
+    <p id="adds"></p>
+    <p id="subtract"></p>
+    <p id="multiply"></p>
+    <p id="division"></p>
+    <p id="exponent"></p>
+
+    <script>
+        function addition(a, b) {
+            return a + b
+        }
+        function subraction(a, b) {
+            return a - b
+        }
+        function multiplication(a, b) {
+            return a * b
+        }
+        function divison(a, b) {
+            return a / b
+        }
+        function exponentiation(a, b) {
+            return a ** b
+        }
+        let add = addition(18, 17)
+        let sub = subraction(18, 17)
+        let mult = multiplication(18, 17)
+        let div = divison(18, 17)
+        let exp = exponentiation(18, 17)
+
+        document.getElementById('adds').innerHTML = 'the value after addition operation is' + add;
+        document.getElementById('subtract').innerHTML = 'the value after subtraction operation is' + sub;
+        document.getElementById('multiply').innerHTML = 'the value after multiplication operation is' + mult;
+        document.getElementById('division').innerHTML = 'the value after division operation is' + div;
+        document.getElementById('exponent').innerHTML = 'the value after exponent operation is' + exp;
+
+    </script> <br>
+    
+    <!-- length -->
+    <!-- array -->
+
+    <p id="fita01"></p>
+    <p id="array"></p>
+    <p id="arraybynum"></p>
+    <p id="arraybyfunction"></p>
+    <p id="arrayfind"></p>
+    <p id="arraytostring"></p>
+    <p id="arraydate"></p>
+    <p id="arrayspecdate"></p>
+    
+
+
+
+    <script>
+        let fita = 'best academy for training in pondicherry';
+        document.getElementById('fita01').innerHTML = 'the length of sentence:' + fita.length;
+
+        const cars=['saab,volvo,BMW']
+        document.getElementById('array').innerHTML = 'the value in array:' + cars;
+
+        const car=[];
+        car[0]='BMW';
+        car[1]='volvo';
+        car[2]='saab';
+        document.getElementById('arraybynum').innerHTML = 'the value in array by numbering:' + car;
+
+
+        const bike= new Array('tvs','bmw')
+        document.getElementById('arraybyfunction').innerHTML = 'the value in array by function:' + bike;
+
+        const bikes= new Array('tvs','bmw')
+        document.getElementById('arrayfind').innerHTML = 'the value in array by find:' + bikes[0];
+    
+
+        const cars_=['saab','volvo','BMW']
+        cars_[0]='opel';
+        document.getElementById('arraytostring').innerHTML = 'the value in array to string:' + cars_.toString();
+
+
+        const d= new Date()
+        document.getElementById('arraydate').innerHTML = d;
+
+        const d_ = new Date("2004-09-27");
+        document.getElementById('arrayspecdate').innerHTML = d_;
+
+
+    </script><br>
+
+<p id="math"></p>
+
+<script>
+document.getElementById("math").innerHTML = 
+"<p><b>Math.E:</b> " + Math.E + "</p>" +
+"<p><b>Math.PI:</b> " + Math.PI + "</p>" +
+"<p><b>Math.SQRT2:</b> " + Math.SQRT2 + "</p>" +
+"<p><b>Math.SQRT1_2:</b> " + Math.SQRT1_2 + "</p>" +
+"<p><b>Math.LN2:</b> " + Math.LN2 + "</p>" +
+"<p><b>Math.LN10:</b> " + Math.LN10 + "</p>" +
+"<p><b>Math.LOG2E:</b> " + Math.LOG2E + "</p>" +
+"<p><b>Math.Log10E:</b> " + Math.LOG10E + "</p>";
+</script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
