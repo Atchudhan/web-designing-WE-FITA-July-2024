@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+<p id="d1"></p>
+<p id="d2"></p>
+<p id="d3"></p>
+<p id="d4"></p>
+<p id="d5"></p>
+
+
+<body>
+    <pre> 
+   formula for volume of frustum=(1/3)*(3.14)*(R*R+Rr+r*r)*(h)
+</pre>
+    <script>
+        h = 45;
+        R = 10;
+        r = 20;
+        R1 = 10 * 10;
+        r1 = 20 * 20;
+        e = 10 * 20;
+        f = 1 / 3;
+        t = 3.14;
+        y = R1 + e + r1;
+        u = f * t;
+        v = u * y * h;
+
+
+
+
+        document.getElementById("d1").innerHTML = "Formula for volume of frustum";
+        document.getElementById("d2").innerHTML = "height of frustum:" + h;
+        document.getElementById("d3").innerHTML = "radius of larger base:" + R;
+        document.getElementById("d4").innerHTML = "radius of smaller base:" + r;
+        document.getElementById("d5").innerHTML = "volume:" + v;
+    </script>
+
+</body>
+
+</html>
