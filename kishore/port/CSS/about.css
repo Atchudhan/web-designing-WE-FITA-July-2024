@@ -1,0 +1,27 @@
+.abt {
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    font-size: 20px;
+    font-weight: 250;
+    opacity: 0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: 1s;
+    margin: 20px 0;
+}
+
+.bdy {
+    text-align: justify;
+    width: 850px;
+}
+
+.img {
+    width: 500px;
+    height: 500px;
+    position: fixed;
+    top: 450px;
+    right: 50px;
+    opacity: 0;
+    animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+    animation-delay: 2.1s, 3.1s;
+}
