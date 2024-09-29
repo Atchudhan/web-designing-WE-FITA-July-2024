@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FONT-AWESOME-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <!--MAIN CSS-->
+    <link rel="stylesheet" href="portfolio2.css">
+    <title>portfolio</title>
+    <!--me resume link-->
+    <!-- Include html2pdf.js library from CDN 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    end -->
+
+    <head>
+        <!-- Include html2pdf.js library from CDN -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    </head>
+
+
+</head>
+
+<body>
+    <!--header design-->
+    <header class="header">
+        <a href="#" class="logo">portfolio</a>
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Technologies</a>
+            <a href="#portfolio">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <!--home section design-->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h3>Hi, Myself</h3>
+            <h1>Kanimozhi</h1>
+            <h3>And I'm a <span class="multiple-text"></span></h3>
+            <p>"I'm pursuing a B.Tech in Artificial Intelligence and Data Science at Achariya College of Engineering and Technology.I’m passionate about creating practical solutions that address real-world challenges. My experience spans Python programming,
+                web development, and full-stack projects, allowing me to design dynamic and user-friendly solutions. I thrive in challenging environments and constantly push my skills in AI and machine learning. I’m grateful for the unwavering support
+                , which fuels my drive to innovate and make a tangible impact. Let’s connect and explore opportunities where technology meets creativity!”
+            </p>
+
+            <div class="social-media">
+                <!-- <a href=""><i class="fa-brands fa-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>-->
+                <a href="https://github.com/Kanimozhi0818"><i class="fa-brands fa-github"></i></a>
+                <a href="mailto:kanimozhimeena77@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/itz___kani18/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/kanimozhi-v-9a7528291" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <!--<a href=""><i class="fa-brands fa-linkedin"></i></a>-->
+                <!--https://www.linkedin.com/in/kanimozhi-v-9a7528291-->
+
+            </div>
+            <!-- Download Button -->
+            <!--<button id="download-btn" class="btn">Download Resume as PDF</button>-->
+            <!--<a href="#" class="btn">Download CV</a>-->
+            <a href="kanimozhi cv resume.pdf" download="My_Resume" class="btn">Download Resume</a>
+        </div>
+        <div class="home-img">
+            <img src="IMG_20240912_133228.jpg" alt="">
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="IMG_20240912_105949.jpg" alt="">
+        </div>
+        <div class="about-content">
+            <h2 class="heading">ABOUT <span>Me</span></h2>
+            <h3>Frontend Developer</h3>
+            <p>
+                "I'm an enthusiastic B.Tech student in Artificial Intelligence and Data Science at Achariya College of Engineering and Technology. I’m passionate about developing innovative solutions to real-world problems through AI, machine learning, and full-stack
+                development. My skill set includes Python programming, web development, effective communication, typing, and project management, allowing me to excel in dynamic environments. With a blend of technical expertise and strong interpersonal
+                skills, I'm driven to explore new opportunities where technology meets creativity, and make a lasting impact."
+            </p>
+            <!--<a href="#" class="btn">Home Page </a>-->
+        </div>
+    </section>
+    <!--service-section design-->
+    <section class="services" id="services">
+        <h2 class="heading">Known <span>Technologies</span></h2>
+        <div class="services-container">
+            <div class="service-box">
+                <i class="fa-solid fa-code"></i>
+                <h3>Web Development</h3>
+                <p>"I provide web development services, focusing on creating responsive, user-friendly websites that are both visually appealing and highly functional. With expertise in front-end and back-end development, I deliver tailored solutions to
+                    help businesses establish a strong online presence and achieve their digital goals."</p>
+                <!--<a href="#" class="btn">Home Page</a>-->
+            </div>
+
+
+            <div class="service-box">
+                <i class="fa-solid fa-palette"></i>
+                <h3>Web </h3>
+                <h3>Design</h3>
+                <p>"I offer professional web design services focused on creating visually appealing, responsive, and user-friendly websites. Whether you need a new design or a revamp of your current site, I ensure a clean and modern look that enhances user
+                    experience and aligns with your brand’s goals. Let’s work together to create a website that truly stands out!"</p>
+                <!--<a href="#" class="btn">Home Page</a>-->
+            </div>
+            <div class="service-box">
+                <i class="fa-solid fa-database"></i>
+                <h3>Video Editing</h3>
+                <p>"Bringing your stories to life through seamless video editing. From concept to final cut, I transform raw footage into dynamic, engaging content that captivates your audience. Whether it's for marketing, social media, or film, each edit
+                    is crafted to deliver your message with precision and creativity. Let your visuals speak louder and leave a lasting impression."</p>
+                <!--<a href="#" class="btn">Home Page</a>-->
+            </div>
+
+
+
+        </div>
+    </section>
+    <!--portfolio-section design-->
+    <section class="portfolio" id="portfolio">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="portfolio-container">
+            <div class="portfolio-box">
+                <img src="DALL·E 2024-09-14 14.34.26 - An automatic street light system, featuring street lights powered by solar panels, connected to sensors that detect ambient light levels. The scene sh.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>
+                        INTELLIGENCE STREETLIGHT SYSTEM
+                    </h4>
+                    <p>Lighting the Way as People Approach, Enhancing Energy Efficiency and Urban Safety</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="Smart-Home-Automation-System-resized.jpg" alt="">
+                <div class="portfolio-layer">
+                    <h4>HOME AUTOMATION SYSTEM WITH IOT</h4>
+                    <p>Built a smart home automation system using IoT devices to control appliances remotely through a mobile app.
+                    </p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+
+            <div class="portfolio-box">
+                <img src="DALL·E 2024-09-15 08.50.53 - A futuristic scene of an electric vehicle driving on a highway with wireless charging technology integrated into the road. The vehicle is sleek and mo.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>WIRELESS CHARGING OF ELECTRIC VEHICLES WHILE MOVING </h4>
+                    <p>Wireless charging for electric vehicles in motion, paving the way for seamless and sustainable travel.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="portfolio-box">
+
+                <img src="DALL·E 2024-09-14 10.17.23 - A facial recognition system interface displaying a recognized face for an attendance system. The image shows a live camera feed with a highlighted squ.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>SMART ATTENDANCE SYSTEM WITH FACIAL RECOGNITION </h4>
+                    <p>Designed a smart attendance system using computer vision and AI .</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="DALL·E 2024-09-14 10.15.11 - A modern, responsive portfolio website displayed on different devices, including a desktop, tablet, and smartphone. The website showcases a clean, min.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>RESPONSIVE PORTFOLIO WEBSIDE</h4>
+                    <p>Built a modern, responsive portfolio website to showcase professional skills and projects, optimized for both desktop and mobile devices.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+            <div class="portfolio-box">
+                <img src="resized_image_2.webp" alt="">
+                <div class="portfolio-layer">
+                    <h4>AI Chatbot for Customer Support</h4>
+                    <p>Developed an AI chatbot capable of handling common customer queries and providing real-time support across various platforms.</p>
+                    <i class="fa-solid fa-up-right-from-square"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section Design -->
+    <section class="resume" id="resume">
+        <h2 class="heading">My <span>Resume</span></h2>
+
+        <!-- Personal Information -->
+        <div class="personal-info">
+            <h3><i class="fa-solid fa-user"></i> Personal Information</h3>
+            <ul>
+                <li><strong>Name:</strong> Kanimozhi </li>
+                <li><strong>Age:</strong> 18 </li>
+                <li><strong>Phone:</strong> +91 9487665203 </li>
+                <li><strong>Email:</strong> kanimozhimeena77@gmail.com </li>
+                <li><strong>Location:</strong> puducherry, India </li>
+            </ul>
+        </div>
+
+        <div class="resume-container">
+            <!-- Education Section -->
+            <div class="resume-box">
+                <h3><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+                <div class="resume-item">
+                    <h4>Bachelor of Artificial Intelligence and Data Science</h4>
+                    <span>Achariya College of Engineering Technology | 2023-2027</span>
+                    <p>Developing strong technical skills in Python, data analytics, and AI algorithms.</p>
+                </div>
+                <div class="resume-item">
+                    <h4>High School</h4>
+                    <span>Government Girls Higher Secondary School, Kadhirkamam, puducherry | 2021-2023</span>
+                    <p>Developed a strong foundation in problem-solving, analytical thinking, and communication skills.</p>
+                </div>
+            </div>
+
+            <!-- Experience Section -->
+            <div class="resume-box">
+                <h3><i class="fa-solid fa-briefcase"></i> Experience</h3>
+                <div class="resume-item">
+                    <h4>As a Intern</h4>
+                    <span>SUNZTER INNOVATIONS | 2024 <!-- Present--></span>
+                    <p>I completed my internship in SUNZTER INNOVATIONS from 24-06-2024 to 28-06-2024 </p>
+                    <p>Gained hands-on experience about solar panels.</p>
+                    <p>Collaborated with a dynamic team Developed practical insights into customber handling, solar panels.</p>
+                    </p>
+                </div>
+                <!--<div class="resume-item">
+                    <h4>Web Development Intern</h4>
+                    <span>Company Name | 2021 - 2022</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra nulla ut metus varius laoreet.</p>
+                </div>-->
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-box">
+                <h3><i class="fa-solid fa-tools"></i> Skills</h3>
+                <ul>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript</li>
+                    <li>React.js</li>
+                    <li>Responsive Web Design</li>
+                    <li>Senior Typist </li>
+                    <li>SQL</li>
+                    <li>Python</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Download Button 
+        <button id="download-btn" class="btn">Download Resume as PDF</button>
+    -->
+
+    </section>
+    <!--me download cv-->
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function() {
+            // Get the resume section
+            var element = document.getElementById('resume');
+
+            // Use html2pdf to generate the PDF
+            html2pdf(element, {
+                margin: 0.5,
+                filename: 'resume.pdf',
+                image: {
+                    type: 'jpeg',
+                    quality: 0.98
+                },
+                html2canvas: {
+                    scale: 2,
+                    logging: true,
+                    dpi: 192,
+                    letterRendering: true
+                },
+                jsPDF: {
+                    unit: 'in',
+                    format: 'letter',
+                    orientation: 'portrait'
+                }
+            });
+        });
+    </script>
+
+
+    <!--end-->
+
+    <!--contact-section design-->
+    <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me</span></h2>
+        <!--<form action="#">-->
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+
+            <input type="hidden" name="access_key" value="f97e7472-3c6f-457e-8ff0-b4780be10c20">
+            <div>
+                <div class="input-box">
+                    <input type="text" name="Full Name" placeholder="first name">
+                    <input type="email" name="Full Name" placeholder="Email Address">
+                </div>
+                <div class="input-box">
+                    <input type="number" name="Full Name" placeholder="Mobile Number">
+                    <input type="text" name="Full Name" placeholder="Email Subject">
+                </div>
+                <textarea name="Subject" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                <input type="submit" value="Send Message" class="btn">
+            </div>
+        </form>
+    </section>
+    <!--footer-section design-->
+    <footer class="footer">
+        <div class="footer-text">
+            <p>Copyright &copy; 2024 by @kanimozhi | All Rights Reserved.</p>
+        </div>
+        <div class="footer-iconTop">
+            <a href="#home">
+                <!--angle up-->
+                <i class="fa-solid fa-angle-up"></i></a>
+        </div>
+    </footer>
+    <!--scroll reveal js-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--typed js-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+
+    <!--main.js-section design-->
+    <script src="portfolio2.js"></script>
+
+
+</body>
+
+</html>
