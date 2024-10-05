@@ -595,6 +595,8 @@ h6 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  /* Center text within the section */
 }
 
 /*--------------------------------------------------------------
@@ -609,8 +611,6 @@ h6 {
   /* Reset margins */
   padding-bottom: 10px;
   /* Space between text and underline */
-  text-align: center;
-  /* Center align the title */
   font-size: 1.5rem;
   /* Base font size */
 }
@@ -661,30 +661,29 @@ h6 {
   /* For the underline */
 }
 
-.section-title h2:after {
+.section-title h2::after {
   content: "";
   display: block;
   width: 100%;
-  /*Dynamicwidthtomatchh2'swidth*/
+  /* Dynamic width to match h2's width */
   height: 5px;
-  /*Thicknessoftheunderline*/
+  /* Thickness of the underline */
   background: var(--accent-color);
   position: absolute;
-  left: 10;
-  /*Alignunderlinetotheleft*/
+  left: 0;
+  /* Align underline to the left */
   bottom: -10px;
-  /*Positionitjustbelowtheh2*/
+  /* Position it just below the h2 */
   transform: scaleX(0);
-  /*Startwithzerowidth*/
+  /* Start with zero width */
   transform-origin: left;
-  /*Startthescaleanimationfromtheleft*/
+  /* Start the scale animation from the left */
   opacity: 0;
-  /*Starthidden*/
+  /* Start hidden */
   animation: scaleIn 0.6s forwards;
-  /*Animationforunderline*/
+  /* Animation for underline */
   animation-delay: 0.6s;
   /* Delay for the underline animation */
-  -webkit-animation: scaleIn 0.6s forwards;
 }
 
 /* Keyframes for the underline animation */
@@ -703,17 +702,21 @@ h6 {
 /* Responsive Design: Adjust font size for smaller screens */
 @media (max-width: 768px) {
   .section-title h2 {
-    font-size: 200px;
+    font-size: 24px;
     /* Adjust font size for mobile devices */
-
-
+    
   }
 
-  .section-title h2:after {
-    height: 5px;
-    /* Adjust underline thickness for mobile */
+  .section-title h2::after {
+    display: 50px; /* Center the underline */
+    width: 200%; /* Adjust width to keep it centered */
+    position: relative; /* Reset to allow centering */
+    left: 2%; /* Center by shifting to the left */
+    bottom: -5px; /* Adjust positioning below the text */
+    height: 3px; /* Adjust underline thickness for mobile */
   }
 }
+
 
 .section-title p {
   font-size: 15px;
@@ -723,17 +726,15 @@ h6 {
   /* Add space between paragraph and heading */
 }
 
-.section-title h2:hover:after, .section-title h2:focus:after {
-  transform: translateX(-50%) scaleX(1);
-  /*Scaletofullwidth*/
+/* Hover effect */
+.section-title h2:hover::after,
+.section-title h2:focus::after {
+  transform: scaleX(1);
+  /* Scale to full width */
   opacity: 1;
-  /*Fadein*/
+  /* Fade in */
   transition: transform 0.5s ease, opacity 0.5s ease;
   /* Smooth transition */
-  -webkit-transform: translateX(-50%) scaleX(1);
-  -moz-transform: translateX(-50%) scaleX(1);
-  -ms-transform: translateX(-50%) scaleX(1);
-  -o-transform: translateX(-50%) scaleX(1);
 }
 
 /*--------------------------------------------------------------
@@ -874,6 +875,7 @@ h6 {
 }
 
 .scroll-down {
+
   position: absolute;
   bottom: 50px;
   left: 50%;
