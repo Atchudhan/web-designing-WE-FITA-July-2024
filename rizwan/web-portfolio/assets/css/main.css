@@ -699,24 +699,6 @@ h6 {
   }
 }
 
-/* Responsive Design: Adjust font size for smaller screens */
-@media (max-width: 768px) {
-  .section-title h2 {
-    font-size: 24px;
-    /* Adjust font size for mobile devices */
-    
-  }
-
-  .section-title h2::after {
-    display: 50px; /* Center the underline */
-    width: 200%; /* Adjust width to keep it centered */
-    position: relative; /* Reset to allow centering */
-    left: 2%; /* Center by shifting to the left */
-    bottom: -5px; /* Adjust positioning below the text */
-    height: 3px; /* Adjust underline thickness for mobile */
-  }
-}
-
 
 .section-title p {
   font-size: 15px;
@@ -740,36 +722,7 @@ h6 {
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-    /* Move back to original position */
-  }
-}
 
-@keyframes scaleIn {
-  to {
-    opacity: 1;
-    /* Fade in */
-    transform: scaleX(1);
-    /* Full width */
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title h2 {
-    font-size: 24px;
-    /* Smaller size for mobile */
-  }
-}
-
-@media (max-width: 768px) {
-  .section-title h2:after {
-    width: 100px;
-    /* Smaller width for mobile */
-  }
-}
 
 /*--------------------------------------------------------------
 # Hero Section
