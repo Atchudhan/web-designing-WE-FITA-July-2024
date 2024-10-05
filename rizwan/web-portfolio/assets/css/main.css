@@ -12,38 +12,6 @@
     overflow-x: hidden;
   }
 
-.button-container {
-  display: flex;                      /* Enable flexbox layout */
-  justify-content: space-between;     /* Space buttons between */
-  align-items: center;                /* Center align items vertically */
-  margin: 20px 0;                    /* Margin for spacing */
-  padding: 0 2cm;                    /* Padding for left/right spacing */
-}
-
-.neon-btn {
-  display: inline-block;              /* Button styling */
-  font-size: 20px;                   /* Font size */
-  padding: 10px 15px;                /* Padding */
-  color: #fff;                       /* Text color */
-  background-color: #007bff;         /* Background color */
-  border: 2px solid transparent;      /* Border styling */
-  border-radius: 8px;                /* Rounded corners */
-  text-decoration: none;              /* No underline */
-  cursor: pointer;                    /* Pointer cursor on hover */
-  position: relative;                 /* Positioning */
-  overflow: hidden;                   /* Hide overflow */
-  transition: all 0.3s ease;         /* Transition for hover effect */
-}
-
-/* Button hover effect */
-.neon-btn:hover {
-  background-color: #0056b3;         /* Darker background on hover */
-}
-
-/* Icon styling */
-.neon-btn i {
-  margin-right: 10px;                /* Space between icon and text */
-}
 
 
   .container {
@@ -232,7 +200,7 @@ h6 {
 }
 
 .header .social-links {
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 
 .header.social-links a:hover {
@@ -343,33 +311,89 @@ h6 {
   font-size: 2rem;
 }
 
+/* Style for the Navigation Menu */
 .navmenu {
-  padding: 0;
-  z-index: 9997;
+  padding: 20px; /* Increased padding for a spacious layout */
   display: flex;
-  /* Hidden by default */
   flex-direction: column;
-  /* Stack items vertically */
-  padding: 10px;
-  /* Padding around the menu */
-  background-color: #111;
-  /* Dark background for contrast */
-  display: flex;
-  align-items: left;
-  justify-content: space-between;
-  padding: 10px;
+  align-items: stretch; /* Stretch items to take full width */
+  background-color: var(--background-color); /* Match header background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 100%; /* Full width of the header */
 }
 
-/* Initially hide the navmenu on small screens */
-#navmenu {
-  display: none;
-  opacity: 0;
-  transition: all 0.5s ease;
+/* Remove bullets and set margin/padding */
+.navmenu ul {
+  list-style: none; /* Remove bullets */
+  margin: 0;
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for each list item */
+.navmenu ul li {
+  margin: 15px 0; /* Added vertical spacing */
+  transition: transform 0.2s; /* Smooth transformation on hover */
+}
+
+/* Styling for links */
+.navmenu a {
+  text-decoration: none;
+  font-size: 18px; /* Font size for links */
+  color: var(--nav-color); /* Color for links */
+  padding: 15px 20px; /* Padding for better touch targets */
+  border-radius: 5px; /* Rounded corners for links */
+  position: relative; /* Position for pseudo-elements */
+  overflow: hidden; /* Prevent overflow for pseudo-elements */
+}
+
+/* Hover effect for links */
+.navmenu a:hover {
+  color: var(--contrast-color); /* Hover text color */
+  background-color: var(--accent-color); /* Background color on hover */
+}
+
+/* Adding an attractive border effect on hover */
+.navmenu a:before {
+  content: ''; /* Pseudo-element for border effect */
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay effect */
+  top: 0;
+  left: 0;
+  z-index: 0; /* Behind the text */
+  transform: translateY(-100%); /* Start position above the link */
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+/* Show the overlay effect on hover */
+.navmenu a:hover:before {
+  transform: translateY(0); /* Move down to reveal */
+}
+
+/* Add a subtle shadow effect to the links on hover */
+.navmenu a:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+/* Ensure the nav menu is always visible on all screens */
+@media (max-width: 768px) {
+  .navmenu {
+      display: flex; /* Always display as flex */
+      padding: 20px; /* Maintain padding on mobile */
+  }
+  .navmenu ul li {
+      margin: 15px 0; /* Maintain vertical spacing on mobile */
+  }
+  .navmenu a {
+      font-size: 18px; /* Same font size for mobile */
+  }
 }
 
 /* When 'open' class is added, display the navmenu */
 #navmenu.open {
-  display: block;
+  display: flex;
   opacity: 1;
 }
 
@@ -388,14 +412,6 @@ h6 {
 .navmenu .logo {
   margin-right: 8px;
   /* Align logo to the left */
-}
-
-.navmenu ul li a {
-  text-decoration: none;
-  font-size: 24px;
-  display: block;
-  align-items: center;
-  padding: 10px;
 }
 
 .navmenu i {
@@ -428,21 +444,6 @@ h6 {
   -o-transform: scale(1.2);
 }
 
-.navmenu ul {
-  list-style: none;
-  margin: 0;
-  flex-direction: column;
-  text-align: center;
-  display: flex;
-  list-style: none;
-  padding: 0;
-
-}
-
-.navmenu ul li {
-  margin: 0 15px;
-}
-
 .navmenu.active ul {
   display: flex;
 }
@@ -464,6 +465,39 @@ h6 {
   -ms-transition: 0.3s;
   -o-transition: 0.3s;
 }
+.button-container {
+  display: flex;                      /* Enable flexbox layout */
+  justify-content: space-between;     /* Space buttons between */
+  align-items: center;                /* Center align items vertically */
+  margin: 20px 0;                    /* Margin for spacing */
+  padding: 0 2cm;                    /* Padding for left/right spacing */
+}
+
+.neon-btn {
+  display: inline-block;              /* Button styling */
+  font-size: 20px;                   /* Font size */
+  padding: 10px 15px;                /* Padding */
+  color: #fff;                       /* Text color */
+  background-color: #007bff;         /* Background color */
+  border: 2px solid transparent;      /* Border styling */
+  border-radius: 8px;                /* Rounded corners */
+  text-decoration: none;              /* No underline */
+  cursor: pointer;                    /* Pointer cursor on hover */
+  position: relative;                 /* Positioning */
+  overflow: hidden;                   /* Hide overflow */
+  transition: all 0.3s ease;         /* Transition for hover effect */
+}
+
+/* Button hover effect */
+.neon-btn:hover {
+  background-color: #0056b3;         /* Darker background on hover */
+}
+
+/* Icon styling */
+.neon-btn i {
+  margin-right: 10px;                /* Space between icon and text */
+}
+
 
 .navmenu a .navicon,
 .navmenu a:focus .navicon {
@@ -524,10 +558,6 @@ h6 {
   -o-transform: rotate(180deg);
 }
 
-.navmenu.open {
-  display: flex;
-  /* Show the menu */
-}
 
 /* Hide the default navigation menu on mobile */
 @media (max-width: 768px) {
@@ -535,29 +565,6 @@ h6 {
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-}
-
-@media (max-width:768px) {
-  .header-toggle {
-    display: flex;
-    /* Show the toggle button on mobile */
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* Ensure the navmenu has position and width set for mobile */
-  .navmenu {
-    position: absolute;
-    top: 70px;
-    /* Adjust based on header height */
-    right: 0;
-    width: 100%;
-    background-color: #ffffff;
-    /* Add a background color for better contrast */
-    z-index: 1000;
-    /* Ensure it is above other elements */
   }
 }
 
