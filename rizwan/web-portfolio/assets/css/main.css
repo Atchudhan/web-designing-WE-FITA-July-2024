@@ -377,16 +377,23 @@ h6 {
 }
 
 .navmenu a span {
-  opacity: 0;
-  transform: translateX(-50px);
+  opacity: 1;
+  transform: translateX(-5px);
   transition: all 0.3s ease;
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
 }
 
 .navmenu a:hover span {
   opacity: 1;
   transform: translateX(0);
   color: var(--contrast-color);
-  /* Text color on hover */
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
 }
 
 .navmenu a:hover {
