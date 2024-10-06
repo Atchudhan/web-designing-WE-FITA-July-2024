@@ -5,14 +5,14 @@
 /* Fonts */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 0px;
+    width: 100%;
+    
   }
 
   body {
     overflow-x: hidden;
   }
-
-
 
   .container {
     display: flex;
@@ -106,7 +106,8 @@ body {
   /* Reset default margin */
   padding-left: 199px;
   /* Adjust this value to match the width of your header */
-
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Stack elements vertically */
 }
 
 a {
@@ -190,42 +191,33 @@ h6 {
 
 /* Header Open State */
 .header.open {
-  transform: translateX(100vw);
-  -webkit-transform: translateX(100vw);
-  -moz-transform: translateX(100vw);
-  -ms-transform: translateX(100vw);
-  -o-transform: translateX(100vw);
+  transform: translateX(0); /* Show header */
 }
-
 /* Mobile Specific Styles */
-@media (max-width: 768px) {
-  .header {
-    width: 100%;
-    /* Full width for mobile */
-  }
 
-  .header.open {
-    width: 100%;
-    /* Ensure full width when open */
-  }
 
-  .header.closed {
-    transform: translateX(-100%);
-    /* Slide out of view completely */
-  }
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  /*Takeremainingspace*/padding: 20px;
+  /*Addsomepadding*/transition: margin-left 0.3s ease;
+  -webkit-transition: margin-left 0.3s ease;
+  -moz-transition: margin-left 0.3s ease;
+  -ms-transition: margin-left 0.3s ease;
+  -o-transition: margin-left 0.3s ease;
 }
 
+/* Add this to ensure the content shifts correctly */
+.header.open + .main-content {
+  margin-left: 200px; /* Adjust margin for the width of the header */
+}
+
+/* Adjust other styles as necessary */
 /* Rest of your CSS remains the same */
 
 
 /* Mobile Specific Styles */
-@media (max-width: 768px) {
-  .header {
-    width: 200px;
-    /* Full width for mobile */
-  }
 
-}
 
 /* Rest of your CSS remains the same */
 
@@ -250,48 +242,40 @@ h6 {
 
 .header .logo-img {
   width: 60px;
-  /*Adjustsizeforthelogo*/
-  max-height: 60px;
-  /*Adjustedsize*/
-  margin-right: 8px;
-  /*Adjustsizeforthelogo*/
-  border: 5px solid rgba(255, 255, 255, 0.2);
-  border-radius: 60%;
-  /*Keepstheimagecircular*/
-  animation: rotate-color 3s infinite linear;
-  -webkit-border-radius: 60%;
-  -moz-border-radius: 60%;
-  -ms-border-radius: 60%;
-  -o-border-radius: 60%;
+  /*Adjustsizeforthelogo*/max-height: 60px;
+  /*Adjustedsize*/margin-right: 8px;
+  /*Adjustsizeforthelogo*/border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  /*Keepstheimagecircular*/animation: rotate-color 3s infinite linear;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
-
-/* Smooth transformation */
+  /* Smooth transformation */
 
 
 /* Header logo image rotation */
 .header .logo-img {
   transition: transform 0.3s ease;
-  /* Smooth transition */
+   
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  -ms-transition: transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
 }
 
 .header .logo-img:hover {
   animation: colorRotate 3s infinite linear;
-  /* Color rotation on hover */
+   
+  -webkit-animation: colorRotate 3s infinite linear;
 }
 
 /* Keyframes for color rotation */
 @keyframes colorRotate {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-
-  50% {
-    filter: hue-rotate(360deg);
-  }
-
-  100% {
-    filter: hue-rotate(0deg);
-  }
+  0% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(360deg); }
+  100% { filter: hue-rotate(0deg); }
 }
 
 /* Animation for the logo image */
@@ -299,11 +283,9 @@ h6 {
   0% {
     filter: hue-rotate(0deg);
   }
-
   50% {
     filter: hue-rotate(180deg);
   }
-
   100% {
     filter: hue-rotate(360deg);
   }
@@ -409,22 +391,6 @@ h6 {
   /* Active item highlighting */
 }
 
-@media (max-width: 768px) {
-  .navmenu {
-    width: 80%;
-    padding: 20px;
-  }
-
-  .navmenu ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  .navmenu ul li {
-    margin-bottom: 35px;
-  }
-}
-
 
 --------------------------------------------------------------*/
 
@@ -499,7 +465,11 @@ h6 {
   50% {
     transform: scale(1.1);
     opacity: 0.4;
-  }
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
 }
 
 /*--------------------------------------------------------------
@@ -844,7 +814,7 @@ h6 {
   display: inline-block;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-
+  
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
