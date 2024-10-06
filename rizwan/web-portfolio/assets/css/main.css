@@ -102,9 +102,11 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  margin: 0; /* Reset default margin */
-  padding-left: 199px; /* Adjust this value to match the width of your header */
-  
+  margin: 0;
+  /* Reset default margin */
+  padding-left: 199px;
+  /* Adjust this value to match the width of your header */
+
 }
 
 a {
@@ -169,9 +171,12 @@ h6 {
   left: 0;
   bottom: 0;
   padding: 0 15px;
-  width: 200px; /* This width is for larger screens */
-  transition: transform 0.3s ease; /* Use transform for sliding */
-  overflow-y: hidden; /* Prevent scrolling when header is closed */
+  width: 200px;
+  /* This width is for larger screens */
+  transition: transform 0.3s ease;
+  /* Use transform for sliding */
+  overflow-y: hidden;
+  /* Prevent scrolling when header is closed */
   z-index: 997;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -179,7 +184,8 @@ h6 {
 
 /* Initially hide the header */
 .header.closed {
-  transform: translateX(-100vw); /* Slide out of view completely */
+  transform: translateX(-100vw);
+  /* Slide out of view completely */
 }
 
 /* Header Open State */
@@ -194,15 +200,18 @@ h6 {
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
   .header {
-    width: 100%; /* Full width for mobile */
+    width: 100%;
+    /* Full width for mobile */
   }
 
   .header.open {
-    width: 100%; /* Ensure full width when open */
+    width: 100%;
+    /* Ensure full width when open */
   }
 
   .header.closed {
-    transform: translateX(-100%); /* Slide out of view completely */
+    transform: translateX(-100%);
+    /* Slide out of view completely */
   }
 }
 
@@ -212,13 +221,13 @@ h6 {
 /* Mobile Specific Styles */
 @media (max-width: 768px) {
   .header {
-    width: 200px; /* Full width for mobile */
+    width: 200px;
+    /* Full width for mobile */
   }
 
 }
 
 /* Rest of your CSS remains the same */
-
 
 /* Header Content Styling */
 .header-content {
@@ -234,21 +243,82 @@ h6 {
 .header .logo {
   display: flex;
   align-items: center;
-  margin-right: 10px;
+  margin-right: 15px;
+  line-height: 1;
   /* Reduced margin to decrease space */
 }
 
 .header .logo-img {
   width: 60px;
-  /* Adjust size for the logo */
-  height: 60px;
-  /* Adjust size for the logo */
+  /*Adjustsizeforthelogo*/
+  max-height: 60px;
+  /*Adjustedsize*/
+  margin-right: 8px;
+  /*Adjustsizeforthelogo*/
   border: 5px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  /* Keeps the image circular */
-  transition: transform 0.3s;
-  /* Smooth transformation */
+  border-radius: 60%;
+  /*Keepstheimagecircular*/
+  animation: rotate-color 3s infinite linear;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  -ms-border-radius: 60%;
+  -o-border-radius: 60%;
 }
+
+/* Smooth transformation */
+
+
+/* Header logo image rotation */
+.header .logo-img {
+  transition: transform 0.3s ease;
+  /* Smooth transition */
+}
+
+.header .logo-img:hover {
+  animation: colorRotate 3s infinite linear;
+  /* Color rotation on hover */
+}
+
+/* Keyframes for color rotation */
+@keyframes colorRotate {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(360deg);
+  }
+
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+/* Animation for the logo image */
+@keyframes rotate-color {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(180deg);
+  }
+
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Name animation in the header */
+.header .logo h1 {
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.header .logo:hover h1 {
+  transform: scale(1.1);
+}
+
 
 .header .logo-img:hover {
   transform: scale(1.1);
@@ -768,11 +838,22 @@ h6 {
 
 /* Social Icons Styling */
 .social-icons {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 20px;
-  border-radius: 10px;
+  background: transparent;
+  padding: 10px;
+  border-radius: 30px;
   display: inline-block;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+}
+
+.social-icons:hover {
+  transform: scale(1.05);
+  /* Slightly scale up on hover */
 }
 
 .social-icons a {
@@ -782,33 +863,61 @@ h6 {
 
 .social-icons i {
   color: #fff;
-  font-size: 24px;
+  font-size: 28px;
+  /* Increased icon size */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
-  padding: 10px;
+  padding: 15px;
+  /* More padding for a larger clickable area */
+  border-radius: 50%;
+  /* Circular shape */
+  background: rgba(255, 255, 255, 0.1);
+  /* Subtle background */
 }
 
 .social-icons a:hover i {
   transform: scale(1.2);
+  /* Scale up icon size on hover */
   color: #f9d423;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  /* Change color on hover */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  /* Enhanced shadow effect */
 }
 
 .social-icons a:hover {
   transform: translateY(-5px);
+  /* Move the link up on hover */
 }
 
 /* Specific Social Media Hover Colors */
 .social-icons i.bi-twitter:hover {
   color: #1DA1F2;
+  /* Twitter color */
 }
 
 .social-icons i.bi-instagram:hover {
   color: #C13584;
+  /* Instagram color */
 }
 
 .social-icons i.bi-linkedin:hover {
   color: #0077b5;
+  /* LinkedIn color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .social-icons {
+    padding: 30px;
+    /* Adjust padding for smaller screens */
+  }
+
+  .social-icons i {
+    font-size: 24px;
+    /* Smaller icons on mobile */
+    padding: 10px;
+    /* Reduce padding */
+  }
 }
 
 /* Scroll Down Icon Animation */
