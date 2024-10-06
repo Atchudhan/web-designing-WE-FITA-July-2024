@@ -157,6 +157,7 @@ h6 {
 # Header Styles
 --------------------------------------------------------------*/
 /* Header Styles */
+/* Header Styles */
 .header {
   color: var(--default-color);
   background-color: #111;
@@ -180,7 +181,11 @@ h6 {
 
 /* Header Open State */
 .header.open {
-  transform: translateX(0); /* Move into view */
+  transform: translateX(100vw);
+  -webkit-transform: translateX(100vw);
+  -moz-transform: translateX(100vw);
+  -ms-transform: translateX(100vw);
+  -o-transform: translateX(100vw);
 }
 
 /* Mobile Specific Styles */
@@ -196,6 +201,17 @@ h6 {
   .header.closed {
     transform: translateX(-100%); /* Slide out of view completely */
   }
+}
+
+/* Rest of your CSS remains the same */
+
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .header {
+    width: 200px; /* Full width for mobile */
+  }
+
 }
 
 /* Rest of your CSS remains the same */
@@ -323,6 +339,7 @@ h6 {
 @media (max-width: 768px) {
   .navmenu {
     width: 80%;
+    padding: 20px;
   }
 
   .navmenu ul {
@@ -331,7 +348,7 @@ h6 {
   }
 
   .navmenu ul li {
-    margin-bottom: 0;
+    margin-bottom: 35px;
   }
 }
 
