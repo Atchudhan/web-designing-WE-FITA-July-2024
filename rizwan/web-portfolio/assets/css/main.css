@@ -734,6 +734,7 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+/* General Hero Styling */
 .hero {
   width: 100%;
   min-height: 100vh;
@@ -751,17 +752,19 @@ h6 {
   background-size: cover;
 }
 
+/* Overlay */
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-  /* Adjust opacity for better contrast */
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  /* Fixing background-image syntax */
   z-index: 1;
 }
 
+/* Hero Image Hover Effect */
 .hero img {
   position: absolute;
   inset: 0;
@@ -774,6 +777,17 @@ h6 {
 
 #hero img:hover {
   transform: scale(1.2);
+  transition: transform 0.6s ease-in-out;
+}
+
+/* Title Styling with Hover */
+#hero h2 {
+  font-size: 3rem;
+  margin: 20px 0;
+  animation: slide-in-left 1s forwards;
+  z-index: 2;
+  color: #fff;
+  text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
 }
 
 #hero h2:hover {
@@ -781,38 +795,34 @@ h6 {
   transition: color 0.3s ease-in-out;
 }
 
-#hero h2 {
-  font-size: 3rem;
-  margin: 20px 0;
-  animation: slide-in-left 1s forwards;
-  z-index: 2;
-  /* To ensure it appears above the overlay */
-  color: #fff;
-  text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
-}
-
+/* Description Styling */
 #hero p {
   z-index: 2;
-  /* To ensure it appears above the overlay */
   text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
 }
 
+/* Call to Action Button */
 .btn-primary {
   animation: pulse 2s infinite;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .btn {
   z-index: 100;
   position: relative;
-  border: 2px solid red;
-  transition: transform 0.3s;
-  /* Just for debugging */
+  border: none;
+  padding: 12px 28px;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 5px;
 }
 
 .btn:hover {
+  background-color: #ff7800;
   transform: scale(1.05);
 }
 
+/* Pulse Animation for CTA Button */
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -827,15 +837,53 @@ h6 {
   }
 }
 
+/* Social Icons Styling */
 .social-icons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-.scroll-down {
+.social-icons a {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
 
+.social-icons i {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  padding: 10px;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+  color: #f9d423;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+/* Specific Social Media Hover Colors */
+.social-icons i.bi-twitter:hover {
+  color: #1DA1F2;
+}
+
+.social-icons i.bi-instagram:hover {
+  color: #C13584;
+}
+
+.social-icons i.bi-linkedin:hover {
+  color: #0077b5;
+}
+
+/* Scroll Down Icon Animation */
+.scroll-down {
   position: absolute;
   bottom: 50px;
   left: 50%;
@@ -856,7 +904,7 @@ h6 {
   }
 }
 
-/* Animations */
+/* Title and Description Animations */
 @keyframes slide-in-left {
   from {
     transform: translateX(-100%);
@@ -864,10 +912,6 @@ h6 {
 
   to {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
   }
 }
 
@@ -877,13 +921,11 @@ h6 {
   }
 }
 
+/* Animated Title */
 .animated-title {
   font-size: 2.5rem;
-  /* Adjust size as needed */
   animation: slideIn 1s forwards, colorChange 3s infinite alternate;
-  /* Combine slide in and color change */
   margin-bottom: 15px;
-  /* Spacing below title */
 }
 
 @keyframes slideIn {
@@ -901,20 +943,17 @@ h6 {
 @keyframes colorChange {
   0% {
     color: #ff9800;
-    /* Original color */
   }
 
   100% {
     color: #00c4ff;
-    /* New color */
   }
 }
 
+/* Animated Description */
 .animated-description {
   font-size: 1.5rem;
-  /* Adjust size as needed */
   animation: fadeIn 1.5s forwards, textShadow 2s infinite alternate;
-  /* Combine fade in and shadow */
 }
 
 @keyframes fadeIn {
@@ -936,6 +975,77 @@ h6 {
 
   100% {
     text-shadow: 0 0 10px rgba(0, 196, 255, 0.7), 0 0 15px rgba(0, 196, 255, 0.5);
+  }
+}
+
+/* Parent container for social links and scroll-down */
+.get-in-touch-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+/* Social Icons */
+.social-icons {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px; /* Spacing between social icons and scroll-down */
+}
+
+.social-icons a {
+  text-decoration: none;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons i {
+  color: #fff;
+  font-size: 24px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  padding: 10px;
+}
+
+.social-icons a:hover i {
+  transform: scale(1.2);
+  color: #f9d423;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+}
+
+/* Scroll Down */
+.scroll-down {
+  font-size: 24px;
+  color: white;
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Alignments on Mobile */
+@media (max-width: 768px) {
+  .get-in-touch-container {
+    bottom: 30px;
   }
 }
 
