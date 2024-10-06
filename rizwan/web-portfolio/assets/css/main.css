@@ -1599,6 +1599,48 @@ button {
   font-size: 24px;
 }
 
+/* Button Section */
+.button-section {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Neon Button Styles */
+.neon-btn {
+  text-decoration: none;
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  border-radius: 50px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  box-shadow: 0 0 20px rgba(255, 152, 0, 0.5), 0 0 40px rgba(255, 87, 34, 0.3);
+  transition: 0.4s ease-in-out;
+  position: relative;
+  display: inline-block;
+}
+
+/* Icon Alignment */
+.neon-btn i {
+  margin-right: 8px;
+}
+
+/* Hover and Focus Effects */
+.neon-btn:hover,
+.neon-btn:focus {
+  box-shadow: 0 0 30px rgba(255, 152, 0, 0.7), 0 0 60px rgba(255, 87, 34, 0.6);
+  transform: scale(1.05);
+}
+
+/* Click Effect */
+.neon-btn:active {
+  transform: scale(0.98);
+}
+
+
 /* Portfolio Section */
 .portfolio {
   padding: 50px 0;
