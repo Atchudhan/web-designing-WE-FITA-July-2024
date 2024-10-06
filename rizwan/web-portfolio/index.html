@@ -995,21 +995,7 @@
     });
   </script>
 
-  <script>
-    const navLinks = document.querySelectorAll('#navmenu ul li a');
 
-    window.addEventListener('scroll', () => {
-      const scrollPos = window.scrollY;
-
-      navLinks.forEach(link => {
-        const section = document.querySelector(link.getAttribute('href'));
-        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
-          navLinks.forEach(link => link.classList.remove('active'));
-          link.classList.add('active');
-        }
-      });
-    });
-  </script>
 
   <script>
     function toggleMenu() {
@@ -1024,7 +1010,55 @@
     });
   </script>
 
+  <script>// JavaScript to handle header visibility and navigation functionalities
+    const header = document.getElementById('header');
+    const navLinks = document.querySelectorAll('#navmenu ul li a');
+    let headerClosed = true; // Initialize as closed
 
+    // Function to toggle header visibility
+    function toggleHeader() {
+      headerClosed = !headerClosed; // Toggle state
+      header.classList.toggle('open', !headerClosed); // Add open class if header is being opened
+      header.classList.toggle('closed', headerClosed); // Add closed class if header is being closed
+    }
+
+    // Event Listener for the header toggle button
+    document.getElementById('header-toggle').addEventListener('click', toggleHeader);
+
+    // Function to handle scroll event and set active class on navigation links
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY;
+
+      navLinks.forEach(link => {
+        const section = document.querySelector(link.getAttribute('href'));
+        if (section.offsetTop <= scrollPos && section.offsetTop + section.offsetHeight > scrollPos) {
+          navLinks.forEach(link => link.classList.remove('active'));
+          link.classList.add('active');
+        }
+      });
+    });
+
+    // Add hover effects to navigation links
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', function () {
+        link.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'; // Change background on hover
+        link.style.color = 'var(--accent-color)'; // Change text color on hover
+      });
+
+      link.addEventListener('mouseout', function () {
+        link.style.backgroundColor = ''; // Reset background on mouse out
+        link.style.color = 'var(--nav-color)'; // Reset text color on mouse out
+      });
+    });
+
+    // To manage the active class for the current link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        navLinks.forEach(nav => nav.classList.remove('active')); // Remove active class from all
+        link.classList.add('active'); // Add active class to the clicked link
+      });
+    });
+  </script>
 
 
 
