@@ -23,6 +23,60 @@
     --main-color: #59B2F4;
 }
 
+.container {
+    perspective: 1000px;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.9;
+}
+
+
+/* Ensure correct positioning of cube faces */
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
 html {
     font-size: 62.5%;
     /*doubt*/
@@ -62,6 +116,7 @@ section {
 .logo {
     font-size: 2.5rem;
     color: var(--text-color);
+    background-color: transparent;
     /*for thickness of the text */
     font-weight: 700;
     cursor: default;
@@ -237,6 +292,9 @@ span {
     margin: 2rem 0 3rem;
 }
 
+
+/* Services Section */
+
 .services h2
 /*for my services*/
 
@@ -286,6 +344,53 @@ span {
     font-size: 1.6rem;
     /*1rem for top 3rem for bottom*/
     margin: 1rem 0 3rem;
+}
+
+
+/* Mobile View Adjustments */
+
+@media (max-width: 768px) {
+    .services h2 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    .services-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .services-container .service-box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        flex: none;
+    }
+    .services-container .service-box i {
+        font-size: 5rem;
+    }
+    .services-container .service-box h3 {
+        font-size: 2.2rem;
+    }
+    .services-container .service-box p {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Very Small Mobile Adjustments */
+
+@media (max-width: 450px) {
+    .services h2 {
+        font-size: 3rem;
+    }
+    .services-container .service-box {
+        padding: 1.5rem;
+    }
+    .services-container .service-box h3 {
+        font-size: 2rem;
+    }
+    .services-container .service-box p {
+        font-size: 1.8rem;
+    }
 }
 
 .portfolio {
@@ -366,30 +471,71 @@ span {
     color: var(--snd-bg-color);
 }
 
+.portfolio-layer {
+    position: relative;
+    perspective: 1000px;
+    /* Adding perspective for 3D effect */
+}
 
-/*for 3d */
+
+/*for 3d*/
+
+
+/* 3D Perspective */
+
+body {
+    perspective: 1000px;
+    /* Adjust perspective distance */
+}
+
+
+/* 3D Effect on Portfolio Section */
+
+.portfolio-box {
+    transition: transform 0.5s ease;
+    transform-style: preserve-3d;
+    /* Ensure children maintain 3D space */
+}
+
+.portfolio-box.active {
+    transform: rotateY(180deg);
+    /* Rotate on click */
+}
+
+
+/* Style for additional info */
 
 .additional-info {
-    display: none;
-    /* Initially hide the additional info */
-    transform: perspective(600px) rotateY(90deg);
-    /* 3D rotation effect */
-    transition: transform 0.6s ease, display 0.6s ease;
+    transition: opacity 0.5s ease;
     opacity: 0;
-    /* Make it invisible */
+    /* Start as invisible */
 }
 
-
-/*for 3d */
-
-.show {
-    display: block;
-    /* Show the additional info */
-    transform: perspective(600px) rotateY(0deg);
-    /* Turn back to normal position */
+.additional-info.active {
     opacity: 1;
-    /* Make it visible */
+    /* Become visible */
 }
+
+
+/* Optional: Adding a transition on reveal */
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Adjust gap between items */
+}
+
+.portfolio-layer {
+    position: relative;
+    /* Required for positioning additional info */
+}
+
+
+/* Add any other styles you need for your design */
+
+
+/*for 3d*/
 
 .contact h2 {
     margin-bottom: 3rem;
@@ -671,4 +817,211 @@ span {
     .contact form .input-box input {
         width: 100%
     }
+}
+
+
+/*for dark and light mode , color*/
+
+
+/* Base Variables for Light and Dark Themes */
+
+
+/* Dark Theme */
+
+body.dark-mode {
+    --bg-color: #191f36;
+    /* Dark background */
+    --snd-bg-color: #262B40;
+    /* Dark secondary background */
+    --text-color: #ffffff;
+    /* Light text for dark mode */
+    --main-color: #59B2F4;
+    /* Default main color */
+}
+
+
+/* Light Theme (Default) */
+
+body.light-mode {
+    --bg-color: #f4f4f9;
+    /* Light background */
+    --snd-bg-color: #e0e0e0;
+    /* Light secondary background */
+    --text-color: #333;
+    /* Dark text for light mode */
+    --main-color: #59B2F4;
+    /* Default main color */
+}
+
+
+/* Section-specific background colors */
+
+
+/* Section 1: Home */
+
+section#home {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 2: Services */
+
+section#services {
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 3: Portfolio */
+
+section#portfolio {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 4: Contact */
+
+section#contact {
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+
+
+/* Color Themes */
+
+
+/* Blue Theme */
+
+body.blue-theme {
+    --main-color: #59B2F4;
+    /* Blue main color */
+}
+
+
+/* Green Theme */
+
+body.green-theme {
+    --main-color: #66BB6A;
+    /* Green main color */
+}
+
+
+/* Red Theme */
+
+body.red-theme {
+    --main-color: #E57373;
+    /* Red main color */
+}
+
+
+/* Purple Theme */
+
+body.purple-theme {
+    --main-color: #BA68C8;
+    /* Purple main color */
+}
+
+
+/* Orange Theme */
+
+body.orange-theme {
+    --main-color: #FFB74D;
+    /* Orange main color */
+}
+
+
+/* Teal Theme */
+
+body.teal-theme {
+    --main-color: #4DB6AC;
+    /* Teal main color */
+}
+
+
+/* Applying the variables */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Navbar and buttons */
+
+header,
+.navbar,
+button,
+a {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Optional button styling for toggles */
+
+#dark-light-btn,
+#color-mode-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Show color options after clicking 'Change Color' */
+
+#color-options {
+    display: none;
+    margin-top: 10px;
+}
+
+#color-options.active {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Styling each color box */
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.color-box.blue {
+    background-color: #59B2F4;
+}
+
+.color-box.green {
+    background-color: #66BB6A;
+}
+
+.color-box.red {
+    background-color: #E57373;
+}
+
+.color-box.purple {
+    background-color: #BA68C8;
+}
+
+.color-box.orange {
+    background-color: #FFB74D;
+}
+
+.color-box.teal {
+    background-color: #4DB6AC;
 }
