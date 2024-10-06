@@ -156,6 +156,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header Styles
 --------------------------------------------------------------*/
+/* Header Styles */
 .header {
   color: var(--default-color);
   background-color: #111;
@@ -164,11 +165,9 @@ h6 {
   left: 0;
   bottom: 0;
   padding: 0 15px;
-  width: 200px;
-  transition: transform 0.3s ease;
-  /* Use transform for sliding */
-  overflow-y: hidden;
-  /* Prevent scrolling when header is closed */
+  width: 200px; /* This width is for larger screens */
+  transition: transform 0.3s ease; /* Use transform for sliding */
+  overflow-y: hidden; /* Prevent scrolling when header is closed */
   z-index: 997;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -176,9 +175,31 @@ h6 {
 
 /* Initially hide the header */
 .header.closed {
-  transform: translateX(-100%);
-  /* Slide out of view */
+  transform: translateX(-100vw); /* Slide out of view completely */
 }
+
+/* Header Open State */
+.header.open {
+  transform: translateX(0); /* Move into view */
+}
+
+/* Mobile Specific Styles */
+@media (max-width: 768px) {
+  .header {
+    width: 100%; /* Full width for mobile */
+  }
+
+  .header.open {
+    width: 100%; /* Ensure full width when open */
+  }
+
+  .header.closed {
+    transform: translateX(-100%); /* Slide out of view completely */
+  }
+}
+
+/* Rest of your CSS remains the same */
+
 
 /* Header Content Styling */
 .header-content {
@@ -314,17 +335,6 @@ h6 {
   }
 }
 
-/* Header Open State */
-.header.open {
-  transform: translateX(200px);
-  /* Move into view */
-}
-
-/* Optional: Header Closed State */
-.header.closed {
-  transform: translateX(-200px);
-  /* Move out of view */
-}
 
 --------------------------------------------------------------*/
 
