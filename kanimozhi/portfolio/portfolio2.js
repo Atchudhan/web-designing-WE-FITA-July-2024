@@ -57,15 +57,47 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true,
 });
-/================ for 3d ================/
-document.querySelectorAll('.know-more-btn').forEach(button => {
-    button.addEventListener('click', () => {
-        const additionalInfo = button.nextElementSibling; // Get the next sibling (additional info)
+// Initial setup for light mode as default
+document.body.classList.add('dark-mode');
 
-        if (additionalInfo.classList.contains('show')) {
-            additionalInfo.classList.remove('show'); // Hide the info
-        } else {
-            additionalInfo.classList.add('show'); // Show the info
-        }
+// Dark/Light Mode Toggle
+const darkLightBtn = document.querySelector('#dark-light-btn');
+const body = document.body;
+
+darkLightBtn.onclick = () => {
+    // Toggle between dark-mode and light-mode classes
+    if (body.classList.contains('light-mode')) {
+        body.classList.remove('light-mode');
+        body.classList.add('dark-mode');
+        darkLightBtn.innerHTML = '🌙'; // Change to moon icon for dark mode
+    } else {
+        body.classList.remove('dark-mode');
+        body.classList.add('light-mode');
+        darkLightBtn.innerHTML = '☀️'; // Change to sun icon for light mode
+    }
+};
+
+// Color Mode Toggle
+const colorBtn = document.querySelector('#color-mode-btn');
+const colorOptions = document.querySelector('#color-options');
+const colors = ['blue-theme', 'green-theme', 'red-theme', 'purple-theme', 'orange-theme', 'teal-theme'];
+let currentColorIndex = 0;
+
+// Show color options on button click
+colorBtn.onclick = () => {
+    colorOptions.classList.toggle('active');
+};
+
+// Handle color box click
+document.querySelectorAll('.color-box').forEach((box, index) => {
+    box.addEventListener('click', () => {
+        // Remove current color theme
+        colors.forEach(color => body.classList.remove(color));
+
+        // Apply selected color theme
+        body.classList.add(colors[index]);
+
+        // Optionally update the button text or icon
+        colorBtn.innerHTML = `Change Color: ${colors[index].split('-')[0]}`;
     });
 });
