@@ -152,178 +152,92 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Header
+/*--------------------------------------------------------------
+/*--------------------------------------------------------------
+# Header Styles
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #111;
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   padding: 0 15px;
-  width: 300px;
-  transition: all ease-in-out 0.3s;
-  overflow-y: auto;
+  width: 200px;
+  transition: transform 0.3s ease;
+  /* Use transform for sliding */
+  overflow-y: hidden;
+  /* Prevent scrolling when header is closed */
   z-index: 997;
-  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  -webkit-transition: all ease-in-out 0.3s;
-  -moz-transition: all ease-in-out 0.3s;
-  -ms-transition: all ease-in-out 0.3s;
-  -o-transition: all ease-in-out 0.3s;
-  background-color: #111;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.header .profile-img img {
-  margin: 15px auto;
-  display: block;
-  width: 120px;
-  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
+/* Initially hide the header */
+.header.closed {
+  transform: translateX(-100%);
+  /* Slide out of view */
 }
 
-.header .logo {
-  line-height: 1;
-  margin-bottom: 15px;
-}
-
-.header .logo img {
-  max-height: 32px;
-  margin-right: 8px;
-}
-
-.header .logo h1 {
-  font-size: 24px;
-  margin: 0;
-  font-weight: 700;
-  color: var(--heading-color);
-}
-
-.header .social-links {
-  margin: 0 0 15px 0;
-}
-
-.header.social-links a:hover {
-  color: #0d6efd;
-  transform: scale(0.8);
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  -ms-transform: scale(0.8);
-  -o-transform: scale(0.8);
-}
-
-.header .social-links a {
-  font-size: 16px;
-  display: inline-flex;
+/* Header Content Styling */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  /* Use space-between for logo and name */
   align-items: center;
-  justify-content: center;
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  color: var(--default-color);
-  margin: 0 2px;
-  border-radius: 50%;
-  text-align: center;
-  width: 40px;
-  height: 40px;
-  transition: 0.3s;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  padding: 10px 0;
+  /* Slightly increased padding for spacing */
 }
 
-.header .social-links a:hover {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-}
-
-@media (min-width: 1200px) {
-
-  .header~main,
-  .header~#footer {
-    margin-left: 300px;
-  }
-}
-
-@media (max-width: 1199px) {
-  .header {
-    left: -100%;
-  }
-}
-
-.header.header-show {
-  left: 0;
-}
-
-.header .header-toggle {
-  color: var(--contrast-color);
-  background-color: var(--accent-color);
-  font-size: 22px;
+/* Logo Image Styling */
+.header .logo {
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  z-index: 9999;
-  transition: background-color 0.3s;
-  -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  margin-right: 10px;
+  /* Reduced margin to decrease space */
 }
 
-.header .header-toggle:hover {
-  color: var(--contrast-color);
-  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+.header .logo-img {
+  width: 60px;
+  /* Adjust size for the logo */
+  height: 60px;
+  /* Adjust size for the logo */
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  /* Keeps the image circular */
+  transition: transform 0.3s;
+  /* Smooth transformation */
+}
+
+.header .logo-img:hover {
+  transform: scale(1.1);
+  /* Slightly enlarge on hover */
+}
+
+.header .sitename {
+  font-size: 24px;
+  /* Increased font size for visibility */
+  font-weight: 700;
+  color: var(--heading-color);
+  margin: 0;
+  /* Remove default margin */
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Navigation Menu Styles
 --------------------------------------------------------------*/
-.mobile-nav-toggle {
-  display: flex;
-}
-
-.hamburger {
-  display: block;
-  font-size: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 999;
-  color: white;
-}
-
-.hamburger i {
-  font-size: 2rem;
-}
-
-/* Style for the Navigation Menu */
 .navmenu {
   padding: 20px;
-  background-color: transparent;
-  border-radius: 2opx;
+  /* Adjusted padding for a cleaner look */
+  background-color: #222;
+  /* Darker background for visibility */
   width: 160px;
-  /*Decreasedwidth*/
   margin: 0 auto;
-
-  -webkit-border-radius: 2opx;
-  -moz-border-radius: 2opx;
-  -ms-border-radius: 2opx;
-  -o-border-radius: 2opx;
+  border-radius: 8px;
+  /* Rounded corners for menu */
+  transition: opacity 0.3s ease;
+  /* Smooth transitions */
 }
 
 .navmenu ul {
@@ -331,16 +245,13 @@ h6 {
   padding: 0;
   margin: 0;
   display: flex;
-  /* Change display to flex for center alignment */
   flex-direction: column;
-  /* Align items vertically */
   align-items: center;
-  /* Center items horizontally */
 }
 
 .navmenu ul li {
-  margin-bottom: 10px;
-  /* Decrease the space between items */
+  margin-bottom: 40px;
+  /* Reduced margin for better spacing */
 }
 
 .navmenu a {
@@ -349,82 +260,70 @@ h6 {
   justify-content: center;
   font-family: var(--nav-font);
   text-decoration: none;
-  font-size: 14px;
-  /* Decrease font size */
-  padding: 10px 15px;
-  /* Decrease padding */
+  font-size: 16px;
+  /* Increased font size for readability */
+  padding: 12px 20px;
+  /* Increased padding for better touch targets */
   border-radius: 50px;
   color: var(--nav-color);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+  transition: all 0.3s ease, background-color 0.5s ease;
+  /* Smooth transitions */
   background: rgba(255, 255, 255, 0.1);
-  /* Subtle transparency to stand out */
+}
+
+.navmenu a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  /* Lighter background on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+  color: var(--contrast-color);
 }
 
 .navmenu a i {
-  font-size: 20px;
-  /* Decrease icon size */
-  margin-right: 5px;
-  /* Decrease margin between icon and text */
-  transition: transform 0.3s ease;
+  font-size: 24px;
+  /* Increased icon size */
+  margin-right: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  /* Smooth transitions */
 }
 
 .navmenu a:hover i {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  /* Enlarge icon on hover */
   color: var(--accent-color);
   /* Change icon color on hover */
 }
 
-.navmenu a span {
-  opacity: 1;
-  transform: translateX(-5px);
-  transition: all 0.3s ease;
-  -webkit-transform: translateX(-5px);
-  -moz-transform: translateX(-5px);
-  -ms-transform: translateX(-5px);
-  -o-transform: translateX(-5px);
-}
-
-.navmenu a:hover span {
-  opacity: 1;
-  transform: translateX(0);
-  color: var(--contrast-color);
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-}
-
-.navmenu a:hover {
-  background: rgba(255, 255, 255, 0.3);
-  /* Slightly highlight the background */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  /* Gentle shadow */
-  color: var(--contrast-color);
-}
-
 .navmenu .active {
-  background: rgba(255, 255, 255, 0.2);
-  /* Soft active color */
-  color: var(--contrast-color);
+  background: rgba(255, 255, 255, 0.3);
+  /* Active item highlighting */
 }
 
 @media (max-width: 768px) {
   .navmenu {
     width: 80%;
-    /* Full-width menu for smaller screens */
   }
 
   .navmenu ul {
     display: flex;
     justify-content: center;
-    /* Center align on smaller screens */
   }
 
   .navmenu ul li {
     margin-bottom: 0;
   }
+}
+
+/* Header Open State */
+.header.open {
+  transform: translateX(200px);
+  /* Move into view */
+}
+
+/* Optional: Header Closed State */
+.header.closed {
+  transform: translateX(-200px);
+  /* Move out of view */
 }
 
 --------------------------------------------------------------*/
@@ -998,7 +897,8 @@ h6 {
   border-radius: 10px;
   display: inline-block;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px; /* Spacing between social icons and scroll-down */
+  margin-bottom: 20px;
+  /* Spacing between social icons and scroll-down */
 }
 
 .social-icons a {
@@ -1412,7 +1312,8 @@ h6 {
   text-align: center;
   position: relative;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.9); /* Slight transparency for layers */
+  background: rgba(255, 255, 255, 0.9);
+  /* Slight transparency for layers */
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -1438,19 +1339,22 @@ h6 {
 }
 
 .bar:hover::after {
-  opacity: 0.8; /* Darker overlay on hover */
+  opacity: 0.8;
+  /* Darker overlay on hover */
 }
 
 .info {
   position: relative;
-  z-index: 2; /* Ensure text is above the overlay */
+  z-index: 2;
+  /* Ensure text is above the overlay */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .info img {
-  width: 80px; /* Uniform size for all icons */
+  width: 80px;
+  /* Uniform size for all icons */
   margin-bottom: 10px;
   transition: transform 0.3s ease, filter 0.3s ease;
   filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
@@ -1465,31 +1369,33 @@ h6 {
   font-size: 18px;
   font-weight: bold;
   color: #333;
-  text-transform: uppercase; /* Make skill names consistent */
+  text-transform: uppercase;
+  /* Make skill names consistent */
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
   .bar {
-      flex: 1 1 calc(50% - 20px);
+    flex: 1 1 calc(50% - 20px);
   }
 }
 
 @media (max-width: 480px) {
   .bar {
-      flex: 1 1 100%;
+    flex: 1 1 100%;
   }
 }
 
 /* Keyframes for Animation */
 @keyframes fadeIn {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
+
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
