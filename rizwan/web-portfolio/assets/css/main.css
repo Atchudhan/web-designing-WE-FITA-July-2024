@@ -102,6 +102,9 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  margin: 0; /* Reset default margin */
+  padding-left: px; /* Adjust this value to match the width of your header */
+  
 }
 
 a {
