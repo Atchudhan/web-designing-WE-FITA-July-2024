@@ -33,60 +33,38 @@
 </head>
 
 <body class="index-page">
-  <!-- audio 
-  <audio id="background-music" autoplay loop hidden>
-    <source src="pookal-pookum-tharunam-remix-ringtone-kalaivananoffl-1314515206.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-  <script>
-    window.onload = function () {
-      var music = document.getElementById("background-music");
-      music.volume = 0.0;  // Set volume to 50%
-    }
 
-  </script> -->
 
   <header id="header" class="header dark-background d-flex flex-column">
     <!-- Hamburger Menu Toggle for Small Screens -->
     <i class="header-toggle d-xl-none bi bi-list" id="header-toggle"></i>
 
-    <!-- Profile Image -->
-    <div class="profile-img">
-      <img src="assets/img/IMG-20231104-WA0000.jpg" alt="Profile Image" class="img-fluid rounded-circle" loading="lazy">
+    <div class="header-wrapper"> <!-- Wrapper for header content -->
+      <div class="header-content d-flex justify-content-between align-items-center">
+        <!-- Profile Image as Logo -->
+        <a href="index.html" class="logo">
+          <img src="assets/img/download.png" alt="Logo Image" class="img-fluid rounded-circle logo-img" loading="lazy">
+        </a>
+
+        <!-- Website Name -->
+        <h1 class="sitename">MD_R27</h1>
+      </div>
+
+      <!-- Navbar Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
+          <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
+          <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
+          <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+          <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
+          <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
+        </ul>
+      </nav>
     </div>
-
-    <!-- Website Name/Logo -->
-    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-      <h1 class="sitename">MOHAMED RIZWAN</h1>
-    </a>
-
-    <!-- Social Links -->
-    <div class="social-links text-center">
-      <a href="https://x.com/smileyrizwan__" class="twitter" aria-label="Visit Twitter Profile">
-        <i class="bi bi-twitter-x" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.instagram.com/smileyrizwan__/?utm_source=ig_web_button_share_sheet" class="instagram"
-        aria-label="Visit Instagram Profile">
-        <i class="bi bi-instagram" aria-hidden="true"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/mohamed-rizwan-r-769015324" class="linkedin"
-        aria-label="Visit LinkedIn Profile">
-        <i class="bi bi-linkedin" aria-hidden="true"></i>
-      </a>
-    </div>
-
-    <!-- Navbar Menu -->
-    <nav id="navmenu" class="navmenu">
-      <ul>
-        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
-        <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
-        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
-        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
-        <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
-      </ul>
-    </nav>
   </header>
+
+
 
   <main class="main">
 
@@ -982,6 +960,7 @@
 
   <!-- Preloader -->
   <div id="preloader"></div>
+  <!-- page loader -->
 
   <script>
     // Function to get current time and country
@@ -1044,6 +1023,7 @@
       document.getElementById("navmenu").classList.toggle("open");
     });
   </script>
+
 
 
 
