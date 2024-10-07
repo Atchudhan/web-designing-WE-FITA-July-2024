@@ -57,6 +57,7 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true,
 });
+
 // Initial setup for light mode as default
 document.body.classList.add('dark-mode');
 
