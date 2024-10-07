@@ -3,15 +3,14 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+/* General mobile styles */
 @media (max-width: 768px) {
   body {
-    padding: 0px;
+    padding: 0;
+    margin: 0;
     width: 100%;
-    
-  }
-
-  body {
-    overflow-x: hidden;
+    overflow-x: hidden; /* Consolidated into one body rule */
+    font-size: 16px; /* Combined font-size here for better readability */
   }
 
   .container {
@@ -19,22 +18,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 10px; /* Added a little padding for spacing */
   }
 
   .card {
     width: 100%;
     margin-bottom: 20px;
   }
-}
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 16px;
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
