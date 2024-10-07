@@ -3,32 +3,38 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
-/* General mobile styles */
 @media (max-width: 768px) {
   body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden; /* Consolidated into one body rule */
-    font-size: 16px; /* Combined font-size here for better readability */
+    padding: 10px;
   }
+
+  body {
+    overflow-x: hidden;
+  }
+
+
 
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 10px; /* Added a little padding for spacing */
   }
 
   .card {
     width: 100%;
     margin-bottom: 20px;
   }
+}
 
-  img {
-    max-width: 100%;
-    height: auto;
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
   }
 }
 
@@ -96,12 +102,6 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  margin: 0;
-  /* Reset default margin */
-  padding-left: 199px;
-  /* Adjust this value to match the width of your header */
-  display: flex; /* Use flexbox layout */
-  flex-direction: column; /* Stack elements vertically */
 }
 
 a {
@@ -152,178 +152,178 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-/*--------------------------------------------------------------
-/*--------------------------------------------------------------
-# Header Styles
+# Global Header
 --------------------------------------------------------------*/
-/* Header Styles */
-/* Header Styles */
 .header {
   color: var(--default-color);
-  background-color: #111;
+  background-color: var(--background-color);
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   padding: 0 15px;
-  width: 200px;
-  /* This width is for larger screens */
-  transition: transform 0.3s ease;
-  /* Use transform for sliding */
-  overflow-y: hidden;
-  /* Prevent scrolling when header is closed */
+  width: 300px;
+  transition: all ease-in-out 0.3s;
+  overflow-y: auto;
   z-index: 997;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  -webkit-transition: all ease-in-out 0.3s;
+  -moz-transition: all ease-in-out 0.3s;
+  -ms-transition: all ease-in-out 0.3s;
+  -o-transition: all ease-in-out 0.3s;
+  background-color: #111;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Initially hide the header */
-.header.closed {
-  transform: translateX(-100vw);
-  /* Slide out of view completely */
+.header .profile-img img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
-/* Header Open State */
-.header.open {
-  transform: translateX(0); /* Show header */
-}
-/* Mobile Specific Styles */
-
-
-/* Main Content Styles */
-.main-content {
-  flex: 1;
-  /*Takeremainingspace*/padding: 20px;
-  /*Addsomepadding*/transition: margin-left 0.3s ease;
-  -webkit-transition: margin-left 0.3s ease;
-  -moz-transition: margin-left 0.3s ease;
-  -ms-transition: margin-left 0.3s ease;
-  -o-transition: margin-left 0.3s ease;
-}
-
-/* Add this to ensure the content shifts correctly */
-.header.open + .main-content {
-  margin-left: 200px; /* Adjust margin for the width of the header */
-}
-
-/* Adjust other styles as necessary */
-/* Rest of your CSS remains the same */
-
-
-/* Mobile Specific Styles */
-
-
-/* Rest of your CSS remains the same */
-
-/* Header Content Styling */
-.header-content {
-  display: flex;
-  justify-content: space-between;
-  /* Use space-between for logo and name */
-  align-items: center;
-  padding: 10px 0;
-  /* Slightly increased padding for spacing */
-}
-
-/* Logo Image Styling */
 .header .logo {
-  display: flex;
-  align-items: center;
-  margin-right: 15px;
   line-height: 1;
-  /* Reduced margin to decrease space */
+  margin-bottom: 15px;
 }
 
-.header .logo-img {
-  width: 60px;
-  /*Adjustsizeforthelogo*/max-height: 60px;
-  /*Adjustedsize*/margin-right: 8px;
-  /*Adjustsizeforthelogo*/border: 5px solid rgba(255, 255, 255, 0.2);
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
+}
+
+.header .logo h1 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 700;
+  color: var(--heading-color);
+}
+
+.header .social-links {
+  margin: 0 0 15px 0;
+}
+
+.header.social-links a:hover {
+  color: #0d6efd;
+  transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  -o-transform: scale(0.8);
+}
+
+.header .social-links a {
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--default-color);
+  margin: 0 2px;
   border-radius: 50%;
-  /*Keepstheimagecircular*/animation: rotate-color 3s infinite linear;
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
-  /* Smooth transformation */
 
-
-/* Header logo image rotation */
-.header .logo-img {
-  transition: transform 0.3s ease;
-   
-  -webkit-transition: transform 0.3s ease;
-  -moz-transition: transform 0.3s ease;
-  -ms-transition: transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
+.header .social-links a:hover {
+  color: var(--contrast-color);
+  background: var(--accent-color);
 }
 
-.header .logo-img:hover {
-  animation: colorRotate 3s infinite linear;
-   
-  -webkit-animation: colorRotate 3s infinite linear;
-}
+@media (min-width: 1200px) {
 
-/* Keyframes for color rotation */
-@keyframes colorRotate {
-  0% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(360deg); }
-  100% { filter: hue-rotate(0deg); }
-}
-
-/* Animation for the logo image */
-@keyframes rotate-color {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  50% {
-    filter: hue-rotate(180deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
+  .header~main,
+  .header~#footer {
+    margin-left: 300px;
   }
 }
 
-/* Name animation in the header */
-.header .logo h1 {
-  font-size: 24px;
-  transition: transform 0.3s ease;
+@media (max-width: 1199px) {
+  .header {
+    left: -100%;
+  }
 }
 
-.header .logo:hover h1 {
-  transform: scale(1.1);
+.header.header-show {
+  left: 0;
 }
 
-
-.header .logo-img:hover {
-  transform: scale(1.1);
-  /* Slightly enlarge on hover */
+.header .header-toggle {
+  color: var(--contrast-color);
+  background-color: var(--accent-color);
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999;
+  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
 }
 
-.header .sitename {
-  font-size: 24px;
-  /* Increased font size for visibility */
-  font-weight: 700;
-  color: var(--heading-color);
-  margin: 0;
-  /* Remove default margin */
+.header .header-toggle:hover {
+  color: var(--contrast-color);
+  background-color: color-mix(in srgb, var(--accent-color) 90%, white 15%);
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu Styles
+# Navigation Menu
 --------------------------------------------------------------*/
+.mobile-nav-toggle {
+  display: flex;
+}
+
+.hamburger {
+  display: block;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 999;
+  color: white;
+}
+
+.hamburger i {
+  font-size: 2rem;
+}
+
+/* Style for the Navigation Menu */
 .navmenu {
   padding: 20px;
-  /* Adjusted padding for a cleaner look */
-  background-color: #222;
-  /* Darker background for visibility */
+  background-color: transparent;
+  border-radius: 2opx;
   width: 160px;
+  /*Decreasedwidth*/
   margin: 0 auto;
-  border-radius: 8px;
-  /* Rounded corners for menu */
-  transition: opacity 0.3s ease;
-  /* Smooth transitions */
+
+  -webkit-border-radius: 2opx;
+  -moz-border-radius: 2opx;
+  -ms-border-radius: 2opx;
+  -o-border-radius: 2opx;
 }
 
 .navmenu ul {
@@ -331,13 +331,16 @@ h6 {
   padding: 0;
   margin: 0;
   display: flex;
+  /* Change display to flex for center alignment */
   flex-direction: column;
+  /* Align items vertically */
   align-items: center;
+  /* Center items horizontally */
 }
 
 .navmenu ul li {
-  margin-bottom: 40px;
-  /* Reduced margin for better spacing */
+  margin-bottom: 10px;
+  /* Decrease the space between items */
 }
 
 .navmenu a {
@@ -346,45 +349,83 @@ h6 {
   justify-content: center;
   font-family: var(--nav-font);
   text-decoration: none;
-  font-size: 16px;
-  /* Increased font size for readability */
-  padding: 12px 20px;
-  /* Increased padding for better touch targets */
+  font-size: 14px;
+  /* Decrease font size */
+  padding: 10px 15px;
+  /* Decrease padding */
   border-radius: 50px;
   color: var(--nav-color);
-  transition: all 0.3s ease, background-color 0.5s ease;
-  /* Smooth transitions */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.1);
-}
-
-.navmenu a:hover {
-  background: rgba(255, 255, 255, 0.2);
-  /* Lighter background on hover */
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
-  color: var(--contrast-color);
+  /* Subtle transparency to stand out */
 }
 
 .navmenu a i {
-  font-size: 24px;
-  /* Increased icon size */
-  margin-right: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-  /* Smooth transitions */
+  font-size: 20px;
+  /* Decrease icon size */
+  margin-right: 5px;
+  /* Decrease margin between icon and text */
+  transition: transform 0.3s ease;
 }
 
 .navmenu a:hover i {
-  transform: scale(1.3);
-  /* Enlarge icon on hover */
+  transform: scale(1.2);
   color: var(--accent-color);
   /* Change icon color on hover */
 }
 
-.navmenu .active {
-  background: rgba(255, 255, 255, 0.3);
-  /* Active item highlighting */
+.navmenu a span {
+  opacity: 1;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+  -webkit-transform: translateX(-5px);
+  -moz-transform: translateX(-5px);
+  -ms-transform: translateX(-5px);
+  -o-transform: translateX(-5px);
 }
 
+.navmenu a:hover span {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--contrast-color);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.navmenu a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  /* Slightly highlight the background */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  /* Gentle shadow */
+  color: var(--contrast-color);
+}
+
+.navmenu .active {
+  background: rgba(255, 255, 255, 0.2);
+  /* Soft active color */
+  color: var(--contrast-color);
+}
+
+@media (max-width: 768px) {
+  .navmenu {
+    width: 80%;
+    /* Full-width menu for smaller screens */
+  }
+
+  .navmenu ul {
+    display: flex;
+    justify-content: center;
+    /* Center align on smaller screens */
+  }
+
+  .navmenu ul li {
+    margin-bottom: 0;
+  }
+}
 
 --------------------------------------------------------------*/
 
@@ -459,11 +500,7 @@ h6 {
   50% {
     transform: scale(1.1);
     opacity: 0.4;
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-}
+  }
 }
 
 /*--------------------------------------------------------------
@@ -722,6 +759,8 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
+  background-color: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  /* Adjust opacity for better contrast */
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
   /* Fixing background-image syntax */
   z-index: 1;
@@ -743,12 +782,17 @@ h6 {
   transition: transform 0.6s ease-in-out;
 }
 
+#hero h2:hover {
+  color: #000000;
+  transition: color 0.3s ease-in-out;
+}
 /* Title Styling with Hover */
 #hero h2 {
   font-size: 3rem;
   margin: 20px 0;
   animation: slide-in-left 1s forwards;
   z-index: 2;
+  /* To ensure it appears above the overlay */
   color: #fff;
   text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
 }
@@ -757,10 +801,10 @@ h6 {
   color: #000000;
   transition: color 0.3s ease-in-out;
 }
-
 /* Description Styling */
 #hero p {
   z-index: 2;
+  /* To ensure it appears above the overlay */
   text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
 }
 
@@ -773,6 +817,9 @@ h6 {
 .btn {
   z-index: 100;
   position: relative;
+  border: 2px solid red;
+  transition: transform 0.3s;
+  /* Just for debugging */
   border: none;
   padding: 12px 28px;
   background-color: #ff9800;
@@ -802,88 +849,47 @@ h6 {
 
 /* Social Icons Styling */
 .social-icons {
-  background: transparent;
-  padding: 10px;
-  border-radius: 30px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 20px;
+  border-radius: 10px;
   display: inline-block;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-}
-
-.social-icons:hover {
-  transform: scale(1.05);
-  /* Slightly scale up on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .social-icons a {
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .social-icons i {
   color: #fff;
-  font-size: 28px;
-  /* Increased icon size */
+  font-size: 24px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: inline-block;
-  padding: 15px;
-  /* More padding for a larger clickable area */
-  border-radius: 50%;
-  /* Circular shape */
-  background: rgba(255, 255, 255, 0.1);
-  /* Subtle background */
+  padding: 10px;
 }
-
 .social-icons a:hover i {
   transform: scale(1.2);
-  /* Scale up icon size on hover */
   color: #f9d423;
-  /* Change color on hover */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
-  /* Enhanced shadow effect */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 .social-icons a:hover {
   transform: translateY(-5px);
-  /* Move the link up on hover */
 }
-
 /* Specific Social Media Hover Colors */
 .social-icons i.bi-twitter:hover {
   color: #1DA1F2;
-  /* Twitter color */
 }
-
 .social-icons i.bi-instagram:hover {
   color: #C13584;
-  /* Instagram color */
 }
 
 .social-icons i.bi-linkedin:hover {
   color: #0077b5;
-  /* LinkedIn color */
 }
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .social-icons {
-    padding: 30px;
-    /* Adjust padding for smaller screens */
-  }
-
-  .social-icons i {
-    font-size: 24px;
-    /* Smaller icons on mobile */
-    padding: 10px;
-    /* Reduce padding */
-  }
-}
-
 /* Scroll Down Icon Animation */
 .scroll-down {
   position: absolute;
@@ -906,6 +912,7 @@ h6 {
   }
 }
 
+/* Animations */
 /* Title and Description Animations */
 @keyframes slide-in-left {
   from {
@@ -914,6 +921,10 @@ h6 {
 
   to {
     transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }
 
@@ -926,8 +937,11 @@ h6 {
 /* Animated Title */
 .animated-title {
   font-size: 2.5rem;
+  /* Adjust size as needed */
   animation: slideIn 1s forwards, colorChange 3s infinite alternate;
+  /* Combine slide in and color change */
   margin-bottom: 15px;
+  /* Spacing below title */
 }
 
 @keyframes slideIn {
@@ -945,17 +959,21 @@ h6 {
 @keyframes colorChange {
   0% {
     color: #ff9800;
+    /* Original color */
   }
 
   100% {
     color: #00c4ff;
+    /* New color */
   }
 }
 
 /* Animated Description */
 .animated-description {
   font-size: 1.5rem;
+  /* Adjust size as needed */
   animation: fadeIn 1.5s forwards, textShadow 2s infinite alternate;
+  /* Combine fade in and shadow */
 }
 
 @keyframes fadeIn {
@@ -992,7 +1010,6 @@ h6 {
   transform: translateX(-50%);
   z-index: 2;
 }
-
 /* Social Icons */
 .social-icons {
   background: linear-gradient(135deg, #667eea, #764ba2);
@@ -1000,15 +1017,12 @@ h6 {
   border-radius: 10px;
   display: inline-block;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px;
-  /* Spacing between social icons and scroll-down */
+  margin-bottom: 20px; /* Spacing between social icons and scroll-down */
 }
-
 .social-icons a {
   text-decoration: none;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
 .social-icons i {
   color: #fff;
   font-size: 24px;
@@ -1016,17 +1030,14 @@ h6 {
   display: inline-block;
   padding: 10px;
 }
-
 .social-icons a:hover i {
   transform: scale(1.2);
   color: #f9d423;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 }
-
 .social-icons a:hover {
   transform: translateY(-5px);
 }
-
 /* Scroll Down */
 .scroll-down {
   font-size: 24px;
@@ -1034,24 +1045,20 @@ h6 {
   animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
 }
-
 @keyframes bounce {
   0%, 100% {
     transform: translateY(0);
   }
-
   50% {
     transform: translateY(-10px);
   }
 }
-
 /* Alignments on Mobile */
 @media (max-width: 768px) {
   .get-in-touch-container {
     bottom: 30px;
   }
 }
-
 
 /* About Section */
 #about .content ul li {
@@ -1401,112 +1408,6 @@ h6 {
   -o-transform: translateY(0);
 }
 
-/* Skill Icons Section */
-#skillsContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 40px;
-}
-
-.bar {
-  flex: 1 1 calc(25% - 20px);
-  margin: 10px;
-  text-align: center;
-  position: relative;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.9);
-  /* Slight transparency for layers */
-  border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.bar::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
-  z-index: 1;
-  opacity: 0.5;
-  transition: opacity 0.3s ease;
-}
-
-.bar:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
-}
-
-.bar:hover::after {
-  opacity: 0.8;
-  /* Darker overlay on hover */
-}
-
-.info {
-  position: relative;
-  z-index: 2;
-  /* Ensure text is above the overlay */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.info img {
-  width: 80px;
-  /* Uniform size for all icons */
-  margin-bottom: 10px;
-  transition: transform 0.3s ease, filter 0.3s ease;
-  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-}
-
-.info img:hover {
-  transform: scale(1.3) rotate(5deg);
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
-}
-
-.info span {
-  font-size: 18px;
-  font-weight: bold;
-  color: #333;
-  text-transform: uppercase;
-  /* Make skill names consistent */
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .bar {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
-@media (max-width: 480px) {
-  .bar {
-    flex: 1 1 100%;
-  }
-}
-
-/* Keyframes for Animation */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply animation to skill items */
-.skill-item {
-  animation: fadeIn 0.5s ease forwards;
-}
-
 /*--------------------------------------------------------------
 # Resume Section
 --------------------------------------------------------------*/
@@ -1708,48 +1609,6 @@ button {
   font-size: 24px;
 }
 
-/* Button Section */
-.button-section {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 40px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-/* Neon Button Styles */
-.neon-btn {
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 15px 40px;
-  border-radius: 50px;
-  color: #fff;
-  background: linear-gradient(135deg, #ff9800, #ff5722);
-  box-shadow: 0 0 20px rgba(255, 152, 0, 0.5), 0 0 40px rgba(255, 87, 34, 0.3);
-  transition: 0.4s ease-in-out;
-  position: relative;
-  display: inline-block;
-}
-
-/* Icon Alignment */
-.neon-btn i {
-  margin-right: 8px;
-}
-
-/* Hover and Focus Effects */
-.neon-btn:hover,
-.neon-btn:focus {
-  box-shadow: 0 0 30px rgba(255, 152, 0, 0.7), 0 0 60px rgba(255, 87, 34, 0.6);
-  transform: scale(1.05);
-}
-
-/* Click Effect */
-.neon-btn:active {
-  transform: scale(0.98);
-}
-
-
 /* Portfolio Section */
 .portfolio {
   padding: 50px 0;
@@ -1949,7 +1808,6 @@ button {
 /*--------------------------------------------------------------
 # Service Details Section
 --------------------------------------------------------------*
-
 /* Service Item Styling */
 .service-item {
   background: linear-gradient(135deg, #000000, #b6b8bf);
