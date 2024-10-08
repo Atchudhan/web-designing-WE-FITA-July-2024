@@ -793,12 +793,12 @@ h6 {
 /* Mobile Styles */
 @media (max-width: 768px) {
   .animated-heading {
-      font-size: 1.0rem; /* Smaller font size for mobile */
+      font-size: 1.8rem; /* Smaller font size for mobile */
       margin-bottom: 15px; /* Adjust space below heading */
   }
 
   .hero-subtitle {
-      font-size: 1.4rem; /* Smaller font size for subtitle */
+      font-size: 1.3rem; /* Smaller font size for subtitle */
       margin-top: 10px; /* Adjust space above the subtitle */
   }
 
