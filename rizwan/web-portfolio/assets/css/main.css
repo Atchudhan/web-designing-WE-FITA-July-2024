@@ -831,13 +831,12 @@ h6 {
 
 /* Animated Heading */
 .animated-heading {
-  font-size: 3rem;
-  /*Fontsizefortheheading*/font-weight: bold;
-  /*Makethetextbold*/color: #ffffff;
-  /*Textcolor*/text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  /*Shadowfordepth*/margin: 20px 0;
-  /*Marginforspacing*/animation: fadeIn 1.5s ease-in-out;
-  -webkit-animation: fadeIn 1.5s ease-in-out;
+  font-size: 3rem; /* Font size for the heading */
+  font-weight: bold; /* Make the text bold */
+  color: #ffffff; /* Text color */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for depth */
+  margin: 20px 0; /* Margin for spacing */
+  animation: fadeIn 1.5s ease-in-out; /* Animation for fade-in effect */
 }
 
 /* Fade-in Animation */
@@ -851,7 +850,6 @@ h6 {
       transform: translateY(0); /* Move to normal position */
   }
 }
-
 
 /* About Section */
 #about .content ul li {
