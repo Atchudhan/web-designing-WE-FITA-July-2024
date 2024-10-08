@@ -769,6 +769,52 @@ h6 {
   color: #fff;
 }
 
+.hero-subtitle {
+  font-size: 1.5rem; /* Font size for the subtitle */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  margin-top: 10px; /* Space above the subtitle */
+  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+}
+
+.hero-subtitle strong {
+  color: #ffd700; /* Highlight color for your name */
+  font-weight: bold; /* Bold text for emphasis */
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0; /* Start invisible */
+  }
+  100% {
+      opacity: 1; /* Fade in to visible */
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .animated-heading {
+      font-size: 1.8rem; /* Smaller font size for mobile */
+      margin-bottom: 15px; /* Adjust space below heading */
+  }
+
+  .hero-subtitle {
+      font-size: 1.4rem; /* Smaller font size for subtitle */
+      margin-top: 10px; /* Adjust space above the subtitle */
+  }
+
+  .hero-actions {
+      flex-direction: column; /* Stack buttons vertically */
+      align-items: center; /* Center align buttons */
+  }
+
+  .btn {
+      width: 100%; /* Full-width buttons */
+      margin-bottom: 10px; /* Space between buttons */
+  }
+}
+
 /* Button Styles */
 .btn {
   padding: 10px 20px; /* Button padding */
@@ -802,41 +848,64 @@ h6 {
 
 /* Social Icons */
 .social-icons {
-  margin-top: 15px;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
 }
 
 .social-icons a {
-  margin: 0 10px;
+  font-size: 24px;
   color: #fff;
-  font-size: 1.5em;
+  margin: 0 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+  color: #007bff;
 }
 
 /* Scroll Down Icon */
 .scroll-down {
-  position: absolute;
-  bottom: 20px;
-  font-size: 2em;
-  color: #fff;
-  animation: bounce 2s infinite;
+  position: absolute; /* Positioning it absolutely within the hero section */
+  bottom: 20px; /* Adjust this value to position it further up or down */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to perfectly center */
+  font-size: 2rem; /* Size of the icon */
+  color: white; /* Color of the icon */
+  opacity: 0.8; /* Slight transparency for a soft effect */
+  transition: opacity 0.3s; /* Smooth transition for hover effect */
+  z-index: 10; /* Ensure it appears above other elements */
+  animation: bounce 1.5s infinite; /* Apply bounce animation */
 }
 
+.scroll-down:hover {
+  opacity: 1; /* Full opacity on hover */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Bounce Animation Keyframes */
 @keyframes bounce {
   0%, 100% {
-      transform: translateY(0);
+    transform: translateY(0); /* Start and end at original position */
   }
   50% {
-      transform: translateY(-10px);
+    transform: translateY(-10px); /* Move up slightly */
   }
 }
+
 
 /* Animated Heading */
 .animated-heading {
-  font-size: 3rem; /* Font size for the heading */
-  font-weight: bold; /* Make the text bold */
-  color: #ffffff; /* Text color */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Shadow for depth */
-  margin: 20px 0; /* Margin for spacing */
-  animation: fadeIn 1.5s ease-in-out; /* Animation for fade-in effect */
+  font-size: 2.5rem;
+  /*Fontsizefortheheading*/font-weight: bold;
+  /*Makethetextbold*/color: #ffffff;
+  /*Textcolor*/text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  /*Shadowfordepth*/margin: 20px 0;
+  /*Marginforspacing*/animation: fadeIn 1.5s ease-in-out;
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+  text-align: center; /* Center align text */
+  margin-bottom: 20px; /* Space below heading */
 }
 
 /* Fade-in Animation */
