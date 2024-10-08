@@ -19,15 +19,14 @@ window.onscroll = () => {
         let id = sec.getAttribute('id');
 
         if (top >= offset && top < offset + height) {
-           navLinks.forEach(link => {
-    link.classList.remove('active');
-    document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            navLinks.forEach.apply(link => {
+                link.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
 
-    if (link.getAttribute('href').includes(id)) {
-        link.classList.add('active');
-    }
-});
-
+                if (link.getAttribute('href').includes(id)) {
+                    link.classList.add('active');
+                }
+            });
         }
     });
 
@@ -73,11 +72,14 @@ darkLightBtn.onclick = () => {
     if (body.classList.contains('light-mode')) {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        darkLightBtn.innerHTML = '🌙'; // Change to moon icon for dark mode
+        // darkLightBtn.innerHTML = '🌙';// Change to moon icon for dark mode in youtube code 
+        darkLightBtn.textContent = '🔆'; // Change to moon icon for dark mode in chatgpt
+
     } else {
         body.classList.remove('dark-mode');
         body.classList.add('light-mode');
-        darkLightBtn.innerHTML = '☀️'; // Change to sun icon for light mode
+        //darkLightBtn.innerHTML = '☀️'; // Change to sun icon for light mode
+        darkLightBtn.innerHTML = '🕶️';
     }
 };
 
