@@ -22,10 +22,10 @@ window.onscroll = () => {
             navLinks.forEach.apply(link => {
                 link.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
-                /*================ sticky navbar 
+                 
                 if (link.getAttribute('href').includes(id)) {
                     link.classList.add('active');
-                }===========*/
+                }
             });
         }
     });
