@@ -45,6 +45,18 @@
     }
   </script> -->
 
+  <section id="color-selector">
+    <h2>Select Color Scheme</h2>
+    <label>
+      <input type="radio" name="colorScheme" value="light" checked> Light Mode
+    </label>
+    <label>
+      <input type="radio" name="colorScheme" value="dark"> Dark Mode
+    </label>
+    <input type="color" id="customColor" title="Choose Custom Color" />
+  </section>
+  
+
   <header id="header" class="header dark-background d-flex flex-column">
     <!-- Hamburger Menu Toggle for Small Screens -->
     <i class="header-toggle d-xl-none bi bi-list" id="header-toggle"></i>
@@ -95,8 +107,9 @@
       <div class="overlay"></div>
       <div class="container hero-content" data-aos="zoom-in" data-aos-delay="200">
         <h1 class="animated-heading">Mohamed Rizwan's Creative Realm!</h1>
-        <p class="hero-subtitle">A Journey of <span class="typed"
-            data-typed-items="Design, Development, Innovation"></span></p>
+        <p class="hero-subtitle">Embarking on a Creative Odyssey: Join <strong>Mohamed Rizwan</strong> in Shaping the
+          Future of <span class="typed" data-typed-items="Design, Development, Innovation"></span>!
+        </p>
         <div class="hero-actions">
           <a href="#portfolio" class="btn primary-btn">View My Work</a>
           <a href="#contact" class="btn secondary-btn">Get In Touch</a>
@@ -919,19 +932,6 @@
     setInterval(updateTimeAndCountry, 1000);
   </script>
 
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var options = {
-        strings: ["Designer", "Full-Stack Developer", "Editor", "Back-End Developer", "Photographer", "Front-End Developer"],
-        typeSpeed: 50,
-        backSpeed: 25,
-        loop: true
-      };
-
-      var typed = new Typed(".typed", options);
-    });
-  </script>
 
   <script>
     const navLinks = document.querySelectorAll('#navmenu ul li a');
