@@ -727,22 +727,27 @@ h6 {
 /*--------------------------------------------------------------
 # Animations
 --------------------------------------------------------------*/
-
-
-
---------------------------------------------------------------*/
+/* Hero Section */
 /* General Hero Styling */
 .hero {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100vh; /* Full screen height */
   position: relative;
-  padding: 80px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  overflow: hidden; /* Prevent overflow of image */
+}
+
+/* Hero Image */
+.hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the entire section */
+  position: absolute; /* Position behind content */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Set z-index to position below text */
 }
 
 /* Overlay */
@@ -752,299 +757,101 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with increased opacity */
+  z-index: 2; /* Set overlay above image */
 }
 
-/* Hero Image Hover Effect */
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-#hero img:hover {
-  transform: scale(1.2);
-  transition: transform 0.6s ease-in-out;
-}
-
-#hero h2:hover {
-  color: #000000;
-  transition: color 0.3s ease-in-out;
-}
-/* Text Styling */
-#hero h2 {
-  font-size: 3rem;
-  margin: 20px 0;
-  animation: slide-in-left 1s forwards;
-  z-index: 2;
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 3; /* Set content above overlay */
+  text-align: center; /* Centering text */
   color: #fff;
-  text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
 }
 
-#hero h2:hover {
-  color: #000000;
-  transition: color 0.3s ease-in-out;
-}
-/* Description Styling */
-#hero p {
-  font-size: 1.5rem;
-  z-index: 2;
-  text-shadow: 0 0 5px rgba(16, 0, 188, 0.8), 0 0 15px rgba(0, 255, 255, 1);
-}
-
-/* Call to Action Button */
-
-
+/* Button Styles */
 .btn {
-  border: none;
-  padding: 12px 28px;
-  background-color: #ff9800;
-  color: white;
-  border-radius: 5px;
+  padding: 10px 20px; /* Button padding */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* No underline */
+  font-size: 1rem; /* Button font size */
+  margin: 0 10px; /* Space between buttons */
+  transition: background-color 0.3s; /* Transition for hover effect */
 }
 
-.btn:hover {
-  background-color: #ff7800;
-  transform: scale(1.05);
+.primary-btn {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
 }
 
-/* Pulse Animation for CTA Button */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.1);
-  }
-
-  100% {
-    transform: scale(1);
-  }
+.primary-btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
-/* Social Icons Styling */
-.social-icons {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 2;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.secondary-btn {
+  background-color: transparent; /* Secondary button transparent */
+  color: white; /* Text color */
+  border: 1px solid white; /* Border for secondary button */
 }
 
-.social-icons a {
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.social-icons i {
-  color: #fff;
-  font-size: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
-  padding: 10px;
-}
-.social-icons a:hover i {
-  transform: scale(1.2);
-  color: #f9d423;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-.social-icons a:hover {
-  transform: translateY(-5px);
-}
-/* Specific Social Media Hover Colors */
-.social-icons i.bi-twitter:hover {
-  color: #1DA1F2;
-}
-.social-icons i.bi-instagram:hover {
-  color: #C13584;
+.secondary-btn:hover {
+  background-color: white; /* Background on hover */
+  color: #007bff; /* Text color on hover */
 }
 
-.social-icons i.bi-linkedin:hover {
-  color: #0077b5;
-}
-/* Scroll Down Icon Animation */
-.scroll-down {
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: white;
-  z-index: 2;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-/* Animations */
-/* Title and Description Animations */
-@keyframes slide-in-left {
-  from {
-    transform: translateX(-100%);
-  }
-
-  to {
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-  }
-}
-
-/* Responsive Text Alignment */
-@media (max-width: 768px) {
-  .hero {
-    background-position: top;
-  }
-  #hero h2 {
-    font-size: 2rem;
-  }
-  #hero p {
-    font-size: 1.2rem;
-  }
-}
-
-/* Animated Title */
-.animated-title {
-  font-size: 2.5rem;
-  animation: slideIn 1s forwards, colorChange 3s infinite alternate;
-}
-
-@keyframes slideIn {
-  0% {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes colorChange {
-  0% {
-    color: #ff9800;
-    /* Original color */
-  }
-
-  100% {
-    color: #00c4ff;
-    /* New color */
-  }
-}
-
-/* Animated Description */
-.animated-description {
-  font-size: 1.5rem;
-  animation: fadeIn 1.5s forwards, textShadow 2s infinite alternate;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes textShadow {
-  0% {
-    text-shadow: 0 0 5px rgba(255, 152, 0, 0.7), 0 0 10px rgba(255, 152, 0, 0.5);
-  }
-
-  100% {
-    text-shadow: 0 0 10px rgba(0, 196, 255, 0.7), 0 0 15px rgba(0, 196, 255, 0.5);
-  }
-}
-
-/* Parent container for social links and scroll-down */
-.get-in-touch-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-}
 /* Social Icons */
 .social-icons {
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  padding: 20px;
-  border-radius: 10px;
-  display: inline-block;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  margin-bottom: 20px; /* Spacing between social icons and scroll-down */
+  margin-top: 15px;
 }
+
 .social-icons a {
-  text-decoration: none;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-.social-icons i {
+  margin: 0 10px;
   color: #fff;
-  font-size: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: inline-block;
-  padding: 10px;
+  font-size: 1.5em;
 }
-.social-icons a:hover i {
-  transform: scale(1.2);
-  color: #f9d423;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-}
-.social-icons a:hover {
-  transform: translateY(-5px);
-}
-/* Scroll Down */
+
+/* Scroll Down Icon */
 .scroll-down {
   position: absolute;
-  bottom: 50px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 24px;
-  color: white;
-  z-index: 2;
+  bottom: 20px;
+  font-size: 2em;
+  color: #fff;
   animation: bounce 2s infinite;
 }
+
 @keyframes bounce {
   0%, 100% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+      transform: translateY(-10px);
   }
 }
-/* Alignments on Mobile */
-@media (max-width: 768px) {
-  .get-in-touch-container {
-    bottom: 30px;
+
+/* Animated Heading */
+.animated-heading {
+  font-size: 3rem;
+  /*Fontsizefortheheading*/font-weight: bold;
+  /*Makethetextbold*/color: #ffffff;
+  /*Textcolor*/text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  /*Shadowfordepth*/margin: 20px 0;
+  /*Marginforspacing*/animation: fadeIn 1.5s ease-in-out;
+  -webkit-animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  0% {
+      opacity: 0; /* Start invisible */
+      transform: translateY(-20px); /* Start slightly above */
+  }
+  100% {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to normal position */
   }
 }
+
 
 /* About Section */
 #about .content ul li {
