@@ -12,6 +12,8 @@
     overflow-x: hidden;
   }
 
+
+
   .container {
     display: flex;
     flex-direction: column;
@@ -798,7 +800,7 @@ h6 {
   }
 
   .hero-subtitle {
-      font-size: 1.3rem; /* Smaller font size for subtitle */
+      font-size: 1.4rem; /* Smaller font size for subtitle */
       margin-top: 10px; /* Adjust space above the subtitle */
   }
 
@@ -960,7 +962,7 @@ h6 {
   .hobby-item {
     justify-content: center;
     /* Center the icon and text in mobile view */
- 
+    text-align: center;
   }
 
   .hobby-item i {
@@ -1085,7 +1087,7 @@ strong {
 }
 .hobbies {
   background: linear-gradient(135deg, #f0f9ff, #7d8da0);
-  padding: 30px;
+  padding: 40px;
   border-radius: 15px;
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
   width: 100%;
@@ -1290,6 +1292,9 @@ strong {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
 }
+
+
+
 
 /*--------------------------------------------------------------
 # Resume Section
@@ -1899,14 +1904,13 @@ button {
   }
 }
 
-.contact .info-item {
-  margin-bottom: 0px;
-}
 
 .info-item h3 {
-  margin: 0; /* Remove margin for headings */
-  font-size: 18px; /* Heading size */
-  color: #333; /* Dark text color */
+  text-align: left; /* Aligns the text to the left */
+  margin: 0; /* Removes any default margin */
+  font-weight: bold; /* Makes the text bold */
+  font-size: 1.2rem; /* Adjusts the font size */
+  color: #333; /* Sets the text color */
 }
 
 .contact .info-item i {
@@ -1931,12 +1935,16 @@ button {
   -o-border-radius: 50px;
 }
 
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 10;
+.hover-effect {
+  color: blue; /* Default link color set to blue */
+  text-decoration: none; /* Removes underline */
+  transition: color 0.3s ease; /* Smooth transition effect */
 }
+
+.hover-effect:hover {
+  color: rgb(255, 0, 0); /* Changes color to black on hover */
+}
+
 
 .contact .info-item p {
   padding: 0;
@@ -2081,5 +2089,5 @@ label {
 }
 
 .social-links a:hover {
-  color: #ff0080; /* Color change on hover */
+  color:blue; /* Color change on hover */
 }
