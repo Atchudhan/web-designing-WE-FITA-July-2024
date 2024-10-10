@@ -27,6 +27,56 @@
     perspective: 1000px;
 }
 
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.9;
+}
+
+
+/* Ensure correct positioning of cube faces */
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
 html {
     font-size: 62.5%;
     /*doubt*/
@@ -421,37 +471,6 @@ span {
     color: var(--snd-bg-color);
 }
 
-.portfolio-layer {
-    position: relative;
-    perspective: 1000px;
-    /* Adding perspective for 3D effect */
-}
-
-
-/*for 3d*/
-
-
-/* 3D Perspective */
-
-body {
-    perspective: 1000px;
-    /* Adjust perspective distance */
-}
-
-
-/* 3D Effect on Portfolio Section */
-
-.portfolio-box {
-    transition: transform 0.5s ease;
-    transform-style: preserve-3d;
-    /* Ensure children maintain 3D space */
-}
-
-.portfolio-box.active {
-    transform: rotateY(180deg);
-    /* Rotate on click */
-}
-
 
 /* Style for additional info */
 
@@ -464,21 +483,6 @@ body {
 .additional-info.active {
     opacity: 1;
     /* Become visible */
-}
-
-
-/* Optional: Adding a transition on reveal */
-
-.portfolio-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    /* Adjust gap between items */
-}
-
-.portfolio-layer {
-    position: relative;
-    /* Required for positioning additional info */
 }
 
 
