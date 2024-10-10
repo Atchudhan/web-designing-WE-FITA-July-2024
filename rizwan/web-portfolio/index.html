@@ -80,7 +80,7 @@
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i><span>Home</span></a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i><span>About</span></a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i><span>Resume</span></a></li>
-        <li><a href="#portfolio"><i class="bi bi-images navicon"></i><span>Portfolio</span></a></li>
+        <li><a href="#projects"><i class="fa-solid fa-layer-group"></i><span>Projects</span></a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i><span>Services</span></a></li>
         <li><a href="#contact"><i class="bi bi-envelope navicon"></i><span>Contact</span></a></li>
       </ul>
@@ -528,155 +528,165 @@
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section light-background">
-
+    <section id="projects" class="projects section">
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Portfolio</h2>
+        <h2>Projects</h2>
         <p>By showcasing each project this way, I emphasize not just the technical stack but my role and the impact I
           made.</p>
-        <div class="button-section"><!-- View GitHub Profile Button -->
+        <div class="button-section">
+          <!-- View GitHub Profile Button -->
           <a href="https://github.com/mohamedrizwan4518" target="_blank"
             onclick="return confirm('Do you want to view my GitHub profile?')" class="neon-btn">
             <i class="fa-brands fa-github"></i> GitHub
           </a>
         </div>
-      </div><!-- End Section Title -->
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      </div>
+      <!-- End Section Title -->
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">All</li>
-            <li data-filter=".filter-app">Software-Project</li>
-            <li data-filter=".filter-project">Hardware-Project</li>
-          </ul><!-- End Portfolio Filters -->
+      <div class="projects__container container grid">
+        <!-- Project Card 1 -->
+        <article class="projects__card" aria-labelledby="project1-title">
+          <a href="#" target="_blank" class="projects__image"
+            aria-label="View Weather Report Project">
+            <img src="assets/img/portfolio/app-1.jpg" alt="Weather Report App Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project1-title" class="projects__name">Weather Report</h3>
+            <p class="projects__description">
+              The Weather Report App is a user-friendly web application that provides real-time weather updates for any
+              location.
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/html.webp" alt="HTML5" class="projects_skill">
+            <img src="assets/img/skill/css3.png" alt="CSS3" class="projects_skill">
+            <img src="assets/img/skill/Python-logo-notext.svg.png" alt="JavaScript" class="projects_skill">
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/Weather_Report" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+        <!-- Project Card 2 -->
+        <article class="projects__card" aria-labelledby="project2-title">
+          <a href="#" target="_blank" class="projects__image" aria-label="View Project 2">
+            <img src="assets/img/portfolio/app-2.jpeg" alt="Project 2 Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project2-title" class="projects__name">Personal Web Portfolio</h3>
+            <p class="projects__description">
+              A personal web's portfolio is a valuable asset for anyone looking to promote themselves and their work in
+              a digital world.
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/html.webp" alt="HTML5" class="projects_skill">
+            <img src="assets/img/skill/css3.png" alt="CSS3" class="projects_skill">
+            <img src="assets/img/skill/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript"
+              class="projects_skill">
+            <img src="assets/img/skill/React.webp" alt="CSS3" class="projects_skill">
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/Web-portfolio" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-1.jpg" class="img-fluid" alt="Weather Report App">
+        <!-- Project Card 3 -->
+        <article class="projects__card" aria-labelledby="project3-title">
+          <a href="#" target="_blank" class="projects__image" aria-label="View Project 3">
+            <img src="assets/img/portfolio/app-3.png" alt="Project 3 Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project3-title" class="projects__name">Speech Recognition:Audio to Text</h3>
+            <p class="projects__description">
+              Listen to the audio and types what you hear.This method can be allows for high accuracy.
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/html.webp" alt="HTML5" class="projects_skill">
+            <img src="assets/img/skill/css3.png" alt="CSS3" class="projects_skill">
+            <img src="assets/img/skill/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript"
+              class="projects_skill">
+              <img src="assets/img/skill/Python-logo-notext.svg.png" alt="CSS3" class="projects_skill">
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/SpeechRecognition--Speech-to-Text" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
 
-                <div class="portfolio-info">
-                  <h4>Weather Report</h4>
-                  <p>Technologies: HTML, CSS, JavaScript</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/Weather_Report" target="_blank" class="project-link"
-                    title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/app-1.jpg" title="Weather Report" data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- Additional Project Cards... -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-2.jpeg" class="img-fluid" alt="Personal Web Portfolio">
+        <!-- Example of Project Card 4 -->
+        <article class="projects__card" aria-labelledby="project4-title">
+          <a href="#" target="_blank" class="projects__image" aria-label="View Project 4">
+            <img src="assets/img/portfolio/project1.jpg" alt="Project 4 Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project4-title" class="projects__name">Smart Home Solutions</h3>
+            <p class="projects__description">
+              As the Internet of Things (IoT) continues to grow, smart home solutions will become increasingly
+              accessible and affordable, making homes more efficient, secure, and user-friendly.
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/iot.jpg" alt="HTML5" class="projects_skill">
+            <img src="assets/img/skill/arduino.png" alt="CSS3" class="projects_skill">
+            <img src="assets/img/skill/Python-logo-notext.svg.png" alt="python" class="projects_skill">
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/Home_Automation" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
 
-                <div class="portfolio-info">
-                  <h4>Personal Web Portfolio</h4>
-                  <p>Technologies: HTML, CSS, JavaScript</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/Web-Portfolio" target="_blank" class="project-link"
-                    title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/app-2.jpeg" title="Personal Web Portfolio"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
+        <!-- Example of Project Card 5 -->
+        <article class="projects__card" aria-labelledby="project5-title">
+          <a href="#" target="_blank" class="projects__image" aria-label="View Project 5">
+            <img src="assets/img/portfolio/project2.jpg" alt="Project 5 Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project5-title" class="projects__name">Gesture Control Bluetooth Speaker</h3>
+            <p class="projects__description">
+              Gesture Control Bluetooth Speakers represent a fusion of technology and convenience, allowing users to
+              enjoy their favorite music
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/iot.jpg" alt="HTML5" class="projects_skill">
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/gesture-controlled-bluetooth-speaker" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
 
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/app-3.png" class="img-fluid" alt="Audio to Text">
+        <!-- Example of Project Card 6 -->
+        <article class="projects__card" aria-labelledby="project6-title">
+          <a href="#" target="_blank" class="projects__image" aria-label="View Project 6">
+            <img src="assets/img/portfolio/project3.jpg" alt="Project 6 Screenshot" class="projects__img">
+          </a>
+          <div class="projects__data">
+            <h3 id="project6-title" class="projects__name">Automatic Street Light</h3>
+            <p class="projects__description">
+              An Automatic Street Light system is a smart lighting solution which is ,automatic street lighting is
+              likely to play a crucial role in modern urban planning and development.
+            </p>
+          </div>
+          <div class="projects__skills">
+            <img src="assets/img/skill/arduino.png" alt="HTML5" class="projects_skill">
+            <img src="assets/img/skill/iot.jpg" alt="HTML5" class="projects_skill">
 
-                <div class="portfolio-info">
-                  <h4>Speech Recognition: Audio to Text</h4>
-                  <p>Technologies: Python, SpeechRecognition Library</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/SpeechRecognition--Speech-to-Text" target="_blank"
-                    class="project-link" title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/app-3.png" title="Speech Recognition: Audio to Text"
-                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/project1.jpg" class="img-fluid" alt="Smart Home Solution">
-
-                <div class="portfolio-info">
-                  <h4>Smart Home Solution</h4>
-                  <p>Technologies: Arduino, IoT, C++</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/Home_Automation" target="_blank" class="project-link"
-                    title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/project1.jpg" title="Smart Home Solution"
-                    data-gallery="portfolio-gallery-project" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item --->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/project2.jpg" class="img-fluid" alt="Gesture Control Bluetooth Speaker">
-
-                <div class="portfolio-info">
-                  <h4>Gesture Control Bluetooth Speaker</h4>
-                  <p>Technologies: Arduino, Bluetooth, C++</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/gesture-controlled-bluetooth-speaker" target="_blank"
-                    class="project-link" title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/project2.jpg" title="Gesture Control Bluetooth Speaker"
-                    data-gallery="portfolio-gallery-project" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-project">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/project3.jpg" class="img-fluid" alt="Gesture Control Bluetooth Speaker">
-
-                <div class="portfolio-info">
-                  <h4>Automatic Street Light</h4>
-                  <p>Technologies: LDR, Arduino, Relays, PIR Sensor</p>
-                  <!-- Link icon for the project -->
-                  <a href="https://github.com/mohamedrizwan4518/smart-street-light-system" target="_blank"
-                    class="project-link" title="View Project">
-                    <i class="bi bi-link-45deg"></i> <!-- Link icon -->
-                  </a>
-                  <!-- Lightbox for image preview -->
-                  <a href="assets/img/portfolio/project3.jpg" title="Automatic Street Light"
-                    data-gallery="portfolio-gallery-project" class="glightbox preview-link"><i
-                      class="bi bi-zoom-in"></i>
-                  </a>
-                </div>
-              </div>
-            </div><!-- End Portfolio Item -->
-          </div><!-- End Portfolio Container -->
-        </div>
+          </div>
+          <a href="https://github.com/mohamedrizwan4518/smart-street-light-system" target="_blank" class="projects__button">
+            <i class="fa-solid fa-link"></i>
+            <span>Visit Project</span>
+          </a>
+        </article>
+        <!-- Additional project cards can be added here following the same structure -->
       </div>
     </section>
 
