@@ -1502,199 +1502,193 @@ button {
   font-size: 24px;
 }
 
-/* Portfolio Section */
-.portfolio {
-  padding: 50px 0;
-  background-color: #f9f9f9;
+/* Project Section */
+/* Container Styles */
+.projects__container {
+  display: grid; /* Using CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
+  gap: 20px; /* Space between project cards */
 }
 
-.portfolio .section-title {
-  text-align: center;
-  margin-bottom: 40px;
+/* Card Styles */
+.projects__card {
+  background-color: #fff; /* Example background */
+  border: 1px solid #ddd; /* Example border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  overflow: hidden; /* Ensure rounded corners apply */
+  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition on hover */
+  perspective: 1000px; /* Perspective for 3D effect */
+  transform-style: preserve-3d;
 }
 
-.portfolio h2 {
-  font-size: 36px;
-  color: #333;
-  font-weight: 700;
+/* Hover effect for project cards */
+.projects__card:hover {
+  transform: rotateY(5deg) rotateX(5deg) scale(1.05); /* 3D tilt and slight zoom */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
-.portfolio p {
-  font-size: 18px;
-  color: #666;
+/* Image Styles */
+.projects__image {
+  display: block; /* Block display for links */
 }
 
-/* Portfolio Items Grid */
-.portfolio .isotope-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Responsive grid */
-  grid-gap: 20px;
-  /* Space between items */
-}
-
-/* Portfolio Item */
-.portfolio-item {
-  position: relative;
-  overflow: hidden;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  /* Soft shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* Smooth transition */
-}
-
-.portfolio-item:hover {
-  transform: translateY(-10px);
-  /* Slight hover lift */
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
-  /* Deeper shadow on hover */
-}
-
-/* Portfolio Image */
-.portfolio-item img {
-  width: 100%;
-  height: 250px;
+.projects__img {
+  width: 100%; /* Full width */
+  height: 200px; /* Auto height */
   object-fit: cover;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; /* Smooth image transition */
 }
 
-.portfolio-item:hover img {
-  transform: scale(1.05);
-  /* Zoom effect on hover */
+/* On hover, zoom out */
+.projects__card:hover .projects__img {
+  transform: scale(0.95); /* Zoom out effect */
 }
 
-/* Portfolio Info */
-.portfolio-info {
-  padding: 20px;
-  text-align: center;
-  background-color: rgba(0, 196, 255, 0.1);
-  /* Light background */
-  transition: background-color 0.3s ease;
+/* Data Styles */
+.projects__data {
+  padding: 15px; /* Padding inside the card */
+  text-align: center; /* Center align text */
 }
 
-.portfolio-info h4 {
-  font-size: 22px;
-  margin-bottom: 10px;
-  color: #333;
+.projects__name {
+  font-size: 1.5rem; /* Font size for project name */
+  margin: 10px 0; /* Space above and below project name */
+  color: #333; /* Dark color for text */
+  font-weight: bold; /* Bold font */
 }
 
-.portfolio-info p {
-  color: #666;
-  margin-bottom: 5px;
+.projects__description {
+  font-size: 0.9rem; /* Smaller font for description */
+  color: #666; /* Grey color for description text */
+  margin-bottom: 15px; /* Space below description */
 }
 
-.portfolio-info p:last-child {
-  font-size: 15px;
-  color: #888;
+/* Skills Styles */
+.projects__skills {
+  display: flex; /* Flexbox for skill icons */
+  justify-content: center; /* Center align skill icons */
+  gap: 10px; /* Space between icons */
+  margin: 10px 0; /* Margin for skill icons */
 }
 
-.project-link i,
-.preview-link i {
-  transition: transform 0.3s ease, color 0.3s ease;
-  /* Smooth transition for transform and color */
+.projects_skill {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.project-link:hover i {
-  color: #000000;
-  /*Changecoloronhover*/
-  transform: scale(1.2);
-  /*Scaleuptheicon*/
-  /*Addadropshadoweffect*/
-  filter: drop-shadow(0 0 5px rgba(0, 196, 255, 0.7));
-  -webkit-filter: drop-shadow(0 0 5px rgba(0, 196, 255, 0.7));
+/* Hover Effect for Skill Icons */
+.projects_skill:hover {
+  transform: scale(1.2); /* Slightly increase size on hover */
+  filter: brightness(1.2); /* Brighten the image on hover */
 }
 
-.preview-link:hover i {
-  color: #000000;
-  /*Changecoloronhover*/
-  transform: scale(1.2);
-  /*Scaleuptheicon*/
-  /*Addadropshadoweffect*/
-  filter: drop-shadow(0 0 5px rgba(0, 196, 255, 0.7));
-  -webkit-filter: drop-shadow(0 0 5px rgba(0, 196, 255, 0.7));
+/* Fade-in Animation for Skill Icons */
+@keyframes fadeInSkill {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start from below */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Move to the final position */
+  }
 }
 
-/* Portfolio Filters */
-.portfolio-filters {
+/* Apply animation with slight delay to each icon */
+.projects_skill:nth-child(1) {
+  animation: fadeInSkill 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+.projects_skill:nth-child(2) {
+  animation: fadeInSkill 0.6s ease forwards;
+  animation-delay: 0.4s;
+}
+.projects_skill:nth-child(3) {
+  animation: fadeInSkill 0.6s ease forwards;
+  animation-delay: 0.6s;
+}
+.projects_skill:nth-child(4) {
+  animation: fadeInSkill 0.6s ease forwards;
+  animation-delay: 0.8s;
+}
+
+/* Button Styles */
+.projects__button {
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 40px;
+  padding: 10px 15px;
+  background: #007bff; /* Bootstrap primary color */
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative; /* For hover effect */
+  overflow: hidden; /* Hide overflow for animation */
 }
 
-.portfolio-filters li {
-  margin: 0 15px;
-  cursor: pointer;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 10px 20px;
-  color: #000000;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  position: relative;
-  transition: color 0.3s ease;
+.projects__button:hover {
+  background: #0056b3; /* Darker shade on hover */
+  transform: scale(1.05); /* Slightly grow on hover */
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4); /* Add shadow */
 }
 
-.portfolio-filters li:hover {
-  color: #00c4ff;
-  /* Highlight color */
+.projects__button i {
+  margin-right: 5px; /* Space between icon and text */
 }
 
-.portfolio-filters li::after {
+/* Hover Animation with Ripple Effect */
+.projects__button::before {
   content: "";
   position: absolute;
-  width: 0;
-  height: 3px;
-  background-color: #00c4ff;
-  bottom: -5px;
+  top: 50%;
   left: 50%;
-  transition: width 0.3s ease, left 0.3s ease;
+  width: 300%;
+  height: 300%;
+  background: rgba(255, 255, 255, 0.2); /* Light ripple color */
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  border-radius: 50%;
+  z-index: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%);
 }
 
-.portfolio-filters li:hover::after,
-.portfolio-filters .filter-active::after {
-  width: 100%;
-  left: 0;
+.projects__button:hover::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
-.portfolio-filters .filter-active {
-  color: #00c4ff;
-  /* Active filter color */
-  font-weight: bold;
+/* Text and Icon Layering */
+.projects__button span, .projects__button i {
+  position: relative;
+  z-index: 2;
 }
 
+/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-  .portfolio-item {
-    width: 100%;
-    /* Ensure items take full width on mobile */
-    margin-bottom: 20px;
-    /* Space between items */
-  }
-
-  .portfolio-content {
-    padding: 10px;
-    /* Adjust padding if necessary */
+  .projects__card {
+    flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
+    max-width: calc(50% - 20px); /* Maximum width for the card */
   }
 }
 
-@media (max-width: 576px) {
-  .portfolio-filters {
-    flex-direction: column;
-    /* Stack items vertically */
-    align-items: center;
-    /* Center align */
+@media (max-width: 480px) {
+  .projects__card {
+    flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
+    max-width: calc(100% - 20px); /* Maximum width for the card */
   }
+}
 
-  .portfolio-filters li {
-    width: 100%;
-    /* Make each filter item take full width */
-    text-align: center;
-    /* Center the text */
+/* Responsive Design for larger screens */
+@media (min-width: 768px) {
+  .projects__container {
+      grid-template-columns: repeat(3, 1fr); /* Show 3 cards in a row */
   }
 }
 
