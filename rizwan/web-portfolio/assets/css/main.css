@@ -903,25 +903,40 @@ h6 {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  transition: background-color 0.3s ease-in-out;
-  -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -ms-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .stats-item:hover {
   background-color: #00c4ff;
   color: #fff;
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.stats-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.stats-item:hover::before {
+  left: calc(100% + 75px);
 }
 
 .stats .stats-item {
   padding: 30px;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .stats .stats-item i {
@@ -930,6 +945,16 @@ h6 {
   font-size: 44px;
   float: left;
   line-height: 0;
+  animation: bounce 1.5s infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
 .stats .stats-item .purecounter {
@@ -948,6 +973,7 @@ h6 {
   font-family: var(--heading-font);
   font-size: 14px;
 }
+
 
 /*--------------------------------------------------------------
 # About Section
@@ -1048,7 +1074,7 @@ strong {
 }
 
 .hobby-item {
-  background: linear-gradient(135deg, #ff7e00, #ff3d00); /* Warm gradient */
+  background: linear-gradient(135deg, #009ffd, #2a2a72); /* Cool blue gradient */
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -1165,7 +1191,7 @@ strong {
 }
 
 .fill-bar {
-  background: linear-gradient(45deg, #e8ec00, #e64a19);
+  background: linear-gradient(45deg, #89f7fe, #66a6ff);
   height: 20px;
   width: auto;
   border-radius: 10px;
@@ -1337,6 +1363,32 @@ strong {
 
 .card-front {
   background-color: #ffffff;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.card-front i {
+  animation: pulse 1s infinite;
+  transition: transform 0.2s ease-in-out;
+  -webkit-animation: pulse 1s infinite;
+  -webkit-transition: transform 0.2s ease-in-out;
+  -moz-transition: transform 0.2s ease-in-out;
+  -ms-transition: transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+}
+
+.card-front:hover i {
+  transform: scale(1.15); /* Slight increase on hover */
 }
 
 .card-back {
