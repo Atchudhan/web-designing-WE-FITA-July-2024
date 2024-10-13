@@ -413,48 +413,6 @@ h6 {
   background: var(--accent-color);
 }
 
-.sitename {
-  font-family: 'Arial', sans-serif;
-  font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff, #00ffff, #ffff00);
-  background-size: 600% 600%; /* Increased size for a smoother transition */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: relative;
-  animation: colorShift 10s linear infinite; /* Continuous color shift */
-  transition: transform 0.3s ease;
-}
-
-.sitename::before {
-  content: "MD_R27";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, rgba(255, 0, 0, 0.6), rgba(0, 255, 0, 0.6), rgba(0, 0, 255, 0.6), rgba(255, 0, 255, 0.6), rgba(0, 255, 255, 0.6), rgba(255, 255, 0, 0.6));
-  background-size: 600% 600%; /* Matches the size for smooth transition */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: blur(10px);
-  z-index: -1;
-  animation: colorShift 10s linear infinite;
-}
-
-@keyframes colorShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-}
-
-
-
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
