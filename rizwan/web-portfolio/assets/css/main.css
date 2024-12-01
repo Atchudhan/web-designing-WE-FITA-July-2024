@@ -105,39 +105,65 @@ body {
 a {
   color: var(--accent-color);
   text-decoration: none;
-  transition: 0.3s;
   -webkit-transition: 0.3s;
+  /* Safari and Chrome */
   -moz-transition: 0.3s;
+  /* Firefox */
   -ms-transition: 0.3s;
+  /* Internet Explorer */
   -o-transition: 0.3s;
+  /* Opera */
+  transition: 0.3s;
+  /* Standard property */
 }
 
+
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: rgba(255, 102, 0, 0.25);
+  /* Using RGBA for 25% transparency */
   text-decoration: none;
 }
 
+
 a:hover, .btn:hover {
-  transition: 0.3s;
   color: #ffffff;
   -webkit-transition: 0.3s;
+  /* Safari and Chrome */
   -moz-transition: 0.3s;
+  /* Firefox */
   -ms-transition: 0.3s;
+  /* Internet Explorer */
   -o-transition: 0.3s;
+  /* Opera */
+  transition: 0.3s;
+  /* Standard property */
 }
 
 .social-links a:hover {
   transform: scale(1.5);
+  /* Standard property */
   transition: transform 0.1s ease-in-out;
+  /* Standard property */
+
   -webkit-transform: scale(1.5);
+  /* For Safari and older Chrome */
   -moz-transform: scale(1.5);
+  /* For Firefox */
   -ms-transform: scale(1.5);
+  /* For Internet Explorer */
   -o-transform: scale(1.5);
+  /* For older Opera */
+
   -webkit-transition: transform 0.1s ease-in-out;
+  /* For Safari and older Chrome */
   -moz-transition: transform 0.1s ease-in-out;
+  /* For Firefox */
   -ms-transition: transform 0.1s ease-in-out;
+  /* For Internet Explorer */
   -o-transition: transform 0.1s ease-in-out;
+  /* For older Opera */
 }
+
 
 h1,
 h2,
@@ -171,7 +197,8 @@ h6 {
 
 /* Profile image container with overlay effect */
 .header .profile-img {
-  position: relative; /* To position the overlay */
+  position: relative;
+  /* To position the overlay */
 }
 
 .header .profile-img::after {
@@ -182,11 +209,15 @@ h6 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.5); /* Initial color */
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Initial color */
   z-index: 2;
-  animation: color-change-overlay 4s infinite alternate; /* Apply color change */
-  mix-blend-mode: multiply; /* Blend the color with the image */
-  pointer-events: none; /* Ensure it doesn't block interaction */
+  animation: color-change-overlay 4s infinite alternate;
+  /* Apply color change */
+  mix-blend-mode: multiply;
+  /* Blend the color with the image */
+  pointer-events: none;
+  /* Ensure it doesn't block interaction */
 }
 
 
@@ -195,7 +226,8 @@ h6 {
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid; /* Remove fixed color and animate */
+  border: 8px solid;
+  /* Remove fixed color and animate */
   border-radius: 50%;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
   /* Apply the color animation to profile image border */
@@ -211,44 +243,67 @@ h6 {
 /* Colorful motion for the profile image border */
 @keyframes color-change-border {
   0% {
-    border-color: #ff5733; /* Vivid Red-Orange */
+    border-color: #ff5733;
+    /* Vivid Red-Orange */
   }
+
   20% {
-    border-color: #33ff57; /* Vivid Green */
+    border-color: #33ff57;
+    /* Vivid Green */
   }
+
   40% {
-    border-color: #3357ff; /* Bright Blue */
+    border-color: #3357ff;
+    /* Bright Blue */
   }
+
   60% {
-    border-color: #ff33c4; /* Vivid Pink */
+    border-color: #ff33c4;
+    /* Vivid Pink */
   }
+
   80% {
-    border-color: #faff33; /* Bright Yellow */
+    border-color: #faff33;
+    /* Bright Yellow */
   }
+
   100% {
-    border-color: #33fff7; /* Light Cyan */
+    border-color: #33fff7;
+    /* Light Cyan */
   }
 }
+
 /* Logo */
 /* Colorful motion for the logo text */
 @keyframes color-change-text {
   0% {
-    color: #ff5733; /* Vivid Red-Orange */
+    color: #ff5733;
+    /* Vivid Red-Orange */
   }
+
   20% {
-    color: #33ff57; /* Vivid Green */
+    color: #33ff57;
+    /* Vivid Green */
   }
+
   40% {
-    color: #3357ff; /* Bright Blue */
+    color: #3357ff;
+    /* Bright Blue */
   }
+
   60% {
-    color: #ff33c4; /* Vivid Pink */
+    color: #ff33c4;
+    /* Vivid Pink */
   }
+
   80% {
-    color: #faff33; /* Bright Yellow */
+    color: #faff33;
+    /* Bright Yellow */
   }
+
   100% {
-    color: #33fff7; /* Light Cyan */
+    color: #33fff7;
+    /* Light Cyan */
   }
 }
 
@@ -258,7 +313,8 @@ h6 {
   font-weight: 700;
   letter-spacing: 1.5px;
   /* Apply the color animation to logo text */
-  animation: color-change-text 4s infinite alternate; /* Faster transition */
+  animation: color-change-text 4s infinite alternate;
+  /* Faster transition */
 }
 
 
@@ -626,11 +682,16 @@ h6 {
 /* Media query for mobile devices */
 @media only screen and (max-width: 768px) {
   .section-title p {
-    font-size: 15px; /* Smaller font size for mobile */
-    line-height: 1.3; /* Adjust line-height for better readability */
-    margin-top: 15px; /* Reduced margin for mobile */
-    text-align: justify; /* Make sure text is aligned properly */
-    padding: 0 10px; /* Add some padding to avoid text touching edges */
+    font-size: 15px;
+    /* Smaller font size for mobile */
+    line-height: 1.3;
+    /* Adjust line-height for better readability */
+    margin-top: 15px;
+    /* Reduced margin for mobile */
+    text-align: justify;
+    /* Make sure text is aligned properly */
+    padding: 0 10px;
+    /* Add some padding to avoid text touching edges */
   }
 }
 
@@ -652,33 +713,40 @@ h6 {
 /* General Hero Styling */
 .hero {
   width: 100%;
-  min-height: 100vh; /* Full screen height */
+  min-height: 100vh;
+  /* Full screen height */
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Prevent overflow of image */
+  overflow: hidden;
+  /* Prevent overflow of image */
 }
 
 /* Hero Image */
 .hero img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Cover the entire section */
-  position: absolute; /* Position behind content */
+  object-fit: cover;
+  /* Cover the entire section */
+  position: absolute;
+  /* Position behind content */
   top: 0;
   left: 0;
-  z-index: 1; /* Set z-index to position below text */
+  z-index: 1;
+  /* Set z-index to position below text */
 }
 
 /* Mobile View Adjustments */
 @media (max-width: 768px) {
   .hero {
-    height: 60vh; /* Reduce the height for mobile */
+    height: 60vh;
+    /* Reduce the height for mobile */
   }
 
   .hero img {
-    object-position: center; /* Ensure important part of image is centered */
+    object-position: center;
+    /* Ensure important part of image is centered */
     height: 100%;
   }
 }
@@ -686,7 +754,8 @@ h6 {
 /* Optional - For screens below 480px, you can further adjust */
 @media (max-width: 480px) {
   .hero {
-    height: 50vh; /* Further reduce height for very small screens */
+    height: 50vh;
+    /* Further reduce height for very small screens */
   }
 }
 
@@ -697,152 +766,213 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Dark overlay with increased opacity */
-  z-index: 2; /* Set overlay above image */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark overlay with increased opacity */
+  z-index: 2;
+  /* Set overlay above image */
 }
 
 /* Hero Content */
 .hero-content {
   position: relative;
-  z-index: 3; /* Set content above overlay */
-  text-align: center; /* Centering text */
+  z-index: 3;
+  /* Set content above overlay */
+  text-align: center;
+  /* Centering text */
   color: #fff;
 }
 
 .hero-subtitle {
-  font-size: 1.5rem; /* Font size for the subtitle */
-  color: white; /* Text color */
-  text-align: center; /* Center align text */
-  margin-top: 10px; /* Space above the subtitle */
-  animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  font-size: 1.5rem;
+  /* Font size for the subtitle */
+  color: white;
+  /* Text color */
+  text-align: center;
+  /* Center align text */
+  margin-top: 10px;
+  /* Space above the subtitle */
+  animation: fadeIn 1.5s ease-in-out;
+  /* Fade-in animation */
 }
 
 .hero-subtitle strong {
-  color: #ffd700; /* Highlight color for your name */
-  font-weight: bold; /* Bold text for emphasis */
+  color: #ffd700;
+  /* Highlight color for your name */
+  font-weight: bold;
+  /* Bold text for emphasis */
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
   0% {
-      opacity: 0; /* Start invisible */
+    opacity: 0;
+    /* Start invisible */
   }
+
   100% {
-      opacity: 1; /* Fade in to visible */
+    opacity: 1;
+    /* Fade in to visible */
   }
 }
 
 /* Mobile Styles */
 @media (max-width: 768px) {
   .animated-heading {
-      font-size: 1.8rem; /* Smaller font size for mobile */
-      margin-bottom: 15px; /* Adjust space below heading */
+    font-size: 1.8rem;
+    /* Smaller font size for mobile */
+    margin-bottom: 15px;
+    /* Adjust space below heading */
   }
 
   .hero-subtitle {
-      font-size: 1.4rem; /* Smaller font size for subtitle */
-      margin-top: 10px; /* Adjust space above the subtitle */
+    font-size: 1.4rem;
+    /* Smaller font size for subtitle */
+    margin-top: 10px;
+    /* Adjust space above the subtitle */
   }
 
   .hero-actions {
-      flex-direction: column; /* Stack buttons vertically */
-      align-items: center; /* Center align buttons */
+    flex-direction: column;
+    /* Stack buttons vertically */
+    align-items: center;
+    /* Center align buttons */
   }
 
   .btn {
-      width: 100%; /* Full-width buttons */
-      margin-bottom: 10px; /* Space between buttons */
+    width: 100%;
+    /* Full-width buttons */
+    margin-bottom: 10px;
+    /* Space between buttons */
   }
 }
 
 /* Button Styles */
 .btn {
-  padding: 10px 20px; /* Button padding */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* No underline */
-  font-size: 1rem; /* Button font size */
-  margin: 0 10px; /* Space between buttons */
-  transition: background-color 0.3s; /* Transition for hover effect */
+  padding: 10px 20px;
+  /* Button padding */
+  border: none;
+  /* No border */
+  border-radius: 5px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* No underline */
+  font-size: 1rem;
+  /* Button font size */
+  margin: 0 10px;
+  /* Space between buttons */
+  transition: background-color 0.3s;
+  /* Transition for hover effect */
 }
 
 .primary-btn {
-  background-color: #007bff; /* Primary button color */
-  color: white; /* Text color */
+  background-color: #007bff;
+  /* Primary button color */
+  color: white;
+  /* Text color */
 }
 
 .primary-btn:hover {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
+  /* Darker shade on hover */
 }
 
 .secondary-btn {
-  background-color: transparent; /* Secondary button transparent */
-  color: white; /* Text color */
-  border: 1px solid white; /* Border for secondary button */
+  background-color: transparent;
+  /* Secondary button transparent */
+  color: white;
+  /* Text color */
+  border: 1px solid white;
+  /* Border for secondary button */
 }
 
 .secondary-btn:hover {
-  background-color: white; /* Background on hover */
-  color: #007bff; /* Text color on hover */
+  background-color: white;
+  /* Background on hover */
+  color: #007bff;
+  /* Text color on hover */
 }
 
 /* Social Icons */
 /* General styles for the social icons */
 /* General styles for social media icons */
 .social-icons .social-links a {
-  font-size: 2rem; /* Icon size */
+  font-size: 2rem;
+  /* Icon size */
   padding: 10px;
   transition: all 0.3s ease;
   display: inline-block;
   text-decoration: none;
-  animation: colorChange 2s infinite alternate, bounce 1.5s infinite; /* Combine color change and bouncing */
+  animation: colorChange 2s infinite alternate, bounce 1.5s infinite;
+  /* Combine color change and bouncing */
 }
 
 /* Continuous color change animation */
 @keyframes colorChange {
   0% {
-    color: #1da1f2; /* Twitter Blue */
+    color: #1da1f2;
+    /* Twitter Blue */
   }
+
   25% {
-    color: #e4405f; /* Instagram Pink */
+    color: #e4405f;
+    /* Instagram Pink */
   }
+
   50% {
-    color: #0077b5; /* LinkedIn Blue */
+    color: #0077b5;
+    /* LinkedIn Blue */
   }
+
   75% {
-    color: #ff9900; /* Yellow */
+    color: #ff9900;
+    /* Yellow */
   }
+
   100% {
-    color: #ff6600; /* Orange */
+    color: #ff6600;
+    /* Orange */
   }
 }
 
 /* Bouncing animation */
 @keyframes bounce {
   0% {
-    transform: translateY(0); /* Starting position */
+    transform: translateY(0);
+    /* Starting position */
   }
+
   20% {
-    transform: translateY(-10px); /* Move up */
+    transform: translateY(-10px);
+    /* Move up */
   }
+
   40% {
-    transform: translateY(0); /* Move back down */
+    transform: translateY(0);
+    /* Move back down */
   }
+
   60% {
-    transform: translateY(-5px); /* Small bounce */
+    transform: translateY(-5px);
+    /* Small bounce */
   }
+
   80% {
-    transform: translateY(0); /* Move back to normal */
+    transform: translateY(0);
+    /* Move back to normal */
   }
+
   100% {
-    transform: translateY(-2px); /* Final tiny bounce */
+    transform: translateY(-2px);
+    /* Final tiny bounce */
   }
 }
 
 /* Hover effect for scaling and color change */
 .social-icons .social-links a:hover {
-  transform: scale(1.1); /* Scale up on hover */
-  color: #00c4ff; /* Optional color change on hover */
+  transform: scale(1.1);
+  /* Scale up on hover */
+  color: #00c4ff;
+  /* Optional color change on hover */
 }
 
 
@@ -852,43 +982,64 @@ h6 {
 .scroll-down {
   font-size: 3rem;
   display: inline-block;
-  position: absolute; /* Allows for positioning relative to the viewport */
-  bottom: -200px; /* Distance from the bottom of the viewport */
-  left: 50%; /* Horizontal centering */
-  transform: translateX(-50%); /* Adjust horizontal positioning to center */
-  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
-  color: #00c4ff; /* Starting color */
+  position: absolute;
+  /* Allows for positioning relative to the viewport */
+  bottom: -200px;
+  /* Distance from the bottom of the viewport */
+  left: 50%;
+  /* Horizontal centering */
+  transform: translateX(-50%);
+  /* Adjust horizontal positioning to center */
+  transition: color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition for hover */
+  color: #00c4ff;
+  /* Starting color */
   text-decoration: none;
-  animation: bounce 1s infinite; /* Bounce animation */
-  -webkit-animation: bounce 1s infinite; /* For Safari */
+  animation: bounce 1s infinite;
+  /* Bounce animation */
+  -webkit-animation: bounce 1s infinite;
+  /* For Safari */
 }
 
 /* Keyframes for bounce animation */
 @keyframes bounce {
   0% {
-    transform: translateY(0); /* Starting position */
+    transform: translateY(0);
+    /* Starting position */
   }
+
   20% {
-    transform: translateY(-10px); /* Move up */
+    transform: translateY(-10px);
+    /* Move up */
   }
+
   40% {
-    transform: translateY(0); /* Move back down */
+    transform: translateY(0);
+    /* Move back down */
   }
+
   60% {
-    transform: translateY(-5px); /* Small bounce */
+    transform: translateY(-5px);
+    /* Small bounce */
   }
+
   80% {
-    transform: translateY(0); /* Move back to normal */
+    transform: translateY(0);
+    /* Move back to normal */
   }
+
   100% {
-    transform: translateY(-2px); /* Final tiny bounce */
+    transform: translateY(-2px);
+    /* Final tiny bounce */
   }
 }
 
 /* Hover effect for scaling */
 .scroll-down:hover {
-  transform: translateY(5px); /* Moves down slightly on hover */
-  color: #ff6600; /* Color change on hover */
+  transform: translateY(5px);
+  /* Moves down slightly on hover */
+  color: #ff6600;
+  /* Color change on hover */
 }
 
 
@@ -896,53 +1047,70 @@ h6 {
 /* Animated Heading */
 .animated-heading {
   font-size: 2.5rem;
-  /*Fontsizefortheheading*/font-weight: bold;
-  /*Makethetextbold*/color: #ffffff;
-  /*Textcolor*/text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  /*Shadowfordepth*/margin: 20px 0;
-  /*Marginforspacing*/animation: fadeIn 1.5s ease-in-out;
+  /*Fontsizefortheheading*/
+  font-weight: bold;
+  /*Makethetextbold*/
+  color: #ffffff;
+  /*Textcolor*/
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+  /*Shadowfordepth*/
+  margin: 20px 0;
+  /*Marginforspacing*/
+  animation: fadeIn 1.5s ease-in-out;
   -webkit-animation: fadeIn 1.5s ease-in-out;
-  text-align: center; /* Center align text */
-  margin-bottom: 20px; /* Space below heading */
+  text-align: center;
+  /* Center align text */
+  margin-bottom: 20px;
+  /* Space below heading */
 }
 
 /* Fade-in Animation */
 @keyframes fadeIn {
   0% {
-      opacity: 0; /* Start invisible */
-      transform: translateY(-20px); /* Start slightly above */
+    opacity: 0;
+    /* Start invisible */
+    transform: translateY(-20px);
+    /* Start slightly above */
   }
+
   100% {
-      opacity: 1; /* Fully visible */
-      transform: translateY(0); /* Move to normal position */
+    opacity: 1;
+    /* Fully visible */
+    transform: translateY(0);
+    /* Move to normal position */
   }
+}
+
+/* General Variables */
+:root {
+  --accent-color: #00c4ff;
+  --heading-color: #333;
+  --background-color: #fff;
+  --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  --hover-box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  --font-size-small: 15px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
 }
 
 /* About Section */
 #about .content ul li {
   padding: 10px 0;
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 10px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  font-size: 15px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  font-size: var(--font-size-small);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+#about .content ul li:hover {
+  box-shadow: var(--hover-box-shadow);
 }
 
 #about img {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-  -webkit-transition: box-shadow 0.3s ease-in-out;
-  -moz-transition: box-shadow 0.3s ease-in-out;
-  -ms-transition: box-shadow 0.3s ease-in-out;
-  -o-transition: box-shadow 0.3s ease-in-out;
 }
 
 #about img:hover {
@@ -953,95 +1121,89 @@ h6 {
 @media (max-width: 768px) {
   .hobby-list {
     flex-direction: column;
-    /* Stack items vertically on mobile */
     align-items: center;
   }
 
   .hobby-item {
     justify-content: center;
-    /* Center the icon and text in mobile view */
     text-align: center;
   }
 
   .hobby-item i {
     margin-right: 0;
-    margin-bottom: 0px;
-    /* Move icon above text */
+    margin-bottom: 0;
   }
 }
 
+/* Info List Styling */
 .info-list {
-  list-style: none; /* Remove bullet points */
+  list-style: none;
   padding: 0;
   margin: 0;
-  font-size: 50px;
+  font-size: var(--font-size-large);
 }
 
 .info-list li {
-  display: grid; /* Use grid for alignment */
-  grid-template-columns: 35% 65%; /* Adjust the width ratio between strong and span */
+  display: grid;
+  grid-template-columns: 35% 65%;
   padding: 10px 0;
-  align-items: center; /* Align vertically */
-  border-bottom: 1px solid #e0e0e0; /* Separator between list items */
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 .info-list li i {
-  color: #00c4ff; /* Icon color */
-  margin-right: 10px; /* Space between icon and text */
-  grid-column: 1 / span 1; /* Icon takes up first column */
+  color: var(--accent-color);
+  margin-right: 10px;
 }
 
 .info-list li strong {
-  font-weight: 700; /* Bold text */
-  color: #333; /* Darker color */
-  margin-right: 10px;
-  font-size: medium;
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: var(--font-size-medium);
 }
 
 .info-list li span {
-  color: #555; /* Slightly lighter color for span */
-  text-align: left; /* Align text to the left */
+  color: #555;
+  text-align: left;
   font-weight: 700;
 }
 
 .info-list li a {
-  color: #0400ff; /* Link color */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s; /* Smooth hover effect */
+  color: #0400ff;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .info-list li a:hover {
-  color: #0073e6; /* Color change on hover */
+  color: #0073e6;
 }
 
-/* Responsive for mobile view */
+/* Mobile Styling */
 @media (max-width: 768px) {
   .info-list li {
-    grid-template-columns: 1fr; /* Stack items vertically on small screens */
-    text-align: left; /* Left-align all text */
+    grid-template-columns: 1fr;
+    text-align: left;
   }
 
-  .info-list li strong,
-  .info-list li span {
-    grid-column: 1 / span 2; /* Each item spans full width */
+  .info-list li strong, .info-list li span {
+    grid-column: 1 / span 2;
     text-align: left;
   }
 }
 
 /* Stats Section */
 .stats-item {
-  background-color: #fff;
+  background-color: var(--background-color);
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   padding: 20px;
   text-align: center;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
   position: relative;
-  overflow: hidden;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s ease-in-out;
 }
 
 .stats-item:hover {
-  background-color: #00c4ff;
+  background-color: var(--accent-color);
   color: #fff;
   transform: translateY(-10px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
@@ -1056,8 +1218,7 @@ h6 {
   height: 150px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  transition: 0.5s;
-  z-index: 1;
+  transition: left 0.5s;
 }
 
 .stats-item:hover::before {
@@ -1066,24 +1227,24 @@ h6 {
 
 .stats .stats-item {
   padding: 30px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
 }
 
 .stats .stats-item i {
   color: var(--accent-color);
-  display: block;
   font-size: 44px;
-  float: left;
-  line-height: 0;
   animation: bounce 1.5s infinite alternate;
+  transition: color 0.3s ease-in-out;
+}
+
+.stats .stats-item:hover i {
+  color: #fff;
 }
 
 @keyframes bounce {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-10px);
   }
@@ -1093,43 +1254,63 @@ h6 {
   color: var(--heading-color);
   font-size: 48px;
   line-height: 40px;
-  display: block;
   font-weight: 700;
-  margin-left: 60px;
+  transition: color 0.3s ease-in-out;
+}
+
+.stats .stats-item:hover .purecounter {
+  color: #fff;
 }
 
 .stats .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  padding: 15px 0 0 0;
-  margin: 0 0 0 60px;
-  font-family: var(--heading-font);
+  color: #7d8da0;
+  padding: 15px 0;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
+  transition: color 0.3s ease-in-out;
 }
 
+.stats .stats-item:hover p {
+  color: #fff;
+}
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .stats .stats-item {
+    padding: 20px;
+  }
+
+  .stats .stats-item .purecounter {
+    font-size: 36px;
+  }
+
+  .stats .stats-item p {
+    font-size: 12px;
+  }
+}
+
+/* About Section Layout */
 .about .content h2 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: var(--font-size-large);
 }
 
 .row {
   display: flex;
-  flex-wrap: wrap; /* Ensures the columns wrap on smaller screens */
-  margin: 0 -15px; /* Adjusts the margins for columns */
+  flex-wrap: wrap;
+  margin: 0 -15px;
 }
 
 .col-lg-6 {
-  padding: 0 15px; /* Adds padding for spacing */
-  flex: 0 0 50%; /* Takes up 50% width on larger screens */
-  max-width: 50%; /* Ensures max width */
+  padding: 0 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
 }
+
 .about .content ul {
   list-style: none;
   padding: 0;
-  margin: 0; /* Removes margin */
+  margin: 0;
 }
 
 .about .content li {
@@ -1142,31 +1323,30 @@ h6 {
   margin-right: 10px;
 }
 
-strong {
-  margin-right: 5px; /* Adds space between label and value */
-}
 .about img {
   border-radius: 10px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .about .content ul i {
-  font-size: 16px;
+  font-size: var(--font-size-small);
   margin-right: 5px;
   color: var(--accent-color);
-  line-height: 0;
 }
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .col-lg-6 {
-    flex: 0 0 100%; /* Stacks columns on smaller screens */
+    flex: 0 0 100%;
     max-width: 100%;
   }
-  
+
   li {
-    font-size: 16px; /* Adjusts font size for readability */
+    font-size: var(--font-size-small);
   }
 }
+
+/* Hobbies Section */
 .hobbies {
   background: linear-gradient(135deg, #f0f9ff, #7d8da0);
   padding: 40px;
@@ -1206,7 +1386,8 @@ strong {
 }
 
 .hobby-item {
-  background: linear-gradient(135deg, #009ffd, #2a2a72); /* Cool blue gradient */
+  background: linear-gradient(135deg, #009ffd, #2a2a72);
+  /* Cool blue gradient */
   border-radius: 15px;
   padding: 20px;
   text-align: center;
@@ -1238,7 +1419,8 @@ strong {
 }
 
 .hobby-item:hover {
-  background: linear-gradient(135deg, #ff4f81, #ff0080); /* Vibrant hover gradient */
+  background: linear-gradient(135deg, #ff4f81, #ff0080);
+  /* Vibrant hover gradient */
 }
 
 .hobby-item:hover::before {
@@ -1246,8 +1428,10 @@ strong {
   left: 0;
   width: 150%;
   height: 150%;
-  background: radial-gradient(circle, rgba(255, 255, 0, 0.5), transparent); /* Bright hover effect */
+  background: radial-gradient(circle, rgba(255, 255, 0, 0.5), transparent);
+  /* Bright hover effect */
 }
+
 .hobby-item i {
   background-color: rgba(255, 255, 255, 0.15);
   color: white;
@@ -1317,7 +1501,8 @@ strong {
   border-radius: 10px;
   height: 20px;
   position: relative;
-  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2); /* 3D shadow */
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* 3D shadow */
   margin-top: 15px;
   overflow: hidden;
 }
@@ -1328,35 +1513,40 @@ strong {
   width: auto;
   border-radius: 10px;
   box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.3);
-  transition: width 2s ease-in-out; /* Animation for filling the bar */
+  transition: width 2s ease-in-out;
+  /* Animation for filling the bar */
 }
 
 /* Skill icon styles */
 .skill-icon {
   font-size: 50px;
-  color: #ff9800; /* Icon color */
-  animation: pulse 2s infinite; /* Infinite pulse animation */
+  color: #ff9800;
+  /* Icon color */
+  animation: pulse 2s infinite;
+  /* Infinite pulse animation */
 }
 
 /* Keyframes for pulse effect */
 @keyframes pulse {
   0% {
-      transform: scale(1);
+    transform: scale(1);
   }
+
   50% {
-      transform: scale(1.3);
-      -webkit-transform: scale(1.3);
-      -moz-transform: scale(1.3);
-      -ms-transform: scale(1.3);
-      -o-transform: scale(1.3);
-}
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+  }
+
   100% {
-      transform: scale(0.8);
-      -webkit-transform: scale(0.8);
-      -moz-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-      -o-transform: scale(0.8);
-}
+    transform: scale(0.8);
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+  }
 }
 
 
@@ -1364,27 +1554,35 @@ strong {
 .fill-bar[data-progress="92"] {
   width: 92%;
 }
+
 .fill-bar[data-progress="90"] {
   width: 90%;
 }
+
 .fill-bar[data-progress="85"] {
   width: 85%;
 }
+
 .fill-bar[data-progress="88"] {
   width: 88%;
 }
+
 .fill-bar[data-progress="80"] {
   width: 80%;
 }
+
 .fill-bar[data-progress="75"] {
   width: 75%;
 }
+
 .fill-bar[data-progress="70"] {
   width: 70%;
 }
+
 .fill-bar[data-progress="65"] {
   width: 65%;
 }
+
 .fill-bar[data-progress="78"] {
   width: 78%;
 }
@@ -1393,27 +1591,35 @@ strong {
 .fa-code {
   color: #f44336;
 }
+
 .fa-paint-brush {
   color: #2196f3;
 }
+
 .fa-python {
   color: #0bfbf3;
 }
+
 .fa-js {
   color: #ffeb3b;
 }
+
 .fa-database {
   color: #607d8b;
 }
+
 .fa-react {
   color: #61dafb;
 }
+
 .fa-server {
   color: #795548;
 }
+
 .fa-network-wired {
   color: #3f51b5;
 }
+
 .fa-robot {
   color: #9c27b0;
 }
@@ -1502,9 +1708,11 @@ strong {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -1521,7 +1729,8 @@ strong {
 }
 
 .card-front:hover i {
-  transform: scale(1.15); /* Slight increase on hover */
+  transform: scale(1.15);
+  /* Slight increase on hover */
 }
 
 .card-back {
@@ -1605,9 +1814,12 @@ button {
 /* Neon Border Animation */
 .button-section {
   display: flex;
-  justify-content: center; /* Center the button */
-  margin-top: 20px; /* Add space above the button */
+  justify-content: center;
+  /* Center the button */
+  margin-top: 20px;
+  /* Add space above the button */
 }
+
 .animated-btn::before {
   content: '';
   position: absolute;
@@ -1656,71 +1868,101 @@ button {
 /* Project Section */
 /* Container Styles */
 .projects__container {
-  display: grid; /* Using CSS Grid */
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive columns */
-  gap: 20px; /* Space between project cards */
+  display: grid;
+  /* Using CSS Grid */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  /* Responsive columns */
+  gap: 20px;
+  /* Space between project cards */
 }
 
 /* Card Styles */
 .projects__card {
-  background-color: #fff; /* Example background */
-  border: 1px solid #ddd; /* Example border */
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  overflow: hidden; /* Ensure rounded corners apply */
-  transition: transform 0.4s ease, box-shadow 0.4s ease; /* Smooth transition on hover */
-  perspective: 1000px; /* Perspective for 3D effect */
+  background-color: #fff;
+  /* Example background */
+  border: 1px solid #ddd;
+  /* Example border */
+  border-radius: 10px;
+  /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  overflow: hidden;
+  /* Ensure rounded corners apply */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  /* Smooth transition on hover */
+  perspective: 1000px;
+  /* Perspective for 3D effect */
   transform-style: preserve-3d;
 }
 
 /* Hover effect for project cards */
 .projects__card:hover {
-  transform: rotateY(5deg) rotateX(5deg) scale(1.05); /* 3D tilt and slight zoom */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transform: rotateY(5deg) rotateX(5deg) scale(1.05);
+  /* 3D tilt and slight zoom */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  /* Enhanced shadow on hover */
 }
 
 /* Image Styles */
 .projects__image {
-  display: block; /* Block display for links */
+  display: block;
+  /* Block display for links */
 }
 
 .projects__img {
-  width: 100%; /* Full width */
-  height: 200px; /* Auto height */
+  width: 100%;
+  /* Full width */
+  height: 200px;
+  /* Auto height */
   object-fit: cover;
-  transition: transform 0.3s ease; /* Smooth image transition */
+  transition: transform 0.3s ease;
+  /* Smooth image transition */
 }
 
 /* On hover, zoom out */
 .projects__card:hover .projects__img {
-  transform: scale(0.95); /* Zoom out effect */
+  transform: scale(0.95);
+  /* Zoom out effect */
 }
 
 /* Data Styles */
 .projects__data {
-  padding: 15px; /* Padding inside the card */
-  text-align: center; /* Center align text */
+  padding: 15px;
+  /* Padding inside the card */
+  text-align: center;
+  /* Center align text */
 }
 
 .projects__name {
-  font-size: 1.5rem; /* Font size for project name */
-  margin: 10px 0; /* Space above and below project name */
-  color: #333; /* Dark color for text */
-  font-weight: bold; /* Bold font */
+  font-size: 1.5rem;
+  /* Font size for project name */
+  margin: 10px 0;
+  /* Space above and below project name */
+  color: #333;
+  /* Dark color for text */
+  font-weight: bold;
+  /* Bold font */
 }
 
 .projects__description {
-  font-size: 0.9rem; /* Smaller font for description */
-  color: #666; /* Grey color for description text */
-  margin-bottom: 15px; /* Space below description */
+  font-size: 0.9rem;
+  /* Smaller font for description */
+  color: #666;
+  /* Grey color for description text */
+  margin-bottom: 15px;
+  /* Space below description */
 }
 
 /* Skills Styles */
 .projects__skills {
-  display: flex; /* Flexbox for skill icons */
-  justify-content: center; /* Center align skill icons */
-  gap: 10px; /* Space between icons */
-  margin: 10px 0; /* Margin for skill icons */
+  display: flex;
+  /* Flexbox for skill icons */
+  justify-content: center;
+  /* Center align skill icons */
+  gap: 10px;
+  /* Space between icons */
+  margin: 10px 0;
+  /* Margin for skill icons */
 }
 
 .projects_skill {
@@ -1731,19 +1973,24 @@ button {
 
 /* Hover Effect for Skill Icons */
 .projects_skill:hover {
-  transform: scale(1.2); /* Slightly increase size on hover */
-  filter: brightness(1.2); /* Brighten the image on hover */
+  transform: scale(1.2);
+  /* Slightly increase size on hover */
+  filter: brightness(1.2);
+  /* Brighten the image on hover */
 }
 
 /* Fade-in Animation for Skill Icons */
 @keyframes fadeInSkill {
   0% {
     opacity: 0;
-    transform: translateY(20px); /* Start from below */
+    transform: translateY(20px);
+    /* Start from below */
   }
+
   100% {
     opacity: 1;
-    transform: translateY(0); /* Move to the final position */
+    transform: translateY(0);
+    /* Move to the final position */
   }
 }
 
@@ -1752,14 +1999,17 @@ button {
   animation: fadeInSkill 0.6s ease forwards;
   animation-delay: 0.2s;
 }
+
 .projects_skill:nth-child(2) {
   animation: fadeInSkill 0.6s ease forwards;
   animation-delay: 0.4s;
 }
+
 .projects_skill:nth-child(3) {
   animation: fadeInSkill 0.6s ease forwards;
   animation-delay: 0.6s;
 }
+
 .projects_skill:nth-child(4) {
   animation: fadeInSkill 0.6s ease forwards;
   animation-delay: 0.8s;
@@ -1771,23 +2021,30 @@ button {
   align-items: center;
   justify-content: center;
   padding: 10px 15px;
-  background: #007bff; /* Bootstrap primary color */
+  background: #007bff;
+  /* Bootstrap primary color */
   color: #ffffff;
   text-decoration: none;
   border-radius: 5px;
   transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative; /* For hover effect */
-  overflow: hidden; /* Hide overflow for animation */
+  position: relative;
+  /* For hover effect */
+  overflow: hidden;
+  /* Hide overflow for animation */
 }
 
 .projects__button:hover {
-  background: #0056b3; /* Darker shade on hover */
-  transform: scale(1.05); /* Slightly grow on hover */
-  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4); /* Add shadow */
+  background: #0056b3;
+  /* Darker shade on hover */
+  transform: scale(1.05);
+  /* Slightly grow on hover */
+  box-shadow: 0 10px 20px rgba(0, 123, 255, 0.4);
+  /* Add shadow */
 }
 
 .projects__button i {
-  margin-right: 5px; /* Space between icon and text */
+  margin-right: 5px;
+  /* Space between icon and text */
 }
 
 /* Hover Animation with Ripple Effect */
@@ -1798,7 +2055,8 @@ button {
   left: 50%;
   width: 300%;
   height: 300%;
-  background: rgba(255, 255, 255, 0.2); /* Light ripple color */
+  background: rgba(255, 255, 255, 0.2);
+  /* Light ripple color */
   transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
   border-radius: 50%;
   z-index: 1;
@@ -1824,23 +2082,82 @@ button {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .projects__card {
-    flex: 1 1 calc(50% - 20px); /* Two cards per row on medium screens */
-    max-width: calc(90% - 20px); /* Maximum width for the card */
+    flex: 1 1 calc(50% - 20px);
+    /* Two cards per row on medium screens */
+    max-width: calc(90% - 20px);
+    /* Maximum width for the card */
   }
 }
 
 @media (max-width: 480px) {
   .projects__card {
-    flex: 1 1 calc(100% - 20px); /* One card per row on small screens */
-    max-width: calc(100% - 20px); /* Maximum width for the card */
+    flex: 1 1 calc(100% - 20px);
+    /* One card per row on small screens */
+    max-width: calc(100% - 20px);
+    /* Maximum width for the card */
   }
 }
 
 /* Responsive Design for larger screens */
 @media (min-width: 768px) {
   .projects__container {
-      grid-template-columns: repeat(3, 1fr); /* Show 3 cards in a row */
+    grid-template-columns: repeat(3, 1fr);
+    /* Show 3 cards in a row */
   }
+}
+
+.building-icon {
+  font-size: 50px;
+  color: #eca100;
+  margin-bottom: 10px;
+}
+
+.graduation-icon {
+  font-size: 50px;
+  color: #000000;
+  margin-bottom: 10px;
+}
+
+.school-icon {
+  font-size: 50px;
+  color: #a30a5c;
+  margin-bottom: 10px;
+}
+
+.python-icon {
+  font-size: 50px;
+  color: #306998;
+}
+
+.excel-icon {
+  font-size: 50px;
+  color: #57A64A;
+}
+
+.tasks-icon {
+  font-size: 50px;
+  color: #e014c8;
+}
+
+.laptop-code-icon {
+  font-size: 50px;
+  color: #ba0d21;
+}
+
+.running-icon {
+  font-size: 50px;
+  color: #1E90FF;
+}
+
+.globe-icon {
+  font-size: 50px;
+  color: #06ff51;
+  margin-bottom: 10px;
+}
+
+.flask-icon {
+  font-size: 50px;
+  color: #06e5ec;
 }
 
 /*--------------------------------------------------------------
@@ -1883,27 +2200,33 @@ button {
 }
 
 .service-item:nth-child(1) .icon {
-  color: #ff6347; /* Tomato color for Database */
+  color: #ff6347;
+  /* Tomato color for Database */
 }
 
 .service-item:nth-child(2) .icon {
-  color: #4682b4; /* SteelBlue color for Editing */
+  color: #4682b4;
+  /* SteelBlue color for Editing */
 }
 
 .service-item:nth-child(3) .icon {
-  color: #32cd32; /* LimeGreen color for Web Design */
+  color: #32cd32;
+  /* LimeGreen color for Web Design */
 }
 
 .service-item:nth-child(4) .icon {
-  color: #ff4500; /* OrangeRed color for Photography */
+  color: #ff4500;
+  /* OrangeRed color for Photography */
 }
 
 .service-item:nth-child(5) .icon {
-  color: #306998; /* Python blue color for Python Development */
+  color: #306998;
+  /* Python blue color for Python Development */
 }
 
 .service-item:nth-child(6) .icon {
-  color: #8a2be2; /* BlueViolet color for Projects */
+  color: #8a2be2;
+  /* BlueViolet color for Projects */
 }
 
 .service-item:hover .icon {
@@ -1963,40 +2286,65 @@ button {
 
 .neon-btn {
   display: inline-flex;
-    align-items: center; /* Center icon and text vertically */
-    padding: 15px 30px; /* Padding for button size */
-    font-size: 18px; /* Font size */
-    color: #000000; /* Text color */
-    text-decoration: none; /* Removes underline */
-    border-radius: 5px; /* Rounded corners */
-    background: transparent; /* Transparent background */
-    border: 2px solid #ff0080; /* Border color */
-    position: relative; /* Positioning for the glow effect */
-    overflow: hidden; /* Hide overflow for the glow */
-    transition: color 0.4s ease; /* Transition for text color */
+  align-items: center;
+  /* Center icon and text vertically */
+  padding: 15px 30px;
+  /* Padding for button size */
+  font-size: 18px;
+  /* Font size */
+  color: #000000;
+  /* Text color */
+  text-decoration: none;
+  /* Removes underline */
+  border-radius: 5px;
+  /* Rounded corners */
+  background: transparent;
+  /* Transparent background */
+  border: 2px solid #ff0080;
+  /* Border color */
+  position: relative;
+  /* Positioning for the glow effect */
+  overflow: hidden;
+  /* Hide overflow for the glow */
+  transition: color 0.4s ease;
+  /* Transition for text color */
 }
 
 .neon-btn:before {
-  content: ""; /* Creates a pseudo-element */
-  position: absolute; /* Position absolutely within the button */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
-  right: 0; /* Align to the right */
-  bottom: 0; /* Align to the bottom */
-  border-radius: 5px; /* Match border radius */
-  background: rgba(255, 0, 128, 0.6); /* Background for the glow */
-  filter: blur(10px); /* Blur for the glow effect */
-  z-index: 0; /* Set below the text */
-  transition: opacity 0.4s ease; /* Transition for opacity */
-  opacity: 0; /* Start invisible */
+  content: "";
+  /* Creates a pseudo-element */
+  position: absolute;
+  /* Position absolutely within the button */
+  top: 0;
+  /* Align to the top */
+  left: 0;
+  /* Align to the left */
+  right: 0;
+  /* Align to the right */
+  bottom: 0;
+  /* Align to the bottom */
+  border-radius: 5px;
+  /* Match border radius */
+  background: rgba(255, 0, 128, 0.6);
+  /* Background for the glow */
+  filter: blur(10px);
+  /* Blur for the glow effect */
+  z-index: 0;
+  /* Set below the text */
+  transition: opacity 0.4s ease;
+  /* Transition for opacity */
+  opacity: 0;
+  /* Start invisible */
 }
 
 .neon-btn:hover:before {
-  opacity: 1; /* Show the glow on hover */
+  opacity: 1;
+  /* Show the glow on hover */
 }
 
 .neon-btn:hover {
-  color: #ff0080; /* Change text color on hover */
+  color: #ff0080;
+  /* Change text color on hover */
 }
 
 /*--------------------------------------------------------------
@@ -2060,10 +2408,14 @@ button {
 }
 
 .info-wrap {
-  background-color: #fff; /* Background for contact info */
-  border-radius: 10px; /* Rounded corners */
-  padding: 20px; /* Inner padding */
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  background-color: #fff;
+  /* Background for contact info */
+  border-radius: 10px;
+  /* Rounded corners */
+  padding: 20px;
+  /* Inner padding */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  /* Shadow effect */
 }
 
 
@@ -2075,11 +2427,16 @@ button {
 
 
 .info-item h3 {
-  text-align: left; /* Aligns the text to the left */
-  margin: 0; /* Removes any default margin */
-  font-weight: bold; /* Makes the text bold */
-  font-size: 1.2rem; /* Adjusts the font size */
-  color: #333; /* Sets the text color */
+  text-align: left;
+  /* Aligns the text to the left */
+  margin: 0;
+  /* Removes any default margin */
+  font-weight: bold;
+  /* Makes the text bold */
+  font-size: 1.2rem;
+  /* Adjusts the font size */
+  color: #333;
+  /* Sets the text color */
 }
 
 .contact .info-item i {
@@ -2105,13 +2462,17 @@ button {
 }
 
 .hover-effect {
-  color: blue; /* Default link color set to blue */
-  text-decoration: none; /* Removes underline */
-  transition: color 0.3s ease; /* Smooth transition effect */
+  color: blue;
+  /* Default link color set to blue */
+  text-decoration: none;
+  /* Removes underline */
+  transition: color 0.3s ease;
+  /* Smooth transition effect */
 }
 
 .hover-effect:hover {
-  color: rgb(255, 0, 0); /* Changes color to black on hover */
+  color: rgb(255, 0, 0);
+  /* Changes color to black on hover */
 }
 
 
@@ -2181,37 +2542,54 @@ button {
 }
 
 .contact .social-links a {
-  margin: 0 10px; /* Space between icons */
-  color: #333; /* Icon color */
-  transition: color 0.3s; /* Transition for hover effect */
+  margin: 0 10px;
+  /* Space between icons */
+  color: #333;
+  /* Icon color */
+  transition: color 0.3s;
+  /* Transition for hover effect */
 }
 
 /* Form fields styles */
 .form-control {
-  border: 1px solid #ddd; /* Light gray border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 12px 15px; /* Inner padding */
-    transition: border-color 0.3s ease; /* Transition for border color */
+  border: 1px solid #ddd;
+  /* Light gray border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 12px 15px;
+  /* Inner padding */
+  transition: border-color 0.3s ease;
+  /* Transition for border color */
 }
 
 .form-control:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove outline */
+  border-color: #007bff;
+  /* Change border color on focus */
+  outline: none;
+  /* Remove outline */
 }
 
 /* Submit button */
 .btn-primary {
-  background-color: #007bff; /* Primary button color */
-    color: #fff; /* Text color */
-    border: none; /* Remove border */
-    border-radius: 8px; /* Rounded corners */
-    padding: 12px 20px; /* Inner padding */
-    cursor: pointer; /* Pointer on hover */
-    transition: background-color 0.3s ease; /* Transition for background color */
+  background-color: #007bff;
+  /* Primary button color */
+  color: #fff;
+  /* Text color */
+  border: none;
+  /* Remove border */
+  border-radius: 8px;
+  /* Rounded corners */
+  padding: 12px 20px;
+  /* Inner padding */
+  cursor: pointer;
+  /* Pointer on hover */
+  transition: background-color 0.3s ease;
+  /* Transition for background color */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3;
+  /* Darker blue on hover */
 }
 
 /* Loading, error, and success messages */
@@ -2223,9 +2601,12 @@ button {
 
 /* Label Styles */
 label {
-  font-weight: bold; /* Bold labels */
-  color: #333; /* Darker text color */
+  font-weight: bold;
+  /* Bold labels */
+  color: #333;
+  /* Darker text color */
 }
+
 .text-center {
   text-align: center !important;
 }
@@ -2238,25 +2619,33 @@ label {
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .form-control {
-      padding: 10px; /* Adjust padding for smaller screens */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
   }
-  
+
   .btn-primary {
-      width: 100%; /* Full width for buttons on smaller screens */
+    width: 100%;
+    /* Full width for buttons on smaller screens */
   }
 }
 
 .social-links {
-  justify-content: center; /* Center social media links */
-  margin-top: 20px; /* Space above links */
+  justify-content: center;
+  /* Center social media links */
+  margin-top: 20px;
+  /* Space above links */
 }
 
 .social-links a {
-  margin: 0 10px; /* Space between icons */
-  color: #333; /* Icon color */
-  transition: color 0.3s; /* Transition for hover effect */
+  margin: 0 10px;
+  /* Space between icons */
+  color: #333;
+  /* Icon color */
+  transition: color 0.3s;
+  /* Transition for hover effect */
 }
 
 .social-links a:hover {
-  color:blue; /* Color change on hover */
+  color: blue;
+  /* Color change on hover */
 }
