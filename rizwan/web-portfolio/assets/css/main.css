@@ -787,52 +787,110 @@ h6 {
 }
 
 /* Social Icons */
-.social-icons {
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
+/* General styles for the social icons */
+/* General styles for social media icons */
+.social-icons .social-links a {
+  font-size: 2rem; /* Icon size */
+  padding: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+  animation: colorChange 2s infinite alternate, bounce 1.5s infinite; /* Combine color change and bouncing */
 }
 
-.social-icons a {
-  font-size: 24px;
-  color: #fff;
-  margin: 0 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-.social-icons a:hover {
-  transform: scale(1.2);
-  color: #007bff;
-}
-
-/* Scroll Down Icon */
-.scroll-down {
-  position: absolute; /* Positioning it absolutely within the hero section */
-  bottom: 20px; /* Adjust this value to position it further up or down */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust to perfectly center */
-  font-size: 2rem; /* Size of the icon */
-  color: white; /* Color of the icon */
-  opacity: 0.8; /* Slight transparency for a soft effect */
-  transition: opacity 0.3s; /* Smooth transition for hover effect */
-  z-index: 10; /* Ensure it appears above other elements */
-  animation: bounce 1.5s infinite; /* Apply bounce animation */
-}
-
-.scroll-down:hover {
-  opacity: 1; /* Full opacity on hover */
-  cursor: pointer; /* Pointer cursor on hover */
-}
-
-/* Bounce Animation Keyframes */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0); /* Start and end at original position */
+/* Continuous color change animation */
+@keyframes colorChange {
+  0% {
+    color: #1da1f2; /* Twitter Blue */
+  }
+  25% {
+    color: #e4405f; /* Instagram Pink */
   }
   50% {
-    transform: translateY(-10px); /* Move up slightly */
+    color: #0077b5; /* LinkedIn Blue */
+  }
+  75% {
+    color: #ff9900; /* Yellow */
+  }
+  100% {
+    color: #ff6600; /* Orange */
   }
 }
+
+/* Bouncing animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  20% {
+    transform: translateY(-10px); /* Move up */
+  }
+  40% {
+    transform: translateY(0); /* Move back down */
+  }
+  60% {
+    transform: translateY(-5px); /* Small bounce */
+  }
+  80% {
+    transform: translateY(0); /* Move back to normal */
+  }
+  100% {
+    transform: translateY(-2px); /* Final tiny bounce */
+  }
+}
+
+/* Hover effect for scaling and color change */
+.social-icons .social-links a:hover {
+  transform: scale(1.1); /* Scale up on hover */
+  color: #00c4ff; /* Optional color change on hover */
+}
+
+
+/* Scroll Down Icon */
+/* General style for the scroll-down link */
+/* Center the .scroll-down icon and position it below */
+.scroll-down {
+  font-size: 3rem;
+  display: inline-block;
+  position: absolute; /* Allows for positioning relative to the viewport */
+  bottom: -200px; /* Distance from the bottom of the viewport */
+  left: 50%; /* Horizontal centering */
+  transform: translateX(-50%); /* Adjust horizontal positioning to center */
+  transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+  color: #00c4ff; /* Starting color */
+  text-decoration: none;
+  animation: bounce 1s infinite; /* Bounce animation */
+  -webkit-animation: bounce 1s infinite; /* For Safari */
+}
+
+/* Keyframes for bounce animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(0); /* Starting position */
+  }
+  20% {
+    transform: translateY(-10px); /* Move up */
+  }
+  40% {
+    transform: translateY(0); /* Move back down */
+  }
+  60% {
+    transform: translateY(-5px); /* Small bounce */
+  }
+  80% {
+    transform: translateY(0); /* Move back to normal */
+  }
+  100% {
+    transform: translateY(-2px); /* Final tiny bounce */
+  }
+}
+
+/* Hover effect for scaling */
+.scroll-down:hover {
+  transform: translateY(5px); /* Moves down slightly on hover */
+  color: #ff6600; /* Color change on hover */
+}
+
 
 
 /* Animated Heading */
