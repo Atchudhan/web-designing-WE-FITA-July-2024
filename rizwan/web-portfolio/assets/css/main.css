@@ -228,48 +228,24 @@ h6 {
   border: 8px solid;
   /* Remove fixed color and animate */
   border-radius: 50%;
-  box-shadow: 0 6px 20px rgba(0, 204, 255, 0.6);
+  box-shadow: 0 8px 30px rgba(0, 204, 255, 0.8);
   /* Apply the color animation to profile image border */
   animation: color-change-border 4s infinite alternate;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .header .profile-img img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1.1);
+  box-shadow: 0 8px 30px rgba(0, 204, 255, 0.8);
 }
 
 /* Colorful motion for the profile image border */
 @keyframes color-change-border {
-  0% {
-    border-color: #ff5733;
-    /* Vivid Red-Orange */
-  }
-
-  20% {
-    border-color: #33ff57;
-    /* Vivid Green */
-  }
-
-  40% {
-    border-color: #3357ff;
-    /* Bright Blue */
-  }
-
-  60% {
-    border-color: #ff33c4;
-    /* Vivid Pink */
-  }
-
-  80% {
-    border-color: #faff33;
-    /* Bright Yellow */
-  }
-
-  100% {
-    border-color: #33fff7;
-    /* Light Cyan */
-  }
+  0% { border-color: #ff00ff; }
+  25% { border-color: #00c4ff; }
+  50% { border-color: #00ff00; }
+  75% { border-color: #ff9900; }
+  100% { border-color: #ff00ff; }
 }
 
 /* Logo */
@@ -332,8 +308,8 @@ h6 {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  
+  flex-direction: row;
   align-items: center;
 }
 
@@ -672,6 +648,11 @@ h6 {
   letter-spacing: 3px;
   display: inline-block;
   animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #00c4ff; }
+  100% { text-shadow: 0 0 10px #ff00ff, 0 0 20px #ff00ff, 0 0 25px #00c4ff; }
 }
 
 @keyframes glow {
