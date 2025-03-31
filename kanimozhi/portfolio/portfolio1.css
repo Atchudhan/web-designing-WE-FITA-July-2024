@@ -185,7 +185,7 @@ span {
 .home-img img {
     animation: floatImage 4s ease-in-out infinite;
     width: 25vw;
-    margin: 50%;
+    margin: 20%;
 }
 
 @keyframes floatImage {
