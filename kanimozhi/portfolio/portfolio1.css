@@ -1,28 +1,104 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /*doubt */
     text-decoration: none;
+    border: none;
+    /*doubt*/
+    outline: invert;
+    /*doubt*/
     scroll-behavior: smooth;
     font-family: "Nunito", sans-serif;
 }
 
-:root {
+:root
+/*doubt*/
+
+{
     --bg-color: #191f36;
     --snd-bg-color: #262B40;
     --text-color: #fff;
     --main-color: #59B2F4;
 }
 
+.container {
+    perspective: 1000px;
+}
+
+.cube {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0.9;
+}
+
+
+/* Ensure correct positioning of cube faces */
+
+.front {
+    transform: translateZ(100px);
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+.left {
+    transform: rotateY(-90deg) translateZ(100px);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(100px);
+}
+
+.top {
+    transform: rotateX(90deg) translateZ(100px);
+}
+
+.bottom {
+    transform: rotateX(-90deg) translateZ(100px);
+}
+
+html {
+    font-size: 62.5%;
+    /*doubt*/
+    overflow-x: hidden;
+}
+
 body {
-    background: var(--bg-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
 }
 
-/* Header */
+section {
+    min-height: 100vh;
+    /*10 for top,
+    20 % for side,
+    */
+    padding: 10rem 20% 2rem;
+}
+
+
+/*doubt*/
+
 .header {
     position: fixed;
     top: 0;
@@ -31,67 +107,91 @@ body {
     padding: 2rem 9%;
     background: var(--bg-color);
     display: flex;
+    /*give a space between each content*/
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.header .logo {
+.logo {
     font-size: 2.5rem;
-    font-weight: 700;
     color: var(--text-color);
+    background-color: transparent;
+    /*for thickness of the text */
+    font-weight: 700;
+    cursor: default;
 }
 
 .navbar a {
     font-size: 1.5rem;
     color: var(--text-color);
     margin-left: 4rem;
-    transition: 0.3s;
+    font-weight: 700;
 }
 
-.navbar a:hover {
-    color: var(--main-color);
+
+/*doubt for no changes*/
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
 }
 
-/* Home Section */
-.home {
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    /*it delete menu bar*/
+    display: none;
+}
+
+.home
+/*from hi to img*/
+
+{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem; /* Add space between content and image */
-    min-height: 100vh;
-    padding: 10rem 20%;
 }
 
-.home-content {
-    max-width: 50%;
-}
+.home-content h3
+/*from hi to before img*/
 
-.home-content h1 {
-    font-size: 5.6rem;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.home-content h3 {
+{
     font-size: 3.2rem;
     font-weight: 700;
 }
 
-.home-content p {
-    font-size: 1.6rem;
-    margin: 2rem 0;
+
+/*doubt*/
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1
+/*for kanimozhi*/
+
+{
+    font-size: 5.6rem;
+    font-weight: 700;
+    /*space between up and down line*/
+    line-height: 1.3;
 }
 
 .home-img img {
-    width: 30vw;
     animation: floatImage 4s ease-in-out infinite;
+    width: 25vw;
 }
 
 @keyframes floatImage {
     0% {
         transform: translateY(0);
     }
+    /*for image up and down*/
     50% {
         transform: translateY(-2.4rem);
     }
@@ -99,6 +199,40 @@ body {
         transform: translateY(0);
     }
 }
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    /*it becomes a box shape*/
+    border: .2rem solid var(--main-color);
+    /*it become circle shape*/
+    border-radius: 50%;
+    /*icon size change*/
+    font-size: 2rem;
+    /*to change icon color*/
+    color: var(--main-color);
+    /*give a space between up and down*/
+    /*3rem for top 1.5 for space between 3 for bottom */
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background-color: var(--main-color);
+    color: var(--snd-bg-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+/*for cv*/
 
 .btn {
     display: inline-block;
@@ -108,21 +242,21 @@ body {
     box-shadow: 0 0 1rem var(--main-color);
     font-size: 1.6rem;
     color: var(--bg-color);
-    transition: 0.5s ease;
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
 }
 
 .btn:hover {
+    /*when we touch box shadow becomes none*/
     box-shadow: none;
 }
 
-/* About Section */
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    min-height: 100vh;
-    padding: 10rem 20%;
+    gap: 2rem;
     background: var(--snd-bg-color);
 }
 
@@ -130,64 +264,718 @@ body {
     width: 35vw;
 }
 
-/* Services Section */
-.services {
-    padding: 10rem 20%;
-    background: var(--bg-color);
+.heading
+/*for about me */
+
+{
     text-align: center;
+    font-size: 4.5rem;
 }
 
-.services h2 {
-    font-size: 4rem;
+.about-content h2
+/*for about me */
+
+{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3
+/*for frontend developer*/
+
+{
+    font-size: 2.6rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+
+/* Services Section */
+
+.services h2
+/*for my services*/
+
+{
     margin-bottom: 5rem;
 }
 
-.services-container {
+.services-container
+/*for 3 paragraph*/
+
+{
     display: flex;
     justify-content: center;
-    gap: 3rem;
+    align-items: center;
+    /*doubt*/
+    flex-wrap: wrap;
+    /*gap between paragraph*/
+    gap: 2rem;
 }
 
-.service-box {
+.services-container .service-box {
+    /*for divide into 3 box*/
+    flex: 1 1 3rem;
     background: var(--snd-bg-color);
-    padding: 3rem;
+    padding: 3rem 2rem 4rem;
     border-radius: 2rem;
-    transition: 0.5s;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
 }
 
-.service-box:hover {
-    transform: scale(1.05);
+.services-container .service-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.02);
 }
 
-/* Contact Section */
-.contact {
-    padding: 10rem 20%;
+.service-box i {
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.service-box h3 {
+    font-size: 2.6rem;
+}
+
+.service-box p {
+    font-size: 1.6rem;
+    /*1rem for top 3rem for bottom*/
+    margin: 1rem 0 3rem;
+}
+
+
+/* Mobile View Adjustments */
+
+@media (max-width: 768px) {
+    .services h2 {
+        font-size: 3.5rem;
+        margin-bottom: 3rem;
+    }
+    .services-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .services-container .service-box {
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        flex: none;
+    }
+    .services-container .service-box i {
+        font-size: 5rem;
+    }
+    .services-container .service-box h3 {
+        font-size: 2.2rem;
+    }
+    .services-container .service-box p {
+        font-size: 1.4rem;
+    }
+}
+
+
+/* Very Small Mobile Adjustments */
+
+@media (max-width: 450px) {
+    .services h2 {
+        font-size: 3rem;
+    }
+    .services-container .service-box {
+        padding: 1.5rem;
+    }
+    .services-container .service-box h3 {
+        font-size: 2rem;
+    }
+    .services-container .service-box p {
+        font-size: 1.8rem;
+    }
+}
+
+.portfolio {
     background: var(--snd-bg-color);
+}
+
+.portfolio h2 {
+    margin-bottom: 4rem;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box {
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0.7;
+}
+
+.portfolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-box .portfolio-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    transform: translateY(0);
+}
+
+.portfolio-layer h4 {
+    font-size: 2rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.4rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio-layer a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio-layer a i {
+    font-size: 2rem;
+    color: var(--snd-bg-color);
+}
+
+
+/* Style for additional info */
+
+.additional-info {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    /* Start as invisible */
+}
+
+.additional-info.active {
+    opacity: 1;
+    /* Become visible */
+}
+
+
+/* Add any other styles you need for your design */
+
+
+/*for 3d*/
+
+.contact h2 {
+    margin-bottom: 3rem;
 }
 
 .contact form {
     max-width: 70rem;
-    margin: 0 auto;
+    margin: 1rem auto;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
-.contact form input,
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
 .contact form textarea {
     width: 100%;
     padding: 1.5rem;
-    margin-bottom: 2rem;
-    border-radius: 0.5rem;
-    background: var(--bg-color);
+    font-size: 1.6rem;
     color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
 }
 
-/* Footer */
-.footer {
-    text-align: center;
-    padding: 2rem 0;
-    background: var(--bg-color);
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
 }
 
 .footer-text {
     font-size: 1.6rem;
+}
+
+.footer-iconTop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: .8rem 1rem;
+    background: var(--main-color);
+    border-radius: .8rem;
+    transition: .5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-iconTop a i {
+    font-size: 2.4rem;
+    color: var(--snd-bg-color);
+}
+
+
+/*start*/
+
+.resume {
+    background: var(--snd-bg-color);
+    padding: 7rem 3%;
+}
+
+.resume h2 {
+    text-align: center;
+    font-size: 4.5rem;
+    color: var(--text-color);
+    margin-bottom: 5rem;
+}
+
+.personal-info {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    margin-bottom: 3rem;
+}
+
+.personal-info h3 {
+    font-size: 2.6rem;
+    color: var(--main-color);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.personal-info h3 i {
+    margin-right: 1rem;
+}
+
+.personal-info ul {
+    list-style: none;
+}
+
+.personal-info ul li {
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 1rem;
+}
+
+.personal-info ul li strong {
+    color: var(--main-color);
+}
+
+.resume-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    flex-wrap: wrap;
+}
+
+.resume-box {
+    flex: 1;
+    background: var(--bg-color);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.resume-box h3 {
+    font-size: 2.6rem;
+    color: var(--main-color);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+.resume-box h3 i {
+    margin-right: 1rem;
+}
+
+.resume-item h4 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.resume-item span {
+    font-size: 1.4rem;
+    color: var(--main-color);
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.resume-item p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.resume-box ul {
+    list-style: none;
+}
+
+.resume-box ul li {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+}
+
+
+/*end*/
+
+
+/*Break point*/
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3%;
+    }
+    .services {
+        padding: 7rem;
+    }
+    .portfolio {
+        padding-bottom: 7rem;
+    }
+    .contact {
+        min-height: auto;
+    }
+    .footer {
+        padding: 2rem 3%
+    }
+}
+
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: 1rem solid rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        display: none;
+    }
+    .navbar.active {
+        display: block;
+    }
+    .navbar a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-content {
+        order: 2;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .about-img img {
+        width: 90vw;
+        margin-top: 4rem;
+    }
+    .services h2 {
+        margin-bottom: 3rem;
+    }
+    .portfolio h2 {
+        margin-bottom: 3rem;
+    }
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 617px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+    .home-img img {
+        width: 80vw;
+        margin-top: 8rem;
+    }
+    .about-img img {
+        width: 100vw;
+        margin-top: 4rem;
+    }
+}
+
+@media(max-width: 450) {
+    html {
+        font-size: 50%;
+    }
+    .contact form .input-box input {
+        width: 100%
+    }
+}
+
+
+/*for dark and light mode , color*/
+
+
+/* Base Variables for Light and Dark Themes */
+
+
+/* Dark Theme */
+
+body.dark-mode {
+    --bg-color: #191f36;
+    /* Dark background */
+    --snd-bg-color: #262B40;
+    /* Dark secondary background */
+    --text-color: #ffffff;
+    /* Light text for dark mode */
+    --main-color: #59B2F4;
+    /* Default main color */
+}
+
+
+/* Light Theme (Default) */
+
+body.light-mode {
+    --bg-color: #f4f4f9;
+    /* Light background */
+    --snd-bg-color: #e0e0e0;
+    /* Light secondary background */
+    --text-color: #333;
+    /* Dark text for light mode */
+    --main-color: #59B2F4;
+    /* Default main color */
+}
+
+
+/* Section-specific background colors */
+
+
+/* Section 1: Home */
+
+section#home {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 2: Services */
+
+section#services {
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 3: Portfolio */
+
+section#portfolio {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+
+/* Section 4: Contact */
+
+section#contact {
+    background-color: var(--snd-bg-color);
+    color: var(--text-color);
+}
+
+
+/* Color Themes */
+
+
+/* Blue Theme */
+
+body.blue-theme {
+    --main-color: #59B2F4;
+    /* Blue main color */
+}
+
+
+/* Green Theme */
+
+body.green-theme {
+    --main-color: #66BB6A;
+    /* Green main color */
+}
+
+
+/* Red Theme */
+
+body.red-theme {
+    --main-color: #E57373;
+    /* Red main color */
+}
+
+
+/* Purple Theme */
+
+body.purple-theme {
+    --main-color: #BA68C8;
+    /* Purple main color */
+}
+
+
+/* Orange Theme */
+
+body.orange-theme {
+    --main-color: #FFB74D;
+    /* Orange main color */
+}
+
+
+/* Teal Theme */
+
+body.teal-theme {
+    --main-color: #4DB6AC;
+    /* Teal main color */
+}
+
+
+/* Applying the variables */
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Navbar and buttons */
+
+header,
+.navbar,
+button,
+a {
+    background-color: transparent;
+    color: var(--text-color);
+}
+
+button {
+    cursor: pointer;
+}
+
+
+/* Optional button styling for toggles */
+
+#dark-light-btn,
+#color-mode-btn {
+    padding: 10px;
+    border: none;
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 16px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* Show color options after clicking 'Change Color' */
+
+#color-options {
+    display: none;
+    margin-top: 10px;
+}
+
+#color-options.active {
+    display: flex;
+    gap: 10px;
+}
+
+
+/* Styling each color box */
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+}
+
+.color-box.blue {
+    background-color: #59B2F4;
+}
+
+.color-box.green {
+    background-color: #66BB6A;
+}
+
+.color-box.red {
+    background-color: #E57373;
+}
+
+.color-box.purple {
+    background-color: #BA68C8;
+}
+
+.color-box.orange {
+    background-color: #FFB74D;
+}
+
+.color-box.teal {
+    background-color: #4DB6AC;
 }
