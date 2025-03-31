@@ -733,6 +733,7 @@ span {
     .home-img img {
         width: 70vw;
         margin-top: 4rem;
+        margin: 0%;
     }
     .about {
         flex-direction: column;
@@ -759,6 +760,7 @@ span {
     .home-img img {
         width: 80vw;
         margin-top: 8rem;
+        margin: 0%;
     }
     .about-img img {
         width: 100vw;
