@@ -186,6 +186,7 @@ span {
     animation: floatImage 4s ease-in-out infinite;
     width: 25vw;
     margin: 20%;
+    border-radius: 2%;
 }
 
 @keyframes floatImage {
